@@ -32,6 +32,7 @@ exports.listAllEmployes = function(callback) {
 }
 
 exports.addEmployee = function( employee , callback ) {
+	delete employee.id;
 	con.query('INSERT INTO employees SET ?', employee, function(err,result){
 	  if(err) throw err;
 	  winston.info('Added => Last insert ID: %d', result.insertId);
