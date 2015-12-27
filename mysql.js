@@ -6,10 +6,11 @@ dal.init( function(err) {
 	dal.listAllEmployes( function(err,rows) {
 		var employee = { name: 'Winnie', location: 'Australia' };
 		dal.addEmployee( employee , function (err,res) {
+			var id = res.insertId;
 			dal.listAllEmployes( function(err,rows) {
-				dal.updateEmployee( employee , function (err,res) {
+				dal.updateEmployee( id, ["South Africa"] , function (err,res) {
 					dal.listAllEmployes( function(err,rows) {
-						dal.deleteEmployee( employee , function (err,res) {
+						dal.deleteEmployee( id , function (err,res) {
 							dal.listAllEmployes( function(err,rows) {
 								dal.exit(function() {
 									winston.info('Exit');									

@@ -41,10 +41,11 @@ exports.addEmployee = function( employee , callback ) {
 	});	
 }
 
-exports.updateEmployee = function( employee, callback  ) {
+exports.updateEmployee = function( id, changes, callback  ) {
+	changes.push(id);
 	con.query(
 	  'UPDATE employees SET location = ? Where ID = ?',
-	  ["South Africa", 5],
+	  changes,
 	  function (err, result) {
 		if (err) throw err;
 		winston.info('Changed ' + result.changedRows + ' rows');
@@ -54,10 +55,10 @@ exports.updateEmployee = function( employee, callback  ) {
 	);
 }
 
-exports.deleteEmployee = function( employee, callback ) {
+exports.deleteEmployee = function( id, callback ) {
 	con.query(
 	  'DELETE FROM employees WHERE id = ?',
-	  [5],
+	  [id],
 	  function (err, result) {
 		if (err) throw err;
 		winston.info('Deleted ' + result.affectedRows + ' rows');
