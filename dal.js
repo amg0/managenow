@@ -42,10 +42,13 @@ exports.addEmployee = function( employee , callback ) {
 }
 
 exports.updateEmployee = function( id, changes, callback  ) {
-	changes.push(id);
+	var arr = [];
+	arr.push(changes);
+	arr.push(id);
+	// changes.push(id);
 	con.query(
-	  'UPDATE employees SET location = ? Where ID = ?',
-	  changes,
+	  'UPDATE employees SET ? Where ID = ?',
+	  arr,
 	  function (err, result) {
 		if (err) throw err;
 		winston.info('Changed ' + result.changedRows + ' rows');
