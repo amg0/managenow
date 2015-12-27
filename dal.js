@@ -22,8 +22,12 @@ exports.init = function(callback) {
 	});	
 }
 
-exports.listAllEmployes = function(callback) {
-	con.query('SELECT * FROM employees',function(err,rows){
+exports.listAllEmployes = function(fields, callback) {
+	var sql = 'SELECT * FROM employees';
+	if (fields && fields.length>0)
+		sql = mysql.format('SELECT ?? FROM employees', [fields]);
+	winston.info('SQL for list all:%s',sql);
+	con.query(sql, function(err,rows){
 	  if(err) throw err;
 	  winston.info('Data received from Db:\n');
 	  winston.info( rows );	//JSON.stringify(rows,null,4)
@@ -42,13 +46,10 @@ exports.addEmployee = function( employee , callback ) {
 }
 
 exports.updateEmployee = function( id, changes, callback  ) {
-	var arr = [];
-	arr.push(changes);
-	arr.push(id);
 	// changes.push(id);
 	con.query(
 	  'UPDATE employees SET ? Where ID = ?',
-	  arr,
+	  [changes,id],
 	  function (err, result) {
 		if (err) throw err;
 		winston.info('Changed ' + result.changedRows + ' rows');
