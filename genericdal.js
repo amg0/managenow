@@ -12,29 +12,29 @@ module.exports = function(tablename) {
 			if (fields && fields.length>0)
 				sql = mysql.format('SELECT ?? FROM '+_tablename, [fields]);
 			winston.info('SQL for list all:%s',sql);
-			con.query(sql, function(err,rows){
-			  if(err) throw err;
-			  (callback)(err,rows);
+			con.query(sql, function(error, results, fields){
+			  if(error) throw error;
+			  (callback)(error, results, fields);
 			});					
 		},
 		add : function( con,object , callback ) {
 			delete object.id;
-			con.query('INSERT INTO '+_tablename+' SET ?', object, function(err,result){
-			  if(err) throw err;
-			  winston.info('Added => Last insert ID: %d', result.insertId);
+			con.query('INSERT INTO '+_tablename+' SET ?', object, function(error, results, fields){
+			  if(error) throw error;
+			  winston.info('Added => Last insert ID: %d', results.insertId);
 			  // winston.info(result);
-			  (callback)(err,result);
+			  (callback)(error, results, fields);
 			});	
 		},
 		update : function( con, id, object, callback  ) {
 			con.query(
 			  'UPDATE '+_tablename+' SET ? Where ID = ?',
 			  [object,id],
-			  function (err, result) {
-				if (err) throw err;
-				winston.info('Changed ' + result.changedRows + ' rows');
-				// winston.info(result);
-				(callback)(err,result);
+			  function (error, results, fields) {
+				if(error) throw error;
+				winston.info('Changed ' + results.changedRows + ' rows');
+				// winston.info(results);
+				(callback)(error,results, fields);
 			  }
 			);
 		},
@@ -42,11 +42,11 @@ module.exports = function(tablename) {
 			con.query(
 			  'DELETE FROM '+_tablename+' WHERE id = ?',
 			  [id],
-			  function (err, result) {
-				if (err) throw err;
-				winston.info('Deleted ' + result.affectedRows + ' rows');
-				// winston.info(result);
-				(callback)(err,result);
+			  function (error,results, fields) {
+				if(error) throw error;
+				winston.info('Deleted ' + results.affectedRows + ' rows');
+				// winston.info(results);
+				(callback)(error,results, fields);
 			  }
 			);
 		}
