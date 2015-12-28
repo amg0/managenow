@@ -1,46 +1,13 @@
 // module DAL
-var mysql = require("mysql");		// mysql access
 var winston = require("winston");	// logging functionality
+var mysql = require("mysql");		// mysql access
 var _tablename = null;
 
 module.exports = function(tablename) {
 	_tablename = tablename;
-	this.con = null;
 	
 	return {
-		init : function(callback) {
-			winston.info("initialize GenericDal for table %s",_tablename);
-			// First you need to create a connection to the db
-			con = mysql.createConnection({
-			  host: "localhost",
-			  user: "amg0",
-			  password: "Clem0tine",
-			  database: "testdb"
-			});
-
-			con.connect(function(err){
-			  if(err){
-				winston.error('Error connecting to Db');
-				return;
-			  } else
-				winston.info('connected as id ' + con.threadId);
-			  (callback)(err);
-			});	
-		},
-		exit : function( callback ) {
-			con.end(function(err) {
-				if(err){
-					winston.error('Error happened while disconnecting from Db');
-				} else {
-					winston.info('The connection is terminated gracefully');
-					// Ensures all previously enqueued queries are still
-					// before sending a COM_QUIT packet to the MySQL server.
-				}
-				con=null;
-				(callback)(err);
-			});
-		},
-		listAll : function(fields,callback) {
+		listAll : function(con,fields,callback) {
 			var sql = 'SELECT * FROM '+_tablename;
 			if (fields && fields.length>0)
 				sql = mysql.format('SELECT ?? FROM '+_tablename, [fields]);
@@ -50,7 +17,7 @@ module.exports = function(tablename) {
 			  (callback)(err,rows);
 			});					
 		},
-		add : function( object , callback ) {
+		add : function( con,object , callback ) {
 			delete object.id;
 			con.query('INSERT INTO '+_tablename+' SET ?', object, function(err,result){
 			  if(err) throw err;
@@ -59,7 +26,7 @@ module.exports = function(tablename) {
 			  (callback)(err,result);
 			});	
 		},
-		update : function( id, object, callback  ) {
+		update : function( con, id, object, callback  ) {
 			con.query(
 			  'UPDATE '+_tablename+' SET ? Where ID = ?',
 			  [object,id],
@@ -71,7 +38,7 @@ module.exports = function(tablename) {
 			  }
 			);
 		},
-		destroy : function( id, callback ) {
+		remove : function( con, id, callback ) {
 			con.query(
 			  'DELETE FROM '+_tablename+' WHERE id = ?',
 			  [id],
