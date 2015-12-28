@@ -34,12 +34,12 @@ exports.listAllEmployes = function(fields, callback) {
 		// connected! (unless `err` is set)
 		if (err) {
 			winston.error('Error connecting to Db');
-			(callback)(err,null);
+			(callback)(err);
 		} else {
 			winston.info('connected as id ' + connection.threadId);
-			dalEmployee.listAll(connection, fields, function(err,rows) {
+			dalEmployee.listAll(connection, fields, function(error,results, fields) {
 				connection.release();
-				(callback)(err,rows);
+				(callback)(error,results, fields);
 			});
 		}
 	});
@@ -53,9 +53,9 @@ exports.addEmployee = function( employee , callback ) {
 			(callback)(err,null);
 		} else {
 			winston.info('connected as id ' + connection.threadId);
-			dalEmployee.add(connection, employee , function(err,result) {
+			dalEmployee.add(connection, employee , function(error,results, fields) {
 				connection.release();
-				(callback)(err,result);
+				(callback)(error,results, fields);
 			});
 		}
 	});
@@ -69,9 +69,9 @@ exports.updateEmployee = function( id, changes, callback  ) {
 			(callback)(err,null);
 		} else {
 			winston.info('connected as id ' + connection.threadId);
-			dalEmployee.update(connection, id, changes, function(err,result) {
+			dalEmployee.update(connection, id, changes, function(error,results, fields) {
 				connection.release();
-				(callback)(err,result);
+				(callback)(error,results, fields);
 			});
 		}
 	});
@@ -85,9 +85,9 @@ exports.deleteEmployee = function( id, callback ) {
 			(callback)(err,null);
 		} else {
 			winston.info('connected as id ' + connection.threadId);
-			dalEmployee.remove(connection, id, function(err,result) {
+			dalEmployee.remove(connection, id, function(error,results, fields) {
 				connection.release();
-				(callback)(err,result);
+				(callback)(error,results, fields);
 			});
 		}
 	});
