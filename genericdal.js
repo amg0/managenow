@@ -47,8 +47,6 @@ module.exports = function(tablename) {
 			winston.info('SQL for list all:%s',sql);
 			con.query(sql, function(err,rows){
 			  if(err) throw err;
-			  winston.info('Data received from Db:');
-			  winston.info( rows );	//JSON.stringify(rows,null,4)
 			  (callback)(err,rows);
 			});					
 		},
@@ -57,7 +55,7 @@ module.exports = function(tablename) {
 			con.query('INSERT INTO '+_tablename+' SET ?', object, function(err,result){
 			  if(err) throw err;
 			  winston.info('Added => Last insert ID: %d', result.insertId);
-			  winston.info(result);
+			  // winston.info(result);
 			  (callback)(err,result);
 			});	
 		},
@@ -68,7 +66,7 @@ module.exports = function(tablename) {
 			  function (err, result) {
 				if (err) throw err;
 				winston.info('Changed ' + result.changedRows + ' rows');
-				winston.info(result);
+				// winston.info(result);
 				(callback)(err,result);
 			  }
 			);
@@ -80,7 +78,7 @@ module.exports = function(tablename) {
 			  function (err, result) {
 				if (err) throw err;
 				winston.info('Deleted ' + result.affectedRows + ' rows');
-				winston.info(result);
+				// winston.info(result);
 				(callback)(err,result);
 			  }
 			);

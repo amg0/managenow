@@ -1,5 +1,4 @@
 // module DAL
-var winston = require("winston");	// logging functionality
 var dalEmployee = require("./genericdal")('employees');
 
 exports.init = function(callback) {
