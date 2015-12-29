@@ -10,7 +10,7 @@ exports.init = function(callback) {
 	  connectionLimit : 10,
 	  host: "localhost",
 	  user: "amg0",
-	  password: "Clem0tine",
+	  password: "xxx",
 	  database: "testdb"
 	});
 	(callback)(null);
