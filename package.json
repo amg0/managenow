@@ -1,9 +1,31 @@
 {
-  "name": "node-mysql",
+  "name": "managenow",
   "version": "0.0.1",
+  "description": "Team and Project manager nodejs application",
+  "main": "home.js",
   "dependencies": {
-    "express": "^4.10.6",
-    "mysql": "^2.5.4",
-	"winston": "^2.1.1"
+    "express": "^4.13.3",
+    "mysql": "^2.10.0",
+    "winston": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mysql.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amg0/managenow.git"
+  },
+  "keywords": [
+    "Project",
+    "Team",
+    "nodejs",
+    "node",
+    "mysql"
+  ],
+  "author": "amg0",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amg0/managenow/issues"
   }
 }
