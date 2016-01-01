@@ -22,5 +22,3 @@ var server = app.listen(3000,function() {
 	var port = server.address().port;
 	winston.info('Example app listening at http://%s:%s', host, port);
 });
-
-
