@@ -4,6 +4,7 @@ winston.add(winston.transports.File, { filename: 'output.log' });
 var express = require("express");	// express
 var app = express();
 
+// default page
 app.get('/', function(req,res) {
 	res.send("Hello World");
 	dal.init( function(err) {
