@@ -1,0 +1,671 @@
+{"level":"info","message":"connected as id 96","timestamp":"2015-12-27T22:49:03.358Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T22:49:03.365Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"level":"info","message":"","timestamp":"2015-12-27T22:49:03.365Z"}
+{"level":"info","message":"Added => Last insert ID: 5","timestamp":"2015-12-27T22:49:03.652Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":5,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T22:49:03.653Z"}
+{"level":"info","message":"connected as id 98","timestamp":"2015-12-27T22:49:48.359Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T22:49:48.365Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"level":"info","message":"","timestamp":"2015-12-27T22:49:48.366Z"}
+{"level":"info","message":"Added => Last insert ID: 5","timestamp":"2015-12-27T22:49:48.369Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":5,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T22:49:48.370Z"}
+{"level":"info","message":"connected as id 99","timestamp":"2015-12-27T22:52:57.355Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T22:52:57.362Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T22:52:57.363Z"}
+{"level":"info","message":"Added => Last insert ID: 6","timestamp":"2015-12-27T22:52:57.676Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":6,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T22:52:57.678Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T22:52:57.680Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":6,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T22:52:57.680Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-27T22:52:57.683Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"(Rows matched: 1  Changed: 1  Warnings: 0","protocol41":true,"changedRows":1,"level":"info","timestamp":"2015-12-27T22:52:57.683Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T22:52:57.684Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":6,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-27T22:52:57.684Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-27T22:52:57.686Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T22:52:57.686Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T22:52:57.687Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T22:52:57.687Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-27T22:52:57.688Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-27T22:52:57.689Z"}
+{"level":"info","message":"connected as id 100","timestamp":"2015-12-27T23:06:27.123Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:06:27.130Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T23:06:27.130Z"}
+{"level":"info","message":"Added => Last insert ID: 7","timestamp":"2015-12-27T23:06:27.428Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":7,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:06:27.429Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:06:27.430Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":7,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T23:06:27.430Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-27T23:06:27.466Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"(Rows matched: 1  Changed: 1  Warnings: 0","protocol41":true,"changedRows":1,"level":"info","timestamp":"2015-12-27T23:06:27.466Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:06:27.467Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":7,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-27T23:06:27.467Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-27T23:06:27.469Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:06:27.470Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:06:27.471Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T23:06:27.471Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-27T23:06:27.472Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-27T23:06:27.473Z"}
+{"level":"info","message":"connected as id 101","timestamp":"2015-12-27T23:09:26.191Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:09:26.198Z"}
+{"0":{"name":"name"},"1":{"name":"name"},"2":{"name":"name"},"3":{"name":"name"},"4":{"name":"name"},"level":"info","message":"","timestamp":"2015-12-27T23:09:26.198Z"}
+{"level":"info","message":"Added => Last insert ID: 8","timestamp":"2015-12-27T23:09:26.202Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":8,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:09:26.202Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:09:26.203Z"}
+{"0":{"*":"*"},"1":{"*":"*"},"2":{"*":"*"},"3":{"*":"*"},"4":{"*":"*"},"5":{"*":"*"},"level":"info","message":"","timestamp":"2015-12-27T23:09:26.203Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-27T23:09:26.205Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"(Rows matched: 1  Changed: 1  Warnings: 0","protocol41":true,"changedRows":1,"level":"info","timestamp":"2015-12-27T23:09:26.205Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:09:26.206Z"}
+{"0":{"*":"*"},"1":{"*":"*"},"2":{"*":"*"},"3":{"*":"*"},"4":{"*":"*"},"5":{"*":"*"},"level":"info","message":"","timestamp":"2015-12-27T23:09:26.206Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-27T23:09:26.207Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:09:26.207Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:09:26.208Z"}
+{"0":{"*":"*"},"1":{"*":"*"},"2":{"*":"*"},"3":{"*":"*"},"4":{"*":"*"},"level":"info","message":"","timestamp":"2015-12-27T23:09:26.208Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-27T23:09:26.210Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-27T23:09:26.210Z"}
+{"level":"info","message":"connected as id 102","timestamp":"2015-12-27T23:09:48.927Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:09:48.934Z"}
+{"0":{"name":"name"},"1":{"name":"name"},"2":{"name":"name"},"3":{"name":"name"},"4":{"name":"name"},"level":"info","message":"","timestamp":"2015-12-27T23:09:48.934Z"}
+{"level":"info","message":"Added => Last insert ID: 9","timestamp":"2015-12-27T23:09:49.225Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":9,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:09:49.227Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:09:49.230Z"}
+{"0":{"*":"*"},"1":{"*":"*"},"2":{"*":"*"},"3":{"*":"*"},"4":{"*":"*"},"5":{"*":"*"},"level":"info","message":"","timestamp":"2015-12-27T23:09:49.231Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-27T23:09:49.237Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"(Rows matched: 1  Changed: 1  Warnings: 0","protocol41":true,"changedRows":1,"level":"info","timestamp":"2015-12-27T23:09:49.237Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:09:49.237Z"}
+{"0":{"*":"*"},"1":{"*":"*"},"2":{"*":"*"},"3":{"*":"*"},"4":{"*":"*"},"5":{"*":"*"},"level":"info","message":"","timestamp":"2015-12-27T23:09:49.237Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-27T23:09:49.240Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:09:49.241Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:09:49.241Z"}
+{"0":{"*":"*"},"1":{"*":"*"},"2":{"*":"*"},"3":{"*":"*"},"4":{"*":"*"},"level":"info","message":"","timestamp":"2015-12-27T23:09:49.241Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-27T23:09:49.243Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-27T23:09:49.243Z"}
+{"level":"info","message":"connected as id 103","timestamp":"2015-12-27T23:11:56.897Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:11:56.904Z"}
+{"0":{"name":"name"},"1":{"name":"name"},"2":{"name":"name"},"3":{"name":"name"},"4":{"name":"name"},"level":"info","message":"","timestamp":"2015-12-27T23:11:56.904Z"}
+{"level":"info","message":"Added => Last insert ID: 10","timestamp":"2015-12-27T23:11:57.186Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":10,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:11:57.188Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:11:57.192Z"}
+{"0":{"*":"*"},"1":{"*":"*"},"2":{"*":"*"},"3":{"*":"*"},"4":{"*":"*"},"5":{"*":"*"},"level":"info","message":"","timestamp":"2015-12-27T23:11:57.193Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-27T23:11:57.201Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"(Rows matched: 1  Changed: 1  Warnings: 0","protocol41":true,"changedRows":1,"level":"info","timestamp":"2015-12-27T23:11:57.201Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:11:57.202Z"}
+{"0":{"*":"*"},"1":{"*":"*"},"2":{"*":"*"},"3":{"*":"*"},"4":{"*":"*"},"5":{"*":"*"},"level":"info","message":"","timestamp":"2015-12-27T23:11:57.202Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-27T23:11:57.221Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:11:57.221Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:11:57.222Z"}
+{"0":{"*":"*"},"1":{"*":"*"},"2":{"*":"*"},"3":{"*":"*"},"4":{"*":"*"},"level":"info","message":"","timestamp":"2015-12-27T23:11:57.222Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-27T23:11:57.223Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-27T23:11:57.224Z"}
+{"level":"info","message":"connected as id 104","timestamp":"2015-12-27T23:12:11.677Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:12:11.683Z"}
+{"0":{"name":"name"},"1":{"name":"name"},"2":{"name":"name"},"3":{"name":"name"},"4":{"name":"name"},"level":"info","message":"","timestamp":"2015-12-27T23:12:11.684Z"}
+{"level":"info","message":"Added => Last insert ID: 11","timestamp":"2015-12-27T23:12:11.687Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":11,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:12:11.688Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:12:11.689Z"}
+{"0":{"*":"*"},"1":{"*":"*"},"2":{"*":"*"},"3":{"*":"*"},"4":{"*":"*"},"5":{"*":"*"},"level":"info","message":"","timestamp":"2015-12-27T23:12:11.689Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-27T23:12:11.696Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"(Rows matched: 1  Changed: 1  Warnings: 0","protocol41":true,"changedRows":1,"level":"info","timestamp":"2015-12-27T23:12:11.696Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:12:11.697Z"}
+{"0":{"*":"*"},"1":{"*":"*"},"2":{"*":"*"},"3":{"*":"*"},"4":{"*":"*"},"5":{"*":"*"},"level":"info","message":"","timestamp":"2015-12-27T23:12:11.697Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-27T23:12:11.699Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:12:11.699Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:12:11.700Z"}
+{"0":{"*":"*"},"1":{"*":"*"},"2":{"*":"*"},"3":{"*":"*"},"4":{"*":"*"},"level":"info","message":"","timestamp":"2015-12-27T23:12:11.700Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-27T23:12:11.701Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-27T23:12:11.702Z"}
+{"level":"info","message":"connected as id 105","timestamp":"2015-12-27T23:12:38.298Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:12:38.305Z"}
+{"0":{"name":"name"},"1":{"name":"name"},"2":{"name":"name"},"3":{"name":"name"},"4":{"name":"name"},"level":"info","message":"","timestamp":"2015-12-27T23:12:38.306Z"}
+{"level":"info","message":"Added => Last insert ID: 12","timestamp":"2015-12-27T23:12:38.596Z"}
+{"level":"info","message":"connected as id 107","timestamp":"2015-12-27T23:14:58.030Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:14:58.036Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T23:14:58.037Z"}
+{"level":"info","message":"Added => Last insert ID: 13","timestamp":"2015-12-27T23:14:58.042Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":13,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:14:58.042Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:14:58.042Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":13,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T23:14:58.043Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-27T23:14:58.044Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"(Rows matched: 1  Changed: 1  Warnings: 0","protocol41":true,"changedRows":1,"level":"info","timestamp":"2015-12-27T23:14:58.044Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:14:58.045Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":13,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-27T23:14:58.045Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-27T23:14:58.050Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:14:58.050Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:14:58.051Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T23:14:58.051Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-27T23:14:58.053Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-27T23:14:58.053Z"}
+{"level":"info","message":"connected as id 108","timestamp":"2015-12-27T23:19:39.090Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:19:39.097Z"}
+{"0":{"name":"Jasmine"},"1":{"name":"Jay"},"2":{"name":"Jim"},"3":{"name":"Lesley"},"4":{"name":"Winnie"},"5":{"name":"Winnie"},"level":"info","message":"","timestamp":"2015-12-27T23:19:39.097Z"}
+{"level":"info","message":"Added => Last insert ID: 14","timestamp":"2015-12-27T23:19:39.407Z"}
+{"level":"info","message":"connected as id 109","timestamp":"2015-12-27T23:21:26.210Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:21:26.216Z"}
+{"0":{"name":"Jasmine"},"1":{"name":"Jay"},"2":{"name":"Jim"},"3":{"name":"Lesley"},"4":{"name":"Winnie"},"5":{"name":"Winnie"},"6":{"name":"Winnie"},"level":"info","message":"","timestamp":"2015-12-27T23:21:26.217Z"}
+{"level":"info","message":"Added => Last insert ID: 15","timestamp":"2015-12-27T23:21:26.220Z"}
+{"level":"info","message":"connected as id 110","timestamp":"2015-12-27T23:23:50.835Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:23:50.842Z"}
+{"0":{"name":"Jasmine"},"1":{"name":"Jay"},"2":{"name":"Jim"},"3":{"name":"Lesley"},"4":{"name":"Winnie"},"5":{"name":"Winnie"},"6":{"name":"Winnie"},"7":{"name":"Winnie"},"level":"info","message":"","timestamp":"2015-12-27T23:23:50.842Z"}
+{"level":"info","message":"Added => Last insert ID: 16","timestamp":"2015-12-27T23:23:51.125Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":16,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:23:51.125Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:23:51.127Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":14,"name":"Winnie","location":"Australia"},"7":{"id":15,"name":"Winnie","location":"Australia"},"8":{"id":16,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T23:23:51.127Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-27T23:23:51.130Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"(Rows matched: 1  Changed: 1  Warnings: 0","protocol41":true,"changedRows":1,"level":"info","timestamp":"2015-12-27T23:23:51.130Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:23:51.130Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":14,"name":"Winnie","location":"Australia"},"7":{"id":15,"name":"Winnie","location":"Australia"},"8":{"id":16,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-27T23:23:51.131Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-27T23:23:51.133Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:23:51.133Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:23:51.134Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":14,"name":"Winnie","location":"Australia"},"7":{"id":15,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T23:23:51.134Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-27T23:23:51.136Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-27T23:23:51.136Z"}
+{"level":"info","message":"connected as id 111","timestamp":"2015-12-27T23:24:50.782Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:24:50.789Z"}
+{"0":{"id":1},"1":{"id":2},"2":{"id":3},"3":{"id":4},"4":{"id":5},"5":{"id":12},"6":{"id":14},"7":{"id":15},"level":"info","message":"","timestamp":"2015-12-27T23:24:50.789Z"}
+{"level":"info","message":"Added => Last insert ID: 17","timestamp":"2015-12-27T23:24:50.793Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":17,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:24:50.793Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:24:50.794Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":14,"name":"Winnie","location":"Australia"},"7":{"id":15,"name":"Winnie","location":"Australia"},"8":{"id":17,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T23:24:50.794Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-27T23:24:50.802Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"(Rows matched: 1  Changed: 1  Warnings: 0","protocol41":true,"changedRows":1,"level":"info","timestamp":"2015-12-27T23:24:50.802Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:24:50.803Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":14,"name":"Winnie","location":"Australia"},"7":{"id":15,"name":"Winnie","location":"Australia"},"8":{"id":17,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-27T23:24:50.803Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-27T23:24:50.805Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:24:50.805Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:24:50.806Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":14,"name":"Winnie","location":"Australia"},"7":{"id":15,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T23:24:50.806Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-27T23:24:50.808Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-27T23:24:50.808Z"}
+{"level":"info","message":"connected as id 112","timestamp":"2015-12-27T23:26:36.331Z"}
+{"level":"info","message":"SQL for list all:SELECT `id` FROM employees","timestamp":"2015-12-27T23:26:36.340Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:26:36.343Z"}
+{"0":{"id":1},"1":{"id":2},"2":{"id":3},"3":{"id":4},"4":{"id":5},"5":{"id":12},"6":{"id":14},"7":{"id":15},"level":"info","message":"","timestamp":"2015-12-27T23:26:36.344Z"}
+{"level":"info","message":"Added => Last insert ID: 18","timestamp":"2015-12-27T23:26:36.407Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":18,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:26:36.408Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-27T23:26:36.408Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:26:36.409Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":14,"name":"Winnie","location":"Australia"},"7":{"id":15,"name":"Winnie","location":"Australia"},"8":{"id":18,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T23:26:36.410Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-27T23:26:36.414Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"(Rows matched: 1  Changed: 1  Warnings: 0","protocol41":true,"changedRows":1,"level":"info","timestamp":"2015-12-27T23:26:36.414Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-27T23:26:36.415Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:26:36.416Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":14,"name":"Winnie","location":"Australia"},"7":{"id":15,"name":"Winnie","location":"Australia"},"8":{"id":18,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-27T23:26:36.416Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-27T23:26:36.419Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:26:36.420Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-27T23:26:36.420Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:26:36.421Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":14,"name":"Winnie","location":"Australia"},"7":{"id":15,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T23:26:36.422Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-27T23:26:36.425Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-27T23:26:36.425Z"}
+{"level":"info","message":"connected as id 113","timestamp":"2015-12-27T23:27:12.887Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-27T23:27:12.896Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:27:12.900Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"4":{"id":5,"name":"Winnie"},"5":{"id":12,"name":"Winnie"},"6":{"id":14,"name":"Winnie"},"7":{"id":15,"name":"Winnie"},"level":"info","message":"","timestamp":"2015-12-27T23:27:12.900Z"}
+{"level":"info","message":"Added => Last insert ID: 19","timestamp":"2015-12-27T23:27:13.189Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":19,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:27:13.190Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-27T23:27:13.191Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:27:13.192Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":14,"name":"Winnie","location":"Australia"},"7":{"id":15,"name":"Winnie","location":"Australia"},"8":{"id":19,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T23:27:13.192Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-27T23:27:13.226Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"(Rows matched: 1  Changed: 1  Warnings: 0","protocol41":true,"changedRows":1,"level":"info","timestamp":"2015-12-27T23:27:13.226Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-27T23:27:13.227Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:27:13.228Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":14,"name":"Winnie","location":"Australia"},"7":{"id":15,"name":"Winnie","location":"Australia"},"8":{"id":19,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-27T23:27:13.228Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-27T23:27:13.232Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-27T23:27:13.232Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-27T23:27:13.233Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-27T23:27:13.234Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":14,"name":"Winnie","location":"Australia"},"7":{"id":15,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-27T23:27:13.234Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-27T23:27:13.237Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-27T23:27:13.238Z"}
+{"level":"info","message":"connected as id 40","timestamp":"2015-12-28T13:14:33.219Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-28T13:14:33.220Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-28T13:14:33.222Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"4":{"id":5,"name":"Winnie"},"5":{"id":12,"name":"Winnie"},"6":{"id":14,"name":"Winnie"},"7":{"id":15,"name":"Winnie"},"level":"info","message":"","timestamp":"2015-12-28T13:14:33.223Z"}
+{"level":"info","message":"Added => Last insert ID: 16","timestamp":"2015-12-28T13:14:33.518Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":16,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-28T13:14:33.518Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:14:33.518Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-28T13:14:33.519Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":14,"name":"Winnie","location":"Australia"},"7":{"id":15,"name":"Winnie","location":"Australia"},"8":{"id":16,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-28T13:14:33.520Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-28T13:14:33.540Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"(Rows matched: 1  Changed: 1  Warnings: 0","protocol41":true,"changedRows":1,"level":"info","timestamp":"2015-12-28T13:14:33.541Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:14:33.541Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-28T13:14:33.542Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":14,"name":"Winnie","location":"Australia"},"7":{"id":15,"name":"Winnie","location":"Australia"},"8":{"id":16,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-28T13:14:33.542Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-28T13:14:33.543Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-28T13:14:33.543Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:14:33.544Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-28T13:14:33.544Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"5":{"id":12,"name":"Winnie","location":"Australia"},"6":{"id":14,"name":"Winnie","location":"Australia"},"7":{"id":15,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-28T13:14:33.545Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-28T13:14:33.546Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-28T13:14:33.546Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2015-12-28T13:16:09.163Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-28T13:16:09.165Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-28T13:16:09.167Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"level":"info","message":"","timestamp":"2015-12-28T13:16:09.167Z"}
+{"level":"info","message":"Added => Last insert ID: 5","timestamp":"2015-12-28T13:16:09.174Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":5,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-28T13:16:09.174Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:16:09.174Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-28T13:16:09.175Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-28T13:16:09.175Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-28T13:16:09.178Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"(Rows matched: 1  Changed: 1  Warnings: 0","protocol41":true,"changedRows":1,"level":"info","timestamp":"2015-12-28T13:16:09.179Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:16:09.179Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-28T13:16:09.179Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-28T13:16:09.179Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-28T13:16:09.181Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-28T13:16:09.181Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:16:09.181Z"}
+{"level":"info","message":"Data received from Db:\n","timestamp":"2015-12-28T13:16:09.181Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"level":"info","message":"","timestamp":"2015-12-28T13:16:09.181Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-28T13:16:09.183Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-28T13:16:09.183Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2015-12-28T13:17:08.504Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-28T13:17:08.506Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T13:17:08.508Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"level":"info","message":"","timestamp":"2015-12-28T13:17:08.508Z"}
+{"level":"info","message":"Added => Last insert ID: 6","timestamp":"2015-12-28T13:17:08.788Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":6,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-28T13:17:08.788Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:17:08.789Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T13:17:08.790Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":6,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-28T13:17:08.790Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-28T13:17:08.793Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"(Rows matched: 1  Changed: 1  Warnings: 0","protocol41":true,"changedRows":1,"level":"info","timestamp":"2015-12-28T13:17:08.793Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:17:08.793Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T13:17:08.794Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":6,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-28T13:17:08.794Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-28T13:17:08.796Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-28T13:17:08.796Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:17:08.797Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T13:17:08.797Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"level":"info","message":"","timestamp":"2015-12-28T13:17:08.797Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-28T13:17:08.799Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-28T13:17:08.799Z"}
+{"level":"info","message":"initialize GenericDal for table undefined","timestamp":"2015-12-28T13:25:06.029Z"}
+{"level":"info","message":"connected as id 48","timestamp":"2015-12-28T13:25:06.072Z"}
+{"level":"info","message":"initialize GenericDal for table Employee","timestamp":"2015-12-28T13:29:49.190Z"}
+{"level":"info","message":"connected as id 49","timestamp":"2015-12-28T13:29:49.233Z"}
+{"level":"info","message":"initialize GenericDal for table employee","timestamp":"2015-12-28T13:30:22.901Z"}
+{"level":"info","message":"connected as id 50","timestamp":"2015-12-28T13:30:22.944Z"}
+{"level":"info","message":"initialize GenericDal for table employee","timestamp":"2015-12-28T13:30:48.120Z"}
+{"level":"info","message":"connected as id 52","timestamp":"2015-12-28T13:30:48.164Z"}
+{"level":"info","message":"initialize GenericDal for table employees","timestamp":"2015-12-28T13:36:06.355Z"}
+{"level":"info","message":"connected as id 53","timestamp":"2015-12-28T13:36:06.398Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-28T13:36:06.399Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T13:36:06.401Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"level":"info","message":"","timestamp":"2015-12-28T13:36:06.401Z"}
+{"level":"info","message":"Added => Last insert ID: 5","timestamp":"2015-12-28T13:36:06.697Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":5,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-28T13:36:06.698Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:36:06.703Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T13:36:06.704Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-28T13:36:06.704Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-28T13:36:06.708Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"(Rows matched: 1  Changed: 1  Warnings: 0","protocol41":true,"changedRows":1,"level":"info","timestamp":"2015-12-28T13:36:06.708Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:36:06.708Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T13:36:06.709Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-28T13:36:06.709Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-28T13:36:06.711Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2015-12-28T13:36:06.712Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:36:06.712Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T13:36:06.712Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"level":"info","message":"","timestamp":"2015-12-28T13:36:06.713Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-28T13:36:06.714Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-28T13:36:06.714Z"}
+{"level":"info","message":"initialize GenericDal for table employees","timestamp":"2015-12-28T13:42:19.506Z"}
+{"level":"info","message":"connected as id 54","timestamp":"2015-12-28T13:42:19.550Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-28T13:42:19.551Z"}
+{"level":"info","message":"Added => Last insert ID: 6","timestamp":"2015-12-28T13:42:19.839Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:42:19.839Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-28T13:42:19.842Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:42:19.842Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-28T13:42:19.850Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:42:19.850Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-28T13:42:19.851Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-28T13:42:19.852Z"}
+{"level":"info","message":"initialize GenericDal for table employees","timestamp":"2015-12-28T13:43:46.158Z"}
+{"level":"info","message":"connected as id 55","timestamp":"2015-12-28T13:43:46.201Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-28T13:43:46.202Z"}
+{"level":"info","message":"Added => Last insert ID: 7","timestamp":"2015-12-28T13:43:46.486Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:43:46.492Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-28T13:43:46.495Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:43:46.495Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-28T13:43:46.498Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:43:46.498Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-28T13:43:46.499Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-28T13:43:46.500Z"}
+{"level":"info","message":"initialize GenericDal for table employees","timestamp":"2015-12-28T13:46:18.678Z"}
+{"level":"info","message":"connected as id 56","timestamp":"2015-12-28T13:46:18.722Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-28T13:46:18.723Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T13:46:18.725Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"level":"info","message":"","timestamp":"2015-12-28T13:46:18.725Z"}
+{"level":"info","message":"Added => Last insert ID: 8","timestamp":"2015-12-28T13:46:18.733Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:46:18.733Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T13:46:18.734Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":8,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-28T13:46:18.734Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-28T13:46:18.737Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:46:18.737Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T13:46:18.737Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":8,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-28T13:46:18.738Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-28T13:46:18.740Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:46:18.740Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T13:46:18.740Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"level":"info","message":"","timestamp":"2015-12-28T13:46:18.740Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-28T13:46:18.742Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-28T13:46:18.742Z"}
+{"level":"info","message":"initialize GenericDal for table employees","timestamp":"2015-12-28T13:47:26.683Z"}
+{"level":"info","message":"connected as id 57","timestamp":"2015-12-28T13:47:26.726Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-28T13:47:26.727Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T13:47:26.729Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"level":"info","message":"","timestamp":"2015-12-28T13:47:26.729Z"}
+{"level":"info","message":"Added => Last insert ID: 9","timestamp":"2015-12-28T13:47:26.736Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:47:26.737Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T13:47:26.737Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":9,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-28T13:47:26.738Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-28T13:47:26.745Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:47:26.745Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T13:47:26.745Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":9,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-28T13:47:26.746Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-28T13:47:26.748Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T13:47:26.748Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T13:47:26.748Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"level":"info","message":"","timestamp":"2015-12-28T13:47:26.749Z"}
+{"level":"info","message":"The connection is terminated gracefully","timestamp":"2015-12-28T13:47:26.750Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-28T13:47:26.750Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2015-12-28T14:16:15.837Z"}
+{"level":"info","message":"connected as id 58","timestamp":"2015-12-28T14:16:16.158Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-28T14:16:16.164Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:16:16.166Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"level":"info","message":"","timestamp":"2015-12-28T14:16:16.166Z"}
+{"level":"info","message":"connected as id 58","timestamp":"2015-12-28T14:16:16.167Z"}
+{"level":"info","message":"Added => Last insert ID: 10","timestamp":"2015-12-28T14:16:16.170Z"}
+{"level":"info","message":"connected as id 58","timestamp":"2015-12-28T14:16:16.171Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:16:16.171Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:16:16.172Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":10,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-28T14:16:16.172Z"}
+{"level":"info","message":"connected as id 58","timestamp":"2015-12-28T14:16:16.173Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-28T14:16:16.175Z"}
+{"level":"info","message":"connected as id 58","timestamp":"2015-12-28T14:16:16.176Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:16:16.176Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:16:16.176Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":10,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-28T14:16:16.177Z"}
+{"level":"info","message":"connected as id 58","timestamp":"2015-12-28T14:16:16.177Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-28T14:16:16.179Z"}
+{"level":"info","message":"connected as id 58","timestamp":"2015-12-28T14:16:16.179Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:16:16.180Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:16:16.180Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"level":"info","message":"","timestamp":"2015-12-28T14:16:16.180Z"}
+{"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2015-12-28T14:16:16.182Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-28T14:16:16.182Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2015-12-28T14:18:49.834Z"}
+{"level":"info","message":"connected as id 59","timestamp":"2015-12-28T14:18:49.880Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-28T14:18:49.887Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:18:49.889Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"level":"info","message":"","timestamp":"2015-12-28T14:18:49.890Z"}
+{"level":"info","message":"connected as id 59","timestamp":"2015-12-28T14:18:49.891Z"}
+{"level":"info","message":"Added => Last insert ID: 11","timestamp":"2015-12-28T14:18:50.169Z"}
+{"level":"info","message":"connected as id 59","timestamp":"2015-12-28T14:18:50.170Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:18:50.170Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:18:50.171Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":11,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-28T14:18:50.171Z"}
+{"level":"info","message":"connected as id 59","timestamp":"2015-12-28T14:18:50.172Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-28T14:18:50.174Z"}
+{"level":"info","message":"connected as id 59","timestamp":"2015-12-28T14:18:50.175Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:18:50.175Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:18:50.175Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":11,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-28T14:18:50.176Z"}
+{"level":"info","message":"connected as id 59","timestamp":"2015-12-28T14:18:50.176Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-28T14:18:50.178Z"}
+{"level":"info","message":"connected as id 59","timestamp":"2015-12-28T14:18:50.178Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:18:50.179Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:18:50.179Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"level":"info","message":"","timestamp":"2015-12-28T14:18:50.180Z"}
+{"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2015-12-28T14:18:50.181Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-28T14:18:50.181Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2015-12-28T14:24:20.555Z"}
+{"level":"info","message":"connected as id 60","timestamp":"2015-12-28T14:24:20.600Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2015-12-28T14:25:00.637Z"}
+{"level":"info","message":"connected as id 61","timestamp":"2015-12-28T14:25:00.683Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-28T14:25:00.689Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:25:00.691Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"level":"info","message":"","timestamp":"2015-12-28T14:25:00.692Z"}
+{"level":"info","message":"connected as id 61","timestamp":"2015-12-28T14:25:00.693Z"}
+{"level":"info","message":"Added => Last insert ID: 12","timestamp":"2015-12-28T14:25:00.735Z"}
+{"level":"info","message":"connected as id 61","timestamp":"2015-12-28T14:25:00.736Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:25:00.736Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:25:00.737Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-28T14:25:00.737Z"}
+{"level":"info","message":"connected as id 61","timestamp":"2015-12-28T14:25:00.738Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-28T14:25:00.740Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2015-12-28T14:25:11.242Z"}
+{"level":"info","message":"connected as id 62","timestamp":"2015-12-28T14:25:11.289Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-28T14:25:11.294Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:25:11.296Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"4":{"id":12,"name":"Winnie"},"level":"info","message":"","timestamp":"2015-12-28T14:25:11.297Z"}
+{"level":"info","message":"connected as id 62","timestamp":"2015-12-28T14:25:11.298Z"}
+{"level":"info","message":"Added => Last insert ID: 13","timestamp":"2015-12-28T14:25:11.301Z"}
+{"level":"info","message":"connected as id 62","timestamp":"2015-12-28T14:25:11.301Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:25:11.302Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:25:11.302Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-28T14:25:11.302Z"}
+{"level":"info","message":"connected as id 62","timestamp":"2015-12-28T14:25:11.303Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-28T14:25:11.305Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2015-12-28T14:25:34.620Z"}
+{"level":"info","message":"connected as id 63","timestamp":"2015-12-28T14:25:34.667Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-28T14:25:34.672Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:25:34.675Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"4":{"id":12,"name":"Winnie"},"5":{"id":13,"name":"Winnie"},"level":"info","message":"","timestamp":"2015-12-28T14:25:34.675Z"}
+{"level":"info","message":"connected as id 63","timestamp":"2015-12-28T14:25:34.676Z"}
+{"level":"info","message":"Added => Last insert ID: 14","timestamp":"2015-12-28T14:25:34.963Z"}
+{"level":"info","message":"connected as id 63","timestamp":"2015-12-28T14:25:34.964Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:25:34.964Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:25:34.965Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"6":{"id":14,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-28T14:25:34.965Z"}
+{"level":"info","message":"connected as id 63","timestamp":"2015-12-28T14:25:34.966Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-28T14:25:34.969Z"}
+{"level":"info","message":"connected as id 63","timestamp":"2015-12-28T14:25:34.969Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:25:34.969Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:25:34.970Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"6":{"id":14,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-28T14:25:34.970Z"}
+{"level":"info","message":"connected as id 63","timestamp":"2015-12-28T14:25:34.971Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-28T14:25:34.973Z"}
+{"level":"info","message":"connected as id 63","timestamp":"2015-12-28T14:25:34.973Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:25:34.973Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:25:34.974Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-28T14:25:34.974Z"}
+{"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2015-12-28T14:25:34.976Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-28T14:25:34.976Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2015-12-28T14:26:54.376Z"}
+{"level":"info","message":"connected as id 64","timestamp":"2015-12-28T14:26:54.420Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-28T14:26:54.424Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:26:54.427Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"4":{"id":12,"name":"Winnie"},"5":{"id":13,"name":"Winnie"},"level":"info","message":"","timestamp":"2015-12-28T14:26:54.427Z"}
+{"level":"info","message":"connected as id 64","timestamp":"2015-12-28T14:26:54.428Z"}
+{"level":"info","message":"Added => Last insert ID: 15","timestamp":"2015-12-28T14:26:54.743Z"}
+{"level":"info","message":"connected as id 64","timestamp":"2015-12-28T14:26:54.744Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:26:54.744Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:26:54.745Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"6":{"id":15,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-28T14:26:54.745Z"}
+{"level":"info","message":"connected as id 64","timestamp":"2015-12-28T14:26:54.746Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-28T14:26:54.749Z"}
+{"level":"info","message":"connected as id 64","timestamp":"2015-12-28T14:26:54.749Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:26:54.749Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:26:54.750Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"6":{"id":15,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-28T14:26:54.750Z"}
+{"level":"info","message":"connected as id 64","timestamp":"2015-12-28T14:26:54.751Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-28T14:26:54.753Z"}
+{"level":"info","message":"connected as id 64","timestamp":"2015-12-28T14:26:54.754Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:26:54.754Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:26:54.755Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-28T14:26:54.755Z"}
+{"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2015-12-28T14:26:54.756Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-28T14:26:54.756Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2015-12-28T14:27:07.126Z"}
+{"level":"info","message":"connected as id 65","timestamp":"2015-12-28T14:27:07.171Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-28T14:27:07.176Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:27:07.178Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"4":{"id":12,"name":"Winnie"},"5":{"id":13,"name":"Winnie"},"level":"info","message":"","timestamp":"2015-12-28T14:27:07.179Z"}
+{"level":"info","message":"connected as id 65","timestamp":"2015-12-28T14:27:07.180Z"}
+{"level":"info","message":"Added => Last insert ID: 16","timestamp":"2015-12-28T14:27:07.453Z"}
+{"level":"info","message":"connected as id 65","timestamp":"2015-12-28T14:27:07.453Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:27:07.453Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:27:07.454Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"6":{"id":16,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-28T14:27:07.454Z"}
+{"level":"info","message":"connected as id 65","timestamp":"2015-12-28T14:27:07.455Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-28T14:27:07.457Z"}
+{"level":"info","message":"connected as id 65","timestamp":"2015-12-28T14:27:07.458Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:27:07.458Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:27:07.459Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"6":{"id":16,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-28T14:27:07.459Z"}
+{"level":"info","message":"connected as id 65","timestamp":"2015-12-28T14:27:07.460Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-28T14:27:07.462Z"}
+{"level":"info","message":"connected as id 65","timestamp":"2015-12-28T14:27:07.462Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:27:07.462Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:27:07.463Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-28T14:27:07.463Z"}
+{"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2015-12-28T14:27:07.465Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-28T14:27:07.465Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2015-12-28T14:27:12.640Z"}
+{"level":"info","message":"connected as id 66","timestamp":"2015-12-28T14:27:12.685Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-28T14:27:12.691Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:27:12.693Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"4":{"id":12,"name":"Winnie"},"5":{"id":13,"name":"Winnie"},"level":"info","message":"","timestamp":"2015-12-28T14:27:12.694Z"}
+{"level":"info","message":"connected as id 66","timestamp":"2015-12-28T14:27:12.695Z"}
+{"level":"info","message":"Added => Last insert ID: 17","timestamp":"2015-12-28T14:27:12.963Z"}
+{"level":"info","message":"connected as id 66","timestamp":"2015-12-28T14:27:12.964Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:27:12.964Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:27:12.965Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"6":{"id":17,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-28T14:27:12.965Z"}
+{"level":"info","message":"connected as id 66","timestamp":"2015-12-28T14:27:12.965Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-28T14:27:12.968Z"}
+{"level":"info","message":"connected as id 66","timestamp":"2015-12-28T14:27:12.968Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:27:12.968Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:27:12.969Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"6":{"id":17,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-28T14:27:12.969Z"}
+{"level":"info","message":"connected as id 66","timestamp":"2015-12-28T14:27:12.970Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-28T14:27:12.972Z"}
+{"level":"info","message":"connected as id 66","timestamp":"2015-12-28T14:27:12.972Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-28T14:27:12.972Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-28T14:27:12.973Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-28T14:27:12.973Z"}
+{"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2015-12-28T14:27:12.975Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-28T14:27:12.975Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2015-12-29T12:36:18.756Z"}
+{"level":"info","message":"connected as id 39","timestamp":"2015-12-29T12:36:18.907Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2015-12-29T12:36:18.915Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-29T12:36:18.932Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"4":{"id":12,"name":"Winnie"},"5":{"id":13,"name":"Winnie"},"level":"info","message":"","timestamp":"2015-12-29T12:36:18.932Z"}
+{"level":"info","message":"connected as id 39","timestamp":"2015-12-29T12:36:18.934Z"}
+{"level":"info","message":"Added => Last insert ID: 14","timestamp":"2015-12-29T12:36:18.972Z"}
+{"level":"info","message":"connected as id 39","timestamp":"2015-12-29T12:36:18.974Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-29T12:36:18.974Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-29T12:36:18.975Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"6":{"id":14,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2015-12-29T12:36:18.976Z"}
+{"level":"info","message":"connected as id 39","timestamp":"2015-12-29T12:36:18.977Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2015-12-29T12:36:19.003Z"}
+{"level":"info","message":"connected as id 39","timestamp":"2015-12-29T12:36:19.004Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-29T12:36:19.004Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-29T12:36:19.005Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"6":{"id":14,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-29T12:36:19.005Z"}
+{"level":"info","message":"connected as id 39","timestamp":"2015-12-29T12:36:19.006Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2015-12-29T12:36:19.010Z"}
+{"level":"info","message":"connected as id 39","timestamp":"2015-12-29T12:36:19.010Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2015-12-29T12:36:19.011Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2015-12-29T12:36:19.012Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2015-12-29T12:36:19.012Z"}
+{"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2015-12-29T12:36:19.022Z"}
+{"level":"info","message":"Exit","timestamp":"2015-12-29T12:36:19.022Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-01T14:08:40.387Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-01T14:08:40.503Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2016-01-01T14:08:40.509Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-01T14:08:40.511Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"4":{"id":12,"name":"Winnie"},"5":{"id":13,"name":"Winnie"},"level":"info","message":"","timestamp":"2016-01-01T14:08:40.511Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-01T14:08:40.512Z"}
+{"level":"info","message":"Added => Last insert ID: 14","timestamp":"2016-01-01T14:08:40.541Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-01T14:08:40.542Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2016-01-01T14:08:40.542Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-01T14:08:40.543Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"6":{"id":14,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2016-01-01T14:08:40.543Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-01T14:08:40.544Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2016-01-01T14:08:40.571Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-01T14:08:40.572Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2016-01-01T14:08:40.572Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-01T14:08:40.573Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"6":{"id":14,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2016-01-01T14:08:40.573Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-01T14:08:40.574Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2016-01-01T14:08:40.575Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-01T14:08:40.576Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2016-01-01T14:08:40.576Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-01T14:08:40.577Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":12,"name":"Winnie","location":"South Africa"},"5":{"id":13,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2016-01-01T14:08:40.577Z"}
+{"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2016-01-01T14:08:40.579Z"}
+{"level":"info","message":"Exit","timestamp":"2016-01-01T14:08:40.579Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-01T14:09:11.035Z"}
+{"level":"info","message":"connected as id 39","timestamp":"2016-01-01T14:09:11.082Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2016-01-01T14:09:11.087Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-01T14:09:11.089Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"level":"info","message":"","timestamp":"2016-01-01T14:09:11.090Z"}
+{"level":"info","message":"connected as id 39","timestamp":"2016-01-01T14:09:11.091Z"}
+{"level":"info","message":"Added => Last insert ID: 5","timestamp":"2016-01-01T14:09:11.153Z"}
+{"level":"info","message":"connected as id 39","timestamp":"2016-01-01T14:09:11.156Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2016-01-01T14:09:11.156Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-01T14:09:11.158Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"Australia"},"level":"info","message":"","timestamp":"2016-01-01T14:09:11.159Z"}
+{"level":"info","message":"connected as id 39","timestamp":"2016-01-01T14:09:11.161Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2016-01-01T14:09:11.166Z"}
+{"level":"info","message":"connected as id 39","timestamp":"2016-01-01T14:09:11.168Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2016-01-01T14:09:11.168Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-01T14:09:11.170Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"4":{"id":5,"name":"Winnie","location":"South Africa"},"level":"info","message":"","timestamp":"2016-01-01T14:09:11.170Z"}
+{"level":"info","message":"connected as id 39","timestamp":"2016-01-01T14:09:11.172Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2016-01-01T14:09:11.176Z"}
+{"level":"info","message":"connected as id 39","timestamp":"2016-01-01T14:09:11.178Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM employees","timestamp":"2016-01-01T14:09:11.179Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-01T14:09:11.181Z"}
+{"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"level":"info","message":"","timestamp":"2016-01-01T14:09:11.181Z"}
+{"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2016-01-01T14:09:11.186Z"}
+{"level":"info","message":"Exit","timestamp":"2016-01-01T14:09:11.186Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-01T16:07:06.752Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-01T16:07:06.796Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2016-01-01T16:07:06.797Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-01T16:07:06.799Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"level":"info","message":"","timestamp":"2016-01-01T16:07:06.799Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-01T16:08:08.728Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-01T16:08:08.770Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2016-01-01T16:08:08.771Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-01T16:08:08.773Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"level":"info","message":"","timestamp":"2016-01-01T16:08:08.773Z"}
+{"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2016-01-01T16:08:08.774Z"}
+{"level":"info","message":"Exit","timestamp":"2016-01-01T16:08:08.775Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-01T16:10:38.282Z"}
+{"level":"info","message":"connected as id 44","timestamp":"2016-01-01T16:10:38.325Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2016-01-01T16:10:38.326Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-01T16:10:38.328Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"level":"info","message":"","timestamp":"2016-01-01T16:10:38.328Z"}
+{"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2016-01-01T16:10:38.329Z"}
+{"level":"info","message":"Exit","timestamp":"2016-01-01T16:10:38.330Z"}
+{"level":"info","message":"Example app listening at http://0.0.0.0:3000","timestamp":"2016-01-01T16:21:54.186Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-01T16:22:09.724Z"}
+{"level":"info","message":"connected as id 45","timestamp":"2016-01-01T16:22:09.782Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2016-01-01T16:22:09.783Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-01T16:22:09.785Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"level":"info","message":"","timestamp":"2016-01-01T16:22:09.785Z"}
+{"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2016-01-01T16:22:09.786Z"}
+{"level":"info","message":"Exit","timestamp":"2016-01-01T16:22:09.786Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-01T16:22:25.251Z"}
+{"level":"info","message":"connected as id 46","timestamp":"2016-01-01T16:22:25.254Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2016-01-01T16:22:25.254Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-01T16:22:25.255Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"level":"info","message":"","timestamp":"2016-01-01T16:22:25.256Z"}
+{"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2016-01-01T16:22:25.257Z"}
+{"level":"info","message":"Exit","timestamp":"2016-01-01T16:22:25.257Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-01T16:22:27.336Z"}
+{"level":"info","message":"connected as id 47","timestamp":"2016-01-01T16:22:27.338Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2016-01-01T16:22:27.339Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-01T16:22:27.339Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"level":"info","message":"","timestamp":"2016-01-01T16:22:27.340Z"}
+{"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2016-01-01T16:22:27.341Z"}
+{"level":"info","message":"Exit","timestamp":"2016-01-01T16:22:27.341Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-01T16:22:28.953Z"}
+{"level":"info","message":"connected as id 48","timestamp":"2016-01-01T16:22:28.955Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `name` FROM employees","timestamp":"2016-01-01T16:22:28.955Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-01T16:22:28.956Z"}
+{"0":{"id":1,"name":"Jasmine"},"1":{"id":2,"name":"Jay"},"2":{"id":3,"name":"Jim"},"3":{"id":4,"name":"Lesley"},"level":"info","message":"","timestamp":"2016-01-01T16:22:28.956Z"}
+{"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2016-01-01T16:22:28.957Z"}
+{"level":"info","message":"Exit","timestamp":"2016-01-01T16:22:28.957Z"}
