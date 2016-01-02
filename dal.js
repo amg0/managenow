@@ -1,11 +1,14 @@
 // module DAL
 var winston = require("winston");	// logging functionality
 var mysql = require("mysql");		// mysql access
-var dalEmployee = require("./genericdal")('employees');
+var genericdal = require("./genericdal");
+var dalEmployee = null;
+
 var pool  = null;
 
 exports.init = function(callback) {
 	winston.info("initialize DAL & pool");
+	dalEmployee = genericdal('employees');
 	pool = mysql.createPool({
 	  connectionLimit : 10,
 	  host: "localhost",

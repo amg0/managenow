@@ -1,11 +1,10 @@
 // module DAL
 var winston = require("winston");	// logging functionality
 var mysql = require("mysql");		// mysql access
-var _tablename = null;
 
 module.exports = function(tablename) {
-	_tablename = tablename;
-	
+	var _tablename = tablename;
+	winston.info('init generic DAL for "%s" ',_tablename);
 	return {
 		listAll : function(con,fields,callback) {
 			var sql = 'SELECT * FROM '+_tablename;

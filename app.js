@@ -20,8 +20,11 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// To serve static files such as images, CSS files, and JavaScript files
 app.use(express.static(path.join(__dirname, 'public')));
 
+// To serve Routes
 app.use('/', routes);
 app.use('/users', users);
 
