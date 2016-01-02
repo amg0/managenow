@@ -16,6 +16,14 @@ module.exports = function(tablename) {
 			  (callback)(error, results, fields);
 			});					
 		},
+		get : function( con,object , callback ) {
+			var sql = mysql.format('SELECT * FROM '+_tablename+' WHERE id=? LIMIT 1',[object.id]);
+			winston.info('SQL for list all:%s',sql);
+			con.query(sql, function(error, results, fields){
+			  if(error) throw error;
+			  (callback)(error, results[0], fields);
+			});					
+		},
 		add : function( con,object , callback ) {
 			delete object.id;
 			con.query('INSERT INTO '+_tablename+' SET ?', object, function(error, results, fields){
