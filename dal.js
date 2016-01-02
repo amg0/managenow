@@ -1,5 +1,6 @@
 // module DAL
 var winston = require("winston");	// logging functionality
+winston.add(winston.transports.File, { filename: 'output.log' });
 var mysql = require("mysql");		// mysql access
 var genericdal = require("./genericdal");
 var dalUsers = null;

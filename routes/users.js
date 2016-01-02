@@ -1,4 +1,5 @@
 var express = require('express');
+var winston = require("winston");	// logging functionality
 var dal = require("../dal");		// mysql access
 var router = express.Router();
 
@@ -23,7 +24,7 @@ router
 		// res.setHeader('Content-Type', 'text/plain')
 		// res.write('you posted:\n')
 		// res.end(JSON.stringify(req.body, null, 2))
-		dal.addUser( req.body , function (error,results, fields) {
+		dal.addUser( req.body , function (err,results, fields) {
 			res.send(results);
 		});
 	})

@@ -1,5 +1,6 @@
 // module DAL
 var winston = require("winston");	// logging functionality
+//{ error: 0, warn: 1, info: 2, verbose: 3, debug: 4, silly: 5 }
 var mysql = require("mysql");		// mysql access
 
 module.exports = function(tablename) {
@@ -10,50 +11,52 @@ module.exports = function(tablename) {
 			var sql = 'SELECT * FROM '+_tablename;
 			if (fields && fields.length>0)
 				sql = mysql.format('SELECT ?? FROM '+_tablename, [fields]);
-			winston.info('SQL for list all:%s',sql);
+			winston.info('listAll SQL:%s',sql);
 			con.query(sql, function(error, results, fields){
-			  if(error) throw error;
-			  (callback)(error, results, fields);
+				if (error) winston.error(error);
+				(callback)(error, results, fields);
 			});					
 		},
 		get : function( con,object , callback ) {
 			var sql = mysql.format('SELECT * FROM '+_tablename+' WHERE id=? LIMIT 1',[object.id]);
-			winston.info('SQL for list all:%s',sql);
+			winston.info('get SQL:%s',sql);
 			con.query(sql, function(error, results, fields){
-			  if(error) throw error;
-			  (callback)(error, results[0], fields);
+			  if (error) winston.error(error);
+			  if (results.length==0) {
+				  var err = new Error("No record found");
+				  winston.log('warn',err);
+				  (callback)(err, {}, fields);
+			  }
+			  else
+				  (callback)(error, results[0], fields);
 			});					
 		},
 		add : function( con,object , callback ) {
 			delete object.id;
-			con.query('INSERT INTO '+_tablename+' SET ?', object, function(error, results, fields){
-			  if(error) throw error;
-			  winston.info('Added => Last insert ID: %d', results.insertId);
-			  /*
-				{
-				  "fieldCount": 0,
-				  "affectedRows": 1,
-				  "insertId": 4,
-				  "serverStatus": 2,
-				  "warningCount": 0,
-				  "message": "",
-				  "protocol41": true,
-				  "changedRows": 0
-				}
-			  */
+			var sql = mysql.format('INSERT INTO '+_tablename+' SET ?',object);
+			winston.info('add SQL:%s',sql);
+			con.query(sql, function(error, results, fields){
+			  if (error) winston.error(error);
+			  winston.info(results);
 			  (callback)(error, results, fields);
 			});	
 		},
 		update : function( con, id, object, callback  ) {
 			delete object.id;
+			var sql = mysql.format('UPDATE '+_tablename+' SET ? Where ID = ?',[object,id]);
+			winston.info('update SQL:%s',sql);
 			con.query(
-			  'UPDATE '+_tablename+' SET ? Where ID = ?',
-			  [object,id],
+			  sql,
 			  function (error, results, fields) {
-				if(error) throw error;
+				if (error) winston.error(error);
 				winston.info('Changed ' + results.changedRows + ' rows');
-				// winston.info(results);
-				(callback)(error,results, fields);
+				if (results.changedRows==0) {
+					var err = new Error("No record found or modified");
+					winston.log('warn',err);
+					(callback)(err, results, fields);
+				}
+				else
+					(callback)(error,results, fields);
 			  }
 			);
 		},
@@ -62,10 +65,15 @@ module.exports = function(tablename) {
 			  'DELETE FROM '+_tablename+' WHERE id = ?',
 			  [id],
 			  function (error,results, fields) {
-				if(error) throw error;
+				if (error) winston.error(error);
 				winston.info('Deleted ' + results.affectedRows + ' rows');
-				// winston.info(results);
-				(callback)(error,results, fields);
+				if (results.affectedRows==0) {
+					var err = new Error("No record deleted");
+					winston.log('warn',err);	
+					(callback)(err,results, fields);					
+				}
+				else
+					(callback)(error,results, fields);
 			  }
 			);
 		}

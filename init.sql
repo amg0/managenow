@@ -4,6 +4,7 @@
 -- FLUSH PRIVILEGES;
 
 USE testdb;
+SET sql_mode='STRICT_ALL_TABLES';
 
 DROP TABLE  IF EXISTS users;
 
