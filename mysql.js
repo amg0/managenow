@@ -14,7 +14,7 @@ dal.init( function(err) {
 				winston.info('Data received from Db:');
 				winston.info( rows );	//JSON.stringify(rows,null,4)
 				
-				dal.updateUser( id, { location:"South Africa" } , function (err,res) {
+				dal.updateUser( { id:id , location:"South Africa" } , function (err,res) {
 					dal.listAllUsers( null,function(err,rows) {
 						winston.info('Data received from Db:');
 						winston.info( rows );	//JSON.stringify(rows,null,4)

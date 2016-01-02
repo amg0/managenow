@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // To serve Routes
 dal.init( function(err) {
 	app.use('/', routes);
-	app.use('/users', users);
+	app.use('/api/users', users);
 });
 
 // catch 404 and forward to error handler

@@ -29,11 +29,23 @@ module.exports = function(tablename) {
 			con.query('INSERT INTO '+_tablename+' SET ?', object, function(error, results, fields){
 			  if(error) throw error;
 			  winston.info('Added => Last insert ID: %d', results.insertId);
-			  // winston.info(result);
+			  /*
+				{
+				  "fieldCount": 0,
+				  "affectedRows": 1,
+				  "insertId": 4,
+				  "serverStatus": 2,
+				  "warningCount": 0,
+				  "message": "",
+				  "protocol41": true,
+				  "changedRows": 0
+				}
+			  */
 			  (callback)(error, results, fields);
 			});	
 		},
 		update : function( con, id, object, callback  ) {
+			delete object.id;
 			con.query(
 			  'UPDATE '+_tablename+' SET ? Where ID = ?',
 			  [object,id],
