@@ -755,3 +755,34 @@
 {"0":{"id":1,"name":"Jasmine","location":"Australia"},"1":{"id":2,"name":"Jay","location":"India"},"2":{"id":3,"name":"Jim","location":"Germany"},"3":{"id":4,"name":"Lesley","location":"Scotland"},"level":"info","message":"","timestamp":"2016-01-02T11:28:08.290Z"}
 {"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2016-01-02T11:28:08.293Z"}
 {"level":"info","message":"Exit","timestamp":"2016-01-02T11:28:08.293Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-02T11:51:45.126Z"}
+{"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-02T11:51:45.127Z"}
+{"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-02T11:51:45.128Z"}
+{"level":"info","message":"connected as id 59","timestamp":"2016-01-02T11:51:45.176Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-02T11:53:48.247Z"}
+{"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-02T11:53:48.248Z"}
+{"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-02T11:53:48.248Z"}
+{"level":"info","message":"connected as id 60","timestamp":"2016-01-02T11:53:48.297Z"}
+{"level":"info","message":"SQL for list all:SELECT `id`, `email` FROM users","timestamp":"2016-01-02T11:53:48.298Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-02T11:53:48.300Z"}
+{"0":{"id":1,"email":"jasmine.jas@toto.com"},"1":{"id":2,"email":"james.west@toto.com"},"2":{"id":3,"email":"artemus.gordon@toto.com"},"level":"info","message":"","timestamp":"2016-01-02T11:53:48.300Z"}
+{"level":"info","message":"connected as id 60","timestamp":"2016-01-02T11:53:48.301Z"}
+{"level":"info","message":"Added => Last insert ID: 5","timestamp":"2016-01-02T11:53:48.304Z"}
+{"level":"info","message":"connected as id 60","timestamp":"2016-01-02T11:53:48.305Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM users","timestamp":"2016-01-02T11:53:48.305Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-02T11:53:48.306Z"}
+{"0":{"id":1,"first_name":"Jasmine","last_name":"Jas","email":"jasmine.jas@toto.com","location":"Australia"},"1":{"id":2,"first_name":"James","last_name":"West","email":"james.west@toto.com","location":"Australia"},"2":{"id":3,"first_name":"Artemus","last_name":"Gordon","email":"artemus.gordon@toto.com","location":"Australia"},"3":{"id":5,"first_name":"Winne","last_name":"Poo","email":"winie.poo@test.com","location":"Australia"},"level":"info","message":"","timestamp":"2016-01-02T11:53:48.306Z"}
+{"level":"info","message":"connected as id 60","timestamp":"2016-01-02T11:53:48.307Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2016-01-02T11:53:48.309Z"}
+{"level":"info","message":"connected as id 60","timestamp":"2016-01-02T11:53:48.309Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM users","timestamp":"2016-01-02T11:53:48.310Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-02T11:53:48.310Z"}
+{"0":{"id":1,"first_name":"Jasmine","last_name":"Jas","email":"jasmine.jas@toto.com","location":"Australia"},"1":{"id":2,"first_name":"James","last_name":"West","email":"james.west@toto.com","location":"Australia"},"2":{"id":3,"first_name":"Artemus","last_name":"Gordon","email":"artemus.gordon@toto.com","location":"Australia"},"3":{"id":5,"first_name":"Winne","last_name":"Poo","email":"winie.poo@test.com","location":"South Africa"},"level":"info","message":"","timestamp":"2016-01-02T11:53:48.310Z"}
+{"level":"info","message":"connected as id 60","timestamp":"2016-01-02T11:53:48.311Z"}
+{"level":"info","message":"Deleted 1 rows","timestamp":"2016-01-02T11:53:48.313Z"}
+{"level":"info","message":"connected as id 60","timestamp":"2016-01-02T11:53:48.313Z"}
+{"level":"info","message":"SQL for list all:SELECT * FROM users","timestamp":"2016-01-02T11:53:48.313Z"}
+{"level":"info","message":"Data received from Db:","timestamp":"2016-01-02T11:53:48.314Z"}
+{"0":{"id":1,"first_name":"Jasmine","last_name":"Jas","email":"jasmine.jas@toto.com","location":"Australia"},"1":{"id":2,"first_name":"James","last_name":"West","email":"james.west@toto.com","location":"Australia"},"2":{"id":3,"first_name":"Artemus","last_name":"Gordon","email":"artemus.gordon@toto.com","location":"Australia"},"level":"info","message":"","timestamp":"2016-01-02T11:53:48.315Z"}
+{"level":"info","message":"The connection pool is terminated gracefully","timestamp":"2016-01-02T11:53:48.316Z"}
+{"level":"info","message":"Exit","timestamp":"2016-01-02T11:53:48.316Z"}

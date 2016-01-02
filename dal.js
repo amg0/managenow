@@ -2,13 +2,14 @@
 var winston = require("winston");	// logging functionality
 var mysql = require("mysql");		// mysql access
 var genericdal = require("./genericdal");
-var dalEmployee = null;
-
+var dalUsers = null;
+var dalProjects = null;
 var pool  = null;
 
 exports.init = function(callback) {
 	winston.info("initialize DAL & pool");
-	dalEmployee = genericdal('employees');
+	dalUsers = genericdal('users');
+	dalProjects = genericdal('projects');
 	pool = mysql.createPool({
 	  connectionLimit : 10,
 	  host: "localhost",
@@ -32,7 +33,7 @@ exports.exit = function( callback ) {
 	});
 }
 
-exports.listAllEmployes = function(fields, callback) {
+exports.listAllUsers = function(fields, callback) {
 	pool.getConnection(function(err, connection) {
 		// connected! (unless `err` is set)
 		if (err) {
@@ -40,7 +41,7 @@ exports.listAllEmployes = function(fields, callback) {
 			(callback)(err);
 		} else {
 			winston.info('connected as id ' + connection.threadId);
-			dalEmployee.listAll(connection, fields, function(error,results, fields) {
+			dalUsers.listAll(connection, fields, function(error,results, fields) {
 				connection.release();
 				(callback)(error,results, fields);
 			});
@@ -48,7 +49,7 @@ exports.listAllEmployes = function(fields, callback) {
 	});
 }
 
-exports.addEmployee = function( employee , callback ) {
+exports.addUser = function( user , callback ) {
 	pool.getConnection(function(err, connection) {
 		// connected! (unless `err` is set)
 		if (err) {
@@ -56,7 +57,7 @@ exports.addEmployee = function( employee , callback ) {
 			(callback)(err,null);
 		} else {
 			winston.info('connected as id ' + connection.threadId);
-			dalEmployee.add(connection, employee , function(error,results, fields) {
+			dalUsers.add(connection, user , function(error,results, fields) {
 				connection.release();
 				(callback)(error,results, fields);
 			});
@@ -64,7 +65,7 @@ exports.addEmployee = function( employee , callback ) {
 	});
 }
 
-exports.updateEmployee = function( id, changes, callback  ) {
+exports.updateUser = function( id, changes, callback  ) {
 	pool.getConnection(function(err, connection) {
 		// connected! (unless `err` is set)
 		if (err) {
@@ -72,7 +73,7 @@ exports.updateEmployee = function( id, changes, callback  ) {
 			(callback)(err,null);
 		} else {
 			winston.info('connected as id ' + connection.threadId);
-			dalEmployee.update(connection, id, changes, function(error,results, fields) {
+			dalUsers.update(connection, id, changes, function(error,results, fields) {
 				connection.release();
 				(callback)(error,results, fields);
 			});
@@ -80,7 +81,7 @@ exports.updateEmployee = function( id, changes, callback  ) {
 	});
 }
 
-exports.deleteEmployee = function( id, callback ) {
+exports.deleteUser = function( id, callback ) {
 	pool.getConnection(function(err, connection) {
 		// connected! (unless `err` is set)
 		if (err) {
@@ -88,7 +89,7 @@ exports.deleteEmployee = function( id, callback ) {
 			(callback)(err,null);
 		} else {
 			winston.info('connected as id ' + connection.threadId);
-			dalEmployee.remove(connection, id, function(error,results, fields) {
+			dalUsers.remove(connection, id, function(error,results, fields) {
 				connection.release();
 				(callback)(error,results, fields);
 			});
