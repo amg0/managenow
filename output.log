@@ -192,3 +192,14 @@
 {"level":"info","message":"connected as id 47","timestamp":"2016-01-02T18:11:46.621Z"}
 {"level":"info","message":"Deleted 0 rows","timestamp":"2016-01-02T18:11:46.623Z"}
 {"level":"warn","timestamp":"2016-01-02T18:11:46.626Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-02T18:57:40.361Z"}
+{"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-02T18:57:40.362Z"}
+{"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-02T18:57:40.363Z"}
+{"level":"info","message":"connected as id 48","timestamp":"2016-01-02T18:57:43.708Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-02T18:57:43.708Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-02T20:10:16.497Z"}
+{"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-02T20:10:16.498Z"}
+{"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-02T20:10:16.498Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-02T20:17:03.756Z"}
+{"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-02T20:17:03.757Z"}
+{"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-02T20:17:03.757Z"}
