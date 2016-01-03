@@ -287,3 +287,183 @@
 {"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T18:27:29.278Z"}
 {"level":"info","message":"connected as id 40","timestamp":"2016-01-03T18:27:30.433Z"}
 {"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:27:30.433Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-03T18:28:27.396Z"}
+{"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-03T18:28:27.397Z"}
+{"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-03T18:28:27.397Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:28:37.934Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:28:37.935Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:28:38.503Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T18:28:38.503Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:28:39.135Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:28:39.136Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:28:40.440Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T18:28:40.440Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:28:42.876Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:28:42.876Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:28:43.438Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T18:28:43.439Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:28:49.997Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:28:49.998Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:28:54.215Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:28:54.216Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:30:50.154Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:30:50.155Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:30:50.744Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T18:30:50.744Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:30:51.262Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:30:51.262Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:37:33.902Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:37:33.904Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:37:52.284Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:37:52.285Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:40:28.602Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:40:28.603Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:41:09.082Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T18:41:09.082Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:41:52.860Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:41:52.860Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:58:37.949Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:58:37.952Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:58:38.477Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T18:58:38.478Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:58:39.343Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:58:39.345Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:58:42.561Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T18:58:42.563Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:58:43.680Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:58:43.681Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:58:44.667Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T18:58:44.668Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:58:45.113Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:58:45.115Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:58:46.597Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T18:58:46.598Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:58:54.199Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T18:58:54.201Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T18:58:58.530Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T18:58:58.531Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:01:52.643Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T19:01:52.644Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:01:54.654Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T19:01:54.656Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:01:55.383Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T19:01:55.384Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:02:03.567Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T19:02:03.568Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:03:11.309Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T19:03:11.310Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:03:11.793Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T19:03:11.795Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:03:14.349Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T19:03:14.351Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:03:14.880Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T19:03:14.881Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:29:46.350Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T19:29:46.351Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:30:51.105Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T19:30:51.106Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:31:07.563Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T19:31:07.564Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:32:16.148Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T19:32:16.150Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:32:35.922Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T19:32:35.926Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:32:49.685Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T19:32:49.688Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:32:50.683Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T19:32:50.684Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:34:21.158Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T19:34:21.159Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:35:22.268Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T19:35:22.269Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:35:27.282Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T19:35:27.283Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:39:07.256Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T19:39:07.257Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:49:29.645Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T19:49:29.646Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:49:38.008Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T19:49:38.009Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:52:44.316Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T19:52:44.317Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:52:52.848Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T19:52:52.848Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T19:59:11.333Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T19:59:11.336Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T20:00:54.774Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:00:54.775Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T20:02:31.032Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:02:31.033Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T20:02:41.342Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T20:02:41.344Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T20:13:42.131Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:13:42.147Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T20:14:12.542Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T20:14:12.543Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T20:14:42.532Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:14:42.533Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T20:27:57.915Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T20:27:57.916Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T20:28:11.539Z"}
+{"level":"info","message":"add SQL:INSERT INTO users SET `first_name` = 'toto', `last_name` = 'titi', `email` = 'toto.titi@email.com', `location` = 'france'","timestamp":"2016-01-03T20:28:11.542Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":8,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2016-01-03T20:28:11.561Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T20:28:11.575Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T20:28:11.577Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T20:28:20.693Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:28:20.695Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-03T20:32:35.302Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:32:35.303Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-03T20:32:57.242Z"}
+{"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-03T20:32:57.248Z"}
+{"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-03T20:32:57.249Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-03T20:33:11.556Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:33:11.558Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-03T20:33:33.232Z"}
+{"level":"info","message":"add SQL:INSERT INTO projects SET `project_name` = 'qsdqsd', `prod_date` = '2016-04-15T22:00:00.000Z'","timestamp":"2016-01-03T20:33:33.236Z"}
+{"code":"ER_TRUNCATED_WRONG_VALUE","errno":1292,"sqlState":"22007","index":0,"level":"error","timestamp":"2016-01-03T20:33:33.253Z"}
+{"level":"info","message":"undefined","timestamp":"2016-01-03T20:33:33.257Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-03T20:33:33.277Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:33:33.279Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-03T20:35:20.803Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T20:35:20.804Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-03T20:35:27.125Z"}
+{"level":"info","message":"add SQL:INSERT INTO users SET `first_name` = 'sdfsdf', `last_name` = 'sdfsdf', `email` = 'sdfsdf', `location` = 'sdfdsfsdf'","timestamp":"2016-01-03T20:35:27.127Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":9,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2016-01-03T20:35:27.182Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-03T20:35:27.198Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T20:35:27.200Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-03T20:45:55.004Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:45:55.006Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-03T20:46:07.428Z"}
+{"level":"info","message":"add SQL:INSERT INTO projects SET `project_name` = 'test', `prod_date` = '2016-12-15'","timestamp":"2016-01-03T20:46:07.430Z"}
+{"fieldCount":0,"affectedRows":1,"insertId":3,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0,"level":"info","timestamp":"2016-01-03T20:46:07.717Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-03T20:46:07.733Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:46:07.734Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-03T20:49:41.430Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:49:41.433Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-03T20:53:32.603Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:53:32.615Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-03T20:54:41.954Z"}
+{"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-03T20:54:41.959Z"}
+{"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-03T20:54:41.960Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-03T20:54:46.993Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:54:46.996Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-03T20:55:33.171Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:55:33.172Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-03T20:55:37.711Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T20:55:37.713Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-03T20:55:38.765Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:55:38.768Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-03T20:56:19.635Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:56:19.636Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-03T20:56:31.668Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T20:56:31.669Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-03T20:56:56.996Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T20:56:56.996Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-03T20:56:57.595Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T20:56:57.596Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-03T21:00:21.632Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T21:00:21.634Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-03T21:00:22.852Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T21:00:22.854Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-03T21:00:37.111Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T21:00:37.112Z"}

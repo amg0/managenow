@@ -20,11 +20,11 @@ router
 			res.send(results);
 		});
 	})
-	// .post('/', function(req, res, next) {
-		// dal.addUser( req.body , function (err,results, fields) {
-			// res.send(results);
-		// });
-	// })
+	.post('/', function(req, res, next) {
+		dal.addProject( req.body , function (err,results, fields) {
+			res.send(results);
+		});
+	})
 	// .get('/:id', function(req, res, next) {
 		// var id = req.params.id;
 		// dal.getUser(id , function (err, results, fields) {
