@@ -50,6 +50,22 @@ exports.listAllUsers = function(fields, callback) {
 	});
 }
 
+exports.listAllProjects = function(fields, callback) {
+	pool.getConnection(function(err, connection) {
+		// connected! (unless `err` is set)
+		if (err) {
+			winston.error('Error connecting to Db');
+			(callback)(err);
+		} else {
+			winston.info('connected as id ' + connection.threadId);
+			dalProjects.listAll(connection, fields, function(error,results, fields) {
+				connection.release();
+				(callback)(error,results, fields);
+			});
+		}
+	});
+}
+
 exports.getUser = function( id , callback ) {
 	pool.getConnection(function(err, connection) {
 		// connected! (unless `err` is set)

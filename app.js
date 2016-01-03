@@ -5,7 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
+var projects = require('./routes/projects');
 var users = require('./routes/users');
+var api_projects = require('./routes/api_projects');
+var api_users = require('./routes/api_users');
 var dal = require("./dal");		// data model mysql access
 
 
@@ -27,7 +30,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 // To serve Routes
 dal.init( function(err) {
 	app.use('/', routes);
-	app.use('/api/users', users);
+	app.use('/projects', projects);
+	app.use('/users', users);
+	app.use('/api/users', api_users);
+	app.use('/api/projects', api_projects);
 });
 
 // catch 404 and forward to error handler
