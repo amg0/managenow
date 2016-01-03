@@ -203,3 +203,13 @@
 {"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-02T20:17:03.756Z"}
 {"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-02T20:17:03.757Z"}
 {"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-02T20:17:03.757Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-02T20:32:27.383Z"}
+{"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-02T20:32:27.384Z"}
+{"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-02T20:32:27.384Z"}
+{"level":"info","message":"connected as id 49","timestamp":"2016-01-02T20:33:02.349Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-02T20:33:02.349Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-03T15:37:55.843Z"}
+{"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-03T15:37:55.846Z"}
+{"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-03T15:37:55.846Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-03T15:46:31.276Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T15:46:31.276Z"}
