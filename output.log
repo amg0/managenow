@@ -228,3 +228,6 @@
 {"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-03T16:36:14.469Z"}
 {"level":"info","message":"connected as id 39","timestamp":"2016-01-03T16:36:19.487Z"}
 {"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-03T16:36:19.488Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-03T16:40:13.203Z"}
+{"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-03T16:40:13.204Z"}
+{"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-03T16:40:13.204Z"}
