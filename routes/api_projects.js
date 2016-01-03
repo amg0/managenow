@@ -36,11 +36,11 @@ router
 			// res.send(results);
 		// });
 	// })
-	// .delete('/:id', function(req, res, next) {
-		// dal.deleteUser(req.params.id,function (err, results, fields) {
-			// res.send(results);
-		// });
-	// })
+	.delete('/:id', function(req, res, next) {
+		dal.deleteProject(req.params.id,function (err, results, fields) {
+			res.send(results);
+		});
+	})
 	;
 
 module.exports = router;

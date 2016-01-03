@@ -19,7 +19,8 @@ var HtmlUtils = (function() {
 			$.each( model, function(key, value){
 			});
 		},
-		array2Table : function (htmlid, arr,idcolumn,viscols) {
+		array2Table : function (htmlid, arr,idcolumn,viscols,commands) {
+			var commands = $.extend([],commands);
 			var html="";
 			var idcolumn = idcolumn || 'id';
 			var viscols = viscols || [idcolumn];
@@ -40,6 +41,8 @@ var HtmlUtils = (function() {
 							html+=k;
 							html+="</th>"
 						});
+						if (commands.length>0)
+							html += "<th data-column-id='commands' data-formatter='commands' data-sortable='false'>Commands</th>"
 						html+="</tr>"
 						html+="</thead>"
 						html+="<tbody>"
@@ -51,6 +54,9 @@ var HtmlUtils = (function() {
 						html+=v;
 						html+="</td>"
 					});
+					if (commands.length>0) {
+						html+="<td></td>";
+					}
 					html+="</tr>"
 				});
 				html+="</tbody>"
@@ -147,6 +153,18 @@ var Model = (function() {
 			  }
 			});
 		},
+		
+		del:function(objtype, id, callback ) {
+			$.ajax({
+			  url: '/api/'+objtype+'/'+id.toString(),
+			  type: 'DELETE',
+			  data: null,
+			  cache:false,
+			  success: function (data) {
+				  callback(data);
+			  }
+			});
+		},
 	}
 })();
 
@@ -166,22 +184,51 @@ var UIManager = (function(){
 		});
 	};
 	function _listPage(type) {
-		Model.get( type,function(data) {
-			// load the template file, then render it with data
-			var htmlid = 'idtable';
-			var html = new EJS({url: '/views/defaultlist.ejs'}).render({htmlid:htmlid, title:'Project list', data: data});
-			$('main').html(html);
-			$("#"+htmlid).bootgrid();						
-			$('#mnow-create-object').click( function() {
-				_onCreateObject(type,function(result){
-					Model.get( type,function(data) {
-						var html = new EJS({url: '/views/defaultlist.ejs'}).render({htmlid:htmlid, title:'Project list', data: data});
-						$('main').html(html);			
-						$("#"+htmlid).bootgrid();						
+		var htmlid = 'idtable';
+		var commandtbl = [
+		"<button type=\"button\" class=\"btn btn-xs btn-default command-edit\" data-row-id=\"{0}\"><span class=\"fa fa-pencil fa-lg\"></span></button> ",
+		"<button type=\"button\" class=\"btn btn-xs btn-danger command-delete \" data-row-id=\"{0}\"><span class=\"fa fa-trash-o fa-lg\"></span></button>"
+		];
+		function _commandFormatter(col,row) {
+			return ($.map(commandtbl, function(e) { return e.format(row.id); })).join(" ");
+		};
+		function _updateList(type,htmlid,commandtbl) {
+			Model.get( type,function(data) {
+				// load the template file, then render it with data
+				var html = new EJS({url: '/views/defaultlist.ejs'}).render({htmlid:htmlid, title:'List: '+type, data: data, commandtbl:commandtbl});
+				$('main').html(html);			
+				var grid = $("#"+htmlid).bootgrid({
+					formatters: {
+						 "commands": _commandFormatter
+					}
+				}).on("loaded.rs.jquery.bootgrid", function()
+				{
+					/* Executes after data is loaded and rendered */
+					grid.find(".command-edit").on("click", function(e)
+					{
+						alert("You pressed edit on row: " + $(this).data("row-id"));
+					}).end().find(".command-delete").on("click", function(e)
+					{
+						var id = $(this).data('row-id');
+						Model.del(type,id,function(result){
+							_updateList(type,htmlid,commandtbl);
+						});
 					});
-				});
+				});			
 			});
-		} );		
+		};
+
+		_updateList(type,htmlid,commandtbl);					
+		$('main')
+			.off('click')
+			.on('click','#mnow-create-object',function() {
+				_onCreateObject(type,function(result){
+					_updateList(type,htmlid,commandtbl);
+				})
+			})
+			// .on('click','.command-delete span',function() {
+
+			// });		
 	};
 	return {
 		pageProjects: function() {

@@ -61,9 +61,10 @@ module.exports = function(tablename) {
 			);
 		},
 		remove : function( con, id, callback ) {
+			var sql = mysql.format('DELETE FROM '+_tablename+' WHERE id = ?',[id]);
+			winston.info('delete SQL:%s',sql);
 			con.query(
-			  'DELETE FROM '+_tablename+' WHERE id = ?',
-			  [id],
+			  sql,
 			  function (error,results, fields) {
 				if (error) winston.error(error);
 				winston.info('Deleted ' + results.affectedRows + ' rows');
