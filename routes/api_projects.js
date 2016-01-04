@@ -1,3 +1,5 @@
+//# sourceURL=api_projects.js
+// "use strict";
 var express = require('express');
 var winston = require("winston");	// logging functionality
 var dal = require("../dal");		// mysql access
@@ -25,17 +27,17 @@ router
 			res.send(results);
 		});
 	})
-	// .get('/:id', function(req, res, next) {
-		// var id = req.params.id;
-		// dal.getUser(id , function (err, results, fields) {
-			// res.send(results);
-		// });
-	// })
-	// .put('/:id', function(req, res, next) {
-		// dal.updateUser(req.params.id, req.body , function (err, results, fields) {
-			// res.send(results);
-		// });
-	// })
+	.get('/:id', function(req, res, next) {
+		var id = req.params.id;
+		dal.getProject(id , function (err, results, fields) {
+			res.send(results);
+		});
+	})
+	.put('/:id', function(req, res, next) {
+		dal.updateProject(req.params.id, req.body , function (err, results, fields) {
+			res.send(results);
+		});
+	})
 	.delete('/:id', function(req, res, next) {
 		dal.deleteProject(req.params.id,function (err, results, fields) {
 			res.send(results);

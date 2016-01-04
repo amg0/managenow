@@ -1,4 +1,6 @@
-// module DAL
+//# sourceURL=dal.js
+// "use strict";
+
 var winston = require("winston");	// logging functionality
 winston.add(winston.transports.File, { filename: 'output.log' });
 var mysql = require("mysql");		// mysql access
@@ -66,6 +68,24 @@ exports.listAllProjects = function(fields, callback) {
 	});
 }
 
+exports.getProject = function( id , callback ) {
+	pool.getConnection(function(err, connection) {
+		// connected! (unless `err` is set)
+		if (err) {
+			winston.error('Error connecting to Db');
+			(callback)(err,null);
+		} else {
+			winston.info('connected as id ' + connection.threadId);
+			dalProjects.get(connection, {id:id} , function(error,results, fields) {
+				connection.release();
+				winston.info(results);
+				winston.info(fields);
+				(callback)(error,results, fields);
+			});
+		}
+	});
+}
+
 exports.addProject = function( obj , callback ) {
 	pool.getConnection(function(err, connection) {
 		// connected! (unless `err` is set)
@@ -81,7 +101,21 @@ exports.addProject = function( obj , callback ) {
 		}
 	});
 }
-
+exports.updateProject = function( id, changes, callback  ) {
+	pool.getConnection(function(err, connection) {
+		// connected! (unless `err` is set)
+		if (err) {
+			winston.error('Error connecting to Db');
+			(callback)(err,null);
+		} else {
+			winston.info('connected as id ' + connection.threadId);
+			dalProjects.update(connection, id, changes, function(error,results, fields) {
+				connection.release();
+				(callback)(error,results, fields);
+			});
+		}
+	});
+}
 exports.deleteProject = function( id, callback ) {
 	pool.getConnection(function(err, connection) {
 		// connected! (unless `err` is set)

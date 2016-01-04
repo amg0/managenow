@@ -1,3 +1,5 @@
+//# sourceURL=api_users.js
+// "use strict";
 var express = require('express');
 var winston = require("winston");	// logging functionality
 var dal = require("../dal");		// mysql access

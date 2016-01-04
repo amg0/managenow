@@ -1,4 +1,5 @@
-// module DAL
+//# sourceURL=genericdal.js
+// "use strict";
 var winston = require("winston");	// logging functionality
 //{ error: 0, warn: 1, info: 2, verbose: 3, debug: 4, silly: 5 }
 var mysql = require("mysql");		// mysql access

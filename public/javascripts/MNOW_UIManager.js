@@ -1,3 +1,5 @@
+//# sourceURL=MNOW_UIManager.js
+// "use strict";
 if (typeof String.prototype.format == 'undefined') {
 	String.prototype.format = function()
 	{
@@ -82,7 +84,7 @@ var DialogManager = ( function() {
 			$("div#dialogs").off();
 			return  $(dialog);
 		},
-		bodyFromTemplate : function ( template ) {
+		bodyFromObject : function ( template ) {
 			var html="<form>";
 			$.each(template, function(key,value) {
 				var placeholder = "";
@@ -131,7 +133,7 @@ var Model = (function() {
 			return null;
 		},
 		
-		get:function(objtype, callback ) {
+		getAll:function(objtype, callback ) {
 			$.ajax({
 			  url: '/api/'+objtype,
 			  dataType: "json",
@@ -140,6 +142,33 @@ var Model = (function() {
 				  callback(data);
 			  }
 			});
+		},
+		
+		get:function(objtype, id, callback ) {
+			if (id) {
+				$.ajax({
+				  url: '/api/'+objtype+'/'+id.toString(),
+				  type: 'GET',
+				  cache:false,
+				  success: function (data) {
+					  callback(data);
+				  }
+				});
+			}
+		},
+
+		update:function(objtype, object, callback ) {
+			if (object.id) {
+				$.ajax({
+				  url: '/api/'+objtype+'/'+object.id.toString(),
+				  type: 'PUT',
+				  data: object,
+				  cache:false,
+				  success: function (data) {
+					  callback(data);
+				  }
+				});
+			}
 		},
 		
 		add:function(objtype, object, callback ) {
@@ -172,10 +201,20 @@ var UIManager = (function(){
 	function _preparePage() {
 		$('main').empty();
 	};
+	function _onEditObject(type,id,callback) {
+		Model.get(type,id,function(object) {
+			var htmlid = 'createDialog';
+			var htmlDialog = new EJS({url: '/views/defaultdialog.ejs'}).render({htmlid:htmlid, title:type, body: DialogManager.bodyFromObject(object)});
+			var dialog = DialogManager.registerDialog(htmlid,htmlDialog);
+			DialogManager.runDialog(dialog,function(result) {
+				(callback)(result);
+			});
+		});
+	};
 	function _onCreateObject(type,callback) {
 		var template = Model.getTemplate(type);
 		var htmlid = 'createDialog';
-		var htmlDialog = new EJS({url: '/views/defaultdialog.ejs'}).render({htmlid:htmlid, title:type, body: DialogManager.bodyFromTemplate(template)});
+		var htmlDialog = new EJS({url: '/views/defaultdialog.ejs'}).render({htmlid:htmlid, title:type, body: DialogManager.bodyFromObject(template)});
 		var dialog = DialogManager.registerDialog(htmlid,htmlDialog);
 		DialogManager.runDialog(dialog,function(result) {
 			Model.add(type,result,function() {
@@ -193,7 +232,7 @@ var UIManager = (function(){
 			return ($.map(commandtbl, function(e) { return e.format(row.id); })).join(" ");
 		};
 		function _updateList(type,htmlid,commandtbl) {
-			Model.get( type,function(data) {
+			Model.getAll( type,function(data) {
 				// load the template file, then render it with data
 				var html = new EJS({url: '/views/defaultlist.ejs'}).render({htmlid:htmlid, title:'List: '+type, data: data, commandtbl:commandtbl});
 				$('main').html(html);			
@@ -206,7 +245,12 @@ var UIManager = (function(){
 					/* Executes after data is loaded and rendered */
 					grid.find(".command-edit").on("click", function(e)
 					{
-						alert("You pressed edit on row: " + $(this).data("row-id"));
+						var id = $(this).data('row-id');
+						_onEditObject(type,id,function(object) {
+							Model.update(type,object,function(result) {
+								_updateList(type,htmlid,commandtbl);
+							});
+						});
 					}).end().find(".command-delete").on("click", function(e)
 					{
 						var id = $(this).data('row-id');

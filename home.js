@@ -1,3 +1,5 @@
+//# sourceURL=home.js
+// "use strict";
 var dal = require("./dal");			// mysql access
 var winston = require("winston");	// logging functionality
 winston.add(winston.transports.File, { filename: 'output.log' });
