@@ -4,15 +4,15 @@
 var Model = (function() {
 	var _dictionary = {
 		"projects":{
-			"id": 			{type:'numeric', default:''},
-			"project_name":	{type:'text', 	default:''},
+			"id": 			{type:'number', default:''},
+			"project_name":	{type:'text', 	default:'' , required:true },
 			"prod_date":	{type:'date', 	default:''},
 		},
 		"users":{
-			"id": 			{type:'numeric', default:''},
+			"id": 			{type:'number', default:''},
 			"first_name":	{type:'text', 	default:''},
 			"last_name":	{type:'text', 	default:''},
-			"email":		{type:'email', 	default:''},
+			"email":		{type:'email', 	default:'' , required:true },
 			"location":		{type:'text', 	default:''},
 		}
 	};
@@ -179,29 +179,51 @@ var DialogManager = ( function() {
 			return  $(dialog);
 		},
 		bodyFromObject : function ( type, template ) {
-			var html="<form>";
+			var html="";
 			var dictionary = Model.getDictionary(type);
 			$.each(template, function(key,value) {
 				var placeholder = "";
-				if (dictionary[key].type=="date")
-				// if (key.slice(-4)=='date')
-					placeholder = "YYYY-MM-DD";
-				var htmlField = new EJS({url: '/views/ff_input.ejs'}).render({htmltype:"text",key:key,value:value,placeholder:placeholder});
+				var htmltype="text";
+				switch (dictionary[key].type) {
+					case "date":
+						placeholder = "YYYY-MM-DD";
+						htmltype="date";
+						break;
+					case "number":
+						htmltype="number";
+						break;
+					default:
+						htmltype=dictionary[key].type;
+				}
+				var htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
+						htmltype:htmltype,
+						key:key,
+						value:value,
+						required:(dictionary[key].required || false), 
+						placeholder:placeholder
+				});
 				html += htmlField;
 			});
-			html+="</form>";
 			return html;
 		},
 		runDialog: function(dialog, callback) {
 			$(dialog).modal('show');
-			$("div#dialogs").on( 'click',".btn-primary", function() {
-				var obj= {};
-				$(dialog).find("input").each(function(idx,elem) {
-					obj[$(elem).prop('id')]=$(elem).val();
-				});
-				(callback)(obj);
-				$(dialog).modal('hide');
-			} );
+			$('#mnow-form').validator().on('submit', function (e) {
+				if (e.isDefaultPrevented()) {
+					// handle the invalid form...
+					return false;
+				} else {
+					// everything looks good!
+					var obj= {};
+					$(dialog).find("input").each(function(idx,elem) {
+						obj[$(elem).prop('id')]=$(elem).val();
+					});
+					(callback)(obj);
+					$(dialog).modal('hide');
+					return true;
+				}
+			});
+			// $("div#dialogs form").off('submit').on( 'submit',".btn-primary", function(e) {			} );
 		}
 	}
 })();
