@@ -1,134 +1,34 @@
 //# sourceURL=MNOW_UIManager.js
 // "use strict";
-if (typeof String.prototype.format == 'undefined') {
-	String.prototype.format = function()
-	{
-		var args = new Array(arguments.length);
-		for (var i = 0; i < args.length; ++i) {
-		// `i` is always valid index in the arguments object
-		// so we merely retrieve the value
-		args[i] = arguments[i];
-		}
-		return this.replace(/{(\d+)}/g, function(match, number) { 
-			return typeof args[number] != 'undefined' ? args[number] : match;
-		});
-	};
-};
-
-var HtmlUtils = (function() {
-	return {
-		model2Form : function(model) {
-			$.each( model, function(key, value){
-			});
-		},
-		array2Table : function (htmlid, arr,idcolumn,viscols,commands) {
-			var commands = $.extend([],commands);
-			var html="";
-			var idcolumn = idcolumn || 'id';
-			var viscols = viscols || [idcolumn];
-			html+="<div class='col-xs-12'>";
-			if ( (arr) && ($.isArray(arr) && (arr.length>0)) ) {
-				var bFirst=true;
-				html+="<table id='{0}' class='table table-condensed table-hover table-striped'>".format(htmlid);
-				$.each(arr, function(idx,obj) {
-					if (bFirst) {
-						html+="<thead>"
-						html+="<tr>"
-						$.each(obj, function(k,v) {
-							html+="<th data-column-id='{0}' {1} {2}>".format(
-								k,
-								(k==idcolumn) ? "data-identifier='true'" : "",
-								"data-visible='{0}'".format( true /*$.inArray(k,viscols)!=-1*/ )
-							)
-							html+=k;
-							html+="</th>"
-						});
-						if (commands.length>0)
-							html += "<th data-column-id='commands' data-formatter='commands' data-sortable='false'>Commands</th>"
-						html+="</tr>"
-						html+="</thead>"
-						html+="<tbody>"
-						bFirst=false;
-					}
-					html+="<tr>"
-					$.each(obj, function(k,v) {
-						html+="<td>"
-						html+=v;
-						html+="</td>"
-					});
-					if (commands.length>0) {
-						html+="<td></td>";
-					}
-					html+="</tr>"
-				});
-				html+="</tbody>"
-				html+="</table>";		
-			}
-			html+="</div>";
-			return html;
-		}
-	}
-})();
-
-var DialogManager = ( function() {
-	return {
-		registerDialog: function( name, htmlDialog ) {
-			var dialog = $("div#dialogs div#"+name);
-			if (dialog.length ==0) 
-				$("div#dialogs").append(htmlDialog);
-			else
-				$(dialog).replaceWith(htmlDialog);
-			dialog = $("div#dialogs div#"+name);
-			// remove all callbacks for now
-			$(dialog).off();			
-			$("div#dialogs").off();
-			return  $(dialog);
-		},
-		bodyFromObject : function ( template ) {
-			var html="<form>";
-			$.each(template, function(key,value) {
-				var placeholder = "";
-				if (key.slice(-4)=='date')
-					placeholder = "YYYY-MM-DD";
-				var htmlField = new EJS({url: '/views/ff_input.ejs'}).render({htmltype:"text",key:key,value:value,placeholder:placeholder});
-				html += htmlField;
-			});
-			html+="</form>";
-			return html;
-		},
-		runDialog: function(dialog, callback) {
-			$(dialog).modal('show');
-			$("div#dialogs").on( 'click',".btn-primary", function() {
-				var obj= {};
-				$(dialog).find("input").each(function(idx,elem) {
-					obj[$(elem).prop('id')]=$(elem).val();
-				});
-				(callback)(obj);
-				$(dialog).modal('hide');
-			} );
-		}
-	}
-})();
 	
 var Model = (function() {
+	var _dictionary = {
+		"projects":{
+			"id": 			{type:'numeric', default:''},
+			"project_name":	{type:'text', 	default:''},
+			"prod_date":	{type:'date', 	default:''},
+		},
+		"users":{
+			"id": 			{type:'numeric', default:''},
+			"first_name":	{type:'text', 	default:''},
+			"last_name":	{type:'text', 	default:''},
+			"email":		{type:'email', 	default:''},
+			"location":		{type:'text', 	default:''},
+		}
+	};
 	return {
+		getDictionary:function(type) {
+			return _dictionary[type] || null;
+		},
+		
 		getTemplate:function(type) {
-			switch(type) {
-				case 'projects':
-					return {
-						"id":"",
-						"project_name":"",
-						"prod_date":""
-					}
-				case 'users':
-					return {
-						"id":"",
-						"first_name":"",
-						"last_name":"",
-						"email":"",
-						"location":""
-					}
-				default:
+			var dict = _dictionary[type];
+			if (dict) {
+				var obj = {};
+				$.each(dict,function(k,v) {
+					obj[k]=v.default;
+				});
+				return obj;
 			}
 			return null;
 		},
@@ -197,6 +97,115 @@ var Model = (function() {
 	}
 })();
 
+
+if (typeof String.prototype.format == 'undefined') {
+	String.prototype.format = function()
+	{
+		var args = new Array(arguments.length);
+		for (var i = 0; i < args.length; ++i) {
+		// `i` is always valid index in the arguments object
+		// so we merely retrieve the value
+		args[i] = arguments[i];
+		}
+		return this.replace(/{(\d+)}/g, function(match, number) { 
+			return typeof args[number] != 'undefined' ? args[number] : match;
+		});
+	};
+};
+
+var HtmlUtils = (function() {
+	return {
+		array2Table : function (htmlid, arr,idcolumn,viscols,commands) {
+			var commands = $.extend([],commands);
+			var html="";
+			var idcolumn = idcolumn || 'id';
+			var viscols = viscols || [idcolumn];
+			html+="<div class='col-xs-12'>";
+			if ( (arr) && ($.isArray(arr) && (arr.length>0)) ) {
+				var bFirst=true;
+				html+="<table id='{0}' class='table table-condensed table-hover table-striped'>".format(htmlid);
+				$.each(arr, function(idx,obj) {
+					if (bFirst) {
+						html+="<thead>"
+						html+="<tr>"
+						$.each(obj, function(k,v) {
+							html+="<th data-column-id='{0}' {1} {2}>".format(
+								k,
+								(k==idcolumn) ? "data-identifier='true'" : "",
+								"data-visible='{0}'".format( true /*$.inArray(k,viscols)!=-1*/ )
+							)
+							html+=k;
+							html+="</th>"
+						});
+						if (commands.length>0)
+							html += "<th data-column-id='commands' data-formatter='commands' data-sortable='false'>Commands</th>"
+						html+="</tr>"
+						html+="</thead>"
+						html+="<tbody>"
+						bFirst=false;
+					}
+					html+="<tr>"
+					$.each(obj, function(k,v) {
+						html+="<td>"
+						html+=v;
+						html+="</td>"
+					});
+					if (commands.length>0) {
+						html+="<td></td>";
+					}
+					html+="</tr>"
+				});
+				html+="</tbody>"
+				html+="</table>";		
+			}
+			html+="</div>";
+			return html;
+		}
+	}
+})();
+
+var DialogManager = ( function() {
+	return {
+		registerDialog: function( name, htmlDialog ) {
+			var dialog = $("div#dialogs div#"+name);
+			if (dialog.length ==0) 
+				$("div#dialogs").append(htmlDialog);
+			else
+				$(dialog).replaceWith(htmlDialog);
+			dialog = $("div#dialogs div#"+name);
+			// remove all callbacks for now
+			$(dialog).off();			
+			$("div#dialogs").off();
+			return  $(dialog);
+		},
+		bodyFromObject : function ( type, template ) {
+			var html="<form>";
+			var dictionary = Model.getDictionary(type);
+			$.each(template, function(key,value) {
+				var placeholder = "";
+				if (dictionary[key].type=="date")
+				// if (key.slice(-4)=='date')
+					placeholder = "YYYY-MM-DD";
+				var htmlField = new EJS({url: '/views/ff_input.ejs'}).render({htmltype:"text",key:key,value:value,placeholder:placeholder});
+				html += htmlField;
+			});
+			html+="</form>";
+			return html;
+		},
+		runDialog: function(dialog, callback) {
+			$(dialog).modal('show');
+			$("div#dialogs").on( 'click',".btn-primary", function() {
+				var obj= {};
+				$(dialog).find("input").each(function(idx,elem) {
+					obj[$(elem).prop('id')]=$(elem).val();
+				});
+				(callback)(obj);
+				$(dialog).modal('hide');
+			} );
+		}
+	}
+})();
+
 var UIManager = (function(){
 	function _preparePage() {
 		$('main').empty();
@@ -204,7 +213,7 @@ var UIManager = (function(){
 	function _onEditObject(type,id,callback) {
 		Model.get(type,id,function(object) {
 			var htmlid = 'createDialog';
-			var htmlDialog = new EJS({url: '/views/defaultdialog.ejs'}).render({htmlid:htmlid, title:type, body: DialogManager.bodyFromObject(object)});
+			var htmlDialog = new EJS({url: '/views/defaultdialog.ejs'}).render({htmlid:htmlid, title:type, body: DialogManager.bodyFromObject(type,object)});
 			var dialog = DialogManager.registerDialog(htmlid,htmlDialog);
 			DialogManager.runDialog(dialog,function(result) {
 				(callback)(result);
@@ -214,7 +223,7 @@ var UIManager = (function(){
 	function _onCreateObject(type,callback) {
 		var template = Model.getTemplate(type);
 		var htmlid = 'createDialog';
-		var htmlDialog = new EJS({url: '/views/defaultdialog.ejs'}).render({htmlid:htmlid, title:type, body: DialogManager.bodyFromObject(template)});
+		var htmlDialog = new EJS({url: '/views/defaultdialog.ejs'}).render({htmlid:htmlid, title:type, body: DialogManager.bodyFromObject(type,template)});
 		var dialog = DialogManager.registerDialog(htmlid,htmlDialog);
 		DialogManager.runDialog(dialog,function(result) {
 			Model.add(type,result,function() {
