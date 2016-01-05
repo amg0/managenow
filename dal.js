@@ -18,7 +18,8 @@ exports.init = function(callback) {
 	  host: "localhost",
 	  user: "amg0",
 	  password: "xxx",
-	  database: "testdb"
+	  database: "testdb",
+	  dateStrings: true
 	});
 	(callback)(null);
 }
