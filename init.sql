@@ -11,10 +11,10 @@ DROP TABLE  IF EXISTS users;
 
 CREATE TABLE users (
   id int(11) NOT NULL AUTO_INCREMENT,
-  first_name varchar(50),
+  first_name varchar(50) DEFAULT '',
   last_name varchar(50) NOT NULL,
   email varchar(50) NOT NULL,
-  location varchar(50),
+  location varchar(50) DEFAULT '',
   PRIMARY KEY (id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
