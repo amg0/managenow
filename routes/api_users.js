@@ -26,7 +26,8 @@ router
 		// res.setHeader('Content-Type', 'text/plain')
 		// res.write('you posted:\n')
 		// res.end(JSON.stringify(req.body, null, 2))
-		dal.addUser( req.body , function (err,results, fields) {
+		var obj = JSON.parse(req.body.json);
+		dal.addUser( obj , function (err,results, fields) {
 			res.send(results);
 		});
 	})
@@ -37,7 +38,8 @@ router
 		});
 	})
 	.put('/:id', function(req, res, next) {
-		dal.updateUser(req.params.id, req.body , function (err, results, fields) {
+		var obj = JSON.parse(req.body.json);
+		dal.updateUser(req.params.id, obj , function (err, results, fields) {
 			res.send(results);
 		});
 	})

@@ -45,6 +45,7 @@ module.exports = function(tablename) {
 		update : function( con, id, object, callback  ) {
 			delete object.id;
 			var sql = mysql.format('UPDATE '+_tablename+' SET ? Where ID = ?',[object,id]);
+			winston.info(object);
 			winston.info('update SQL:%s',sql);
 			con.query(
 			  sql,

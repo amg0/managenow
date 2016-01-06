@@ -10,7 +10,7 @@ SET sql_mode='STRICT_ALL_TABLES';
 DROP TABLE  IF EXISTS users;
 
 CREATE TABLE users (
-  id int(11) NOT NULL AUTO_INCREMENT,
+  id int unsigned NOT NULL AUTO_INCREMENT,
   first_name varchar(50) DEFAULT '',
   last_name varchar(50) NOT NULL,
   email varchar(50) NOT NULL,
@@ -27,12 +27,13 @@ INSERT INTO users (id, first_name, last_name, email, location) VALUES
 DROP TABLE  IF EXISTS projects;
 
 CREATE TABLE projects (
-  id int(11) NOT NULL AUTO_INCREMENT,
+  id int unsigned NOT NULL AUTO_INCREMENT,
   project_name varchar(50) NOT NULL,
-  prod_date DATE NOT NULL,
+  prod_date date NOT NULL,
+  project_manager int unsigned,
   PRIMARY KEY (id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
-INSERT INTO projects (id, project_name, prod_date) VALUES
-(1, 'Biztalk Migration', '2016-1-31'),
-(2, 'Snow rel4', '2016-3-31');
+INSERT INTO projects (id, project_name, prod_date, project_manager) VALUES
+(1, 'Biztalk Migration', '2016-1-31', 1),
+(2, 'Snow rel4', '2016-3-31', NULL);

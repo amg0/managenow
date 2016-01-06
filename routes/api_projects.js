@@ -23,7 +23,8 @@ router
 		});
 	})
 	.post('/', function(req, res, next) {
-		dal.addProject( req.body , function (err,results, fields) {
+		var obj = JSON.parse(req.body.json);
+		dal.addProject( obj , function (err,results, fields) {
 			res.send(results);
 		});
 	})
@@ -34,7 +35,8 @@ router
 		});
 	})
 	.put('/:id', function(req, res, next) {
-		dal.updateProject(req.params.id, req.body , function (err, results, fields) {
+		var obj = JSON.parse(req.body.json);
+		dal.updateProject(req.params.id, obj , function (err, results, fields) {
 			res.send(results);
 		});
 	})

@@ -4,9 +4,10 @@
 var Model = (function() {
 	var _dictionary = {
 		"projects":{
-			"id": 			{type:'number', default:''},
-			"project_name":	{type:'text', 	default:'' , required:true },
-			"prod_date":	{type:'date', 	default:new Date().toISOString().substring(0, 10) , required:true },
+			"id": 				{type:'number', default:''},
+			"project_name":		{type:'text', 	default:'' , required:true },
+			"prod_date":		{type:'date', 	default:new Date().toISOString().substring(0, 10) , required:true },
+			"project_manager":	{type:'number', default:null},
 		},
 		"users":{
 			"id": 			{type:'number', default:''},
@@ -62,7 +63,9 @@ var Model = (function() {
 				$.ajax({
 				  url: '/api/'+objtype+'/'+object.id.toString(),
 				  type: 'PUT',
-				  data: object,
+				  data: {
+					  json:JSON.stringify(object)
+				  },
 				  cache:false,
 				  success: function (data) {
 					  callback(data);
@@ -75,7 +78,9 @@ var Model = (function() {
 			$.ajax({
 			  url: '/api/'+objtype,
 			  type: 'POST',
-			  data: object,
+			  data: {
+				json:JSON.stringify(object)
+			  },
 			  cache:false,
 			  success: function (data) {
 				  callback(data);
@@ -148,7 +153,7 @@ var HtmlUtils = (function() {
 			return html;
 		},
 		objectFromBody : function (type, inputs) {
-			var obj= {};
+			var obj= Model.getTemplate(type);
 			var dictionary = Model.getDictionary(type);
 			inputs.each(function(idx,elem) {
 				var key = $(elem).prop('id');
