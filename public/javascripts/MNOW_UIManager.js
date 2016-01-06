@@ -288,6 +288,7 @@ var UIManager = (function(){
 				var html = new EJS({url: '/views/defaultlist.ejs'}).render({htmlid:htmlid, title:'List: '+type, data: data, commandtbl:commandtbl});
 				$('main').html(html);			
 				var grid = $("#"+htmlid).bootgrid({
+					caseSensitive:false,
 					formatters: {
 						 "commands": _commandFormatter
 					}
