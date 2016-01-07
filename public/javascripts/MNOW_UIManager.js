@@ -7,7 +7,7 @@ var Model = (function() {
 			"id": 				{type:'number', default:''},
 			"project_name":		{type:'text', 	default:'' , required:true },
 			"prod_date":		{type:'date', 	default:new Date().toISOString().substring(0, 10) , required:true },
-			"project_manager":	{type:'number', default:null},
+			"project_manager":	{type:'reference', default:null, table:'users', field:'id', display:'last_name,first_name' },
 		},
 		"users":{
 			"id": 			{type:'number', default:''},
@@ -119,14 +119,28 @@ if (typeof String.prototype.format == 'undefined') {
 };
 
 var HtmlUtils = (function() {
+	function _buildItems(table,field,display,selectedvalue) {
+		Model.getAll(table,function(list) {
+			var i=0;
+		});
+		return [];
+	};
 	return {
-		bodyFromObject : function ( type, template ) {
+		bodyFromObject : function ( type, template , callback ) {
 			var html="";
 			var dictionary = Model.getDictionary(type);
 			$.each(template, function(key,value) {
 				var placeholder = "";
 				var htmltype="text";
+				var htmlField = "";
 				switch (dictionary[key].type) {
+					case "reference":
+						htmlField = new EJS({url: '/views/ff_select.ejs'}).render({
+							key:key,
+							value:value,
+							items:_buildItems(dictionary[key].table,dictionary[key].field,dictionary[key].display,value)							
+						});
+						break;
 					case "date":
 						// for pure date field, we do not want to take into account user locale. date is the date we want
 						placeholder = "YYYY-MM-DD";
@@ -134,23 +148,39 @@ var HtmlUtils = (function() {
 						value = value.substring(0, 10);
 						// var date = new Date(value);
 						// value = date.toISOString().substring(0, 10);
+						htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
+								htmltype:htmltype,
+								key:key,
+								value:value,
+								required:(dictionary[key].required || false), 
+								placeholder:placeholder
+						});
 						break;
 					case "number":
 						htmltype="number";
+						htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
+								htmltype:htmltype,
+								key:key,
+								value:value,
+								required:(dictionary[key].required || false), 
+								placeholder:placeholder
+						});
 						break;
 					default:
 						htmltype=dictionary[key].type;
+						htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
+								htmltype:htmltype,
+								key:key,
+								value:value,
+								required:(dictionary[key].required || false), 
+								placeholder:placeholder
+						});
 				}
-				var htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
-						htmltype:htmltype,
-						key:key,
-						value:value,
-						required:(dictionary[key].required || false), 
-						placeholder:placeholder
-				});
+
 				html += htmlField;
 			});
-			return html;
+			(callback)(html);
+			return ;
 		},
 		objectFromBody : function (type, inputs) {
 			var obj= Model.getTemplate(type);
@@ -260,22 +290,26 @@ var UIManager = (function(){
 	function _onEditObject(type,id,callback) {
 		Model.get(type,id,function(object) {
 			var htmlid = 'createDialog';
-			var htmlDialog = new EJS({url: '/views/defaultdialog.ejs'}).render({htmlid:htmlid, title:type, body: HtmlUtils.bodyFromObject(type,object)});
-			var dialog = DialogManager.registerDialog(htmlid,htmlDialog);
-			DialogManager.runDialog(dialog,function(result) {
-				var obj = HtmlUtils.objectFromBody(type,$(dialog).find("input"));
-				(callback)(obj);
+			HtmlUtils.bodyFromObject(type,object,function(htmlbody) {
+				var htmlDialog = new EJS({url: '/views/defaultdialog.ejs'}).render({htmlid:htmlid, title:type, body: htmlbody});
+				var dialog = DialogManager.registerDialog(htmlid,htmlDialog);
+				DialogManager.runDialog(dialog,function(result) {
+					var obj = HtmlUtils.objectFromBody(type,$(dialog).find("input"));
+					(callback)(obj);
+				});
 			});
 		});
 	};
 	function _onCreateObject(type,callback) {
 		var template = Model.getTemplate(type);
 		var htmlid = 'createDialog';
-		var htmlDialog = new EJS({url: '/views/defaultdialog.ejs'}).render({htmlid:htmlid, title:type, body: HtmlUtils.bodyFromObject(type,template)});
-		var dialog = DialogManager.registerDialog(htmlid,htmlDialog);
-		DialogManager.runDialog(dialog,function(result) {
-			var obj = HtmlUtils.objectFromBody(type,$(dialog).find("input"));
-			(callback)(obj);
+		HtmlUtils.bodyFromObject(type,template,function(htmlbody){
+			var htmlDialog = new EJS({url: '/views/defaultdialog.ejs'}).render({htmlid:htmlid, title:type, body: htmlbody});
+			var dialog = DialogManager.registerDialog(htmlid,htmlDialog);
+			DialogManager.runDialog(dialog,function(result) {
+				var obj = HtmlUtils.objectFromBody(type,$(dialog).find("input"));
+				(callback)(obj);
+			});
 		});
 	};
 	function _listPage(type) {

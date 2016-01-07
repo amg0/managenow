@@ -1,0 +1,9 @@
+<!-- views/pages/ff_select.ejs -->  
+<div class="form-group">
+	<label for="<%=key%>"><%=key%>:</label>
+	<select id="<%=key%>" class="form-control" >
+		<% for (var i=0; i<items.length ; i++) { %>
+				<option value="<%= items[i].id %>"><%= items[i].label %></option>
+		<% } %>
+	</select>
+</div>
