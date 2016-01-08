@@ -187,6 +187,8 @@ if (jQuery.when.all===undefined) {
 		$.when.apply(jQuery, deferreds)
 		.then(
 			function() {
+				// bug of jquery ? if there is only one defered, the result will not be an array
+				// so we have to mock it up here to inssure the result is allways an array of result
 				var result = [];
 				if (len==1) 
 					result.push(Array.prototype.slice.call(arguments))
@@ -284,10 +286,10 @@ var HtmlUtils = (function() {
 			$.each(template, function(key,value) {
 				deferreds.push( _buildField(dictionary[key],key,value) );
 			});
-			$.when.all(deferreds).then(function(results) {
-				(callback)(results.join(""));
+			return $.when.all(deferreds).then(function(results) {
+				if ($.isFunction(callback))
+					(callback)(results.join(""));
 			});
-			return;
 		},
 		objectFromBody : function (type, dialog) {
 			var obj= DBModel.getTemplate(type);
@@ -437,11 +439,13 @@ var UIManager = (function(){
 		function _commandFormatter(col,row) {
 			return ($.map(commandtbl, function(e) { return e.format(row.id); })).join(" ");
 		};
+		
 		function _updateList(type,htmlid,commandtbl) {
 			var dictionary = DBModel.getDictionary(type);
 			$.when(DBModel.getAll(type)).then(function(results) {
 				// load the template file, then render it with data
-				var html = new EJS({url: '/views/defaultlist.ejs'}).render({
+				var html = new EJS({url: '/views/defaultlist.ejs'})
+				.render({
 					htmlid:htmlid, 
 					title:'List: '+type, 
 					data: results, 
@@ -464,8 +468,8 @@ var UIManager = (function(){
 					formatters: $.extend( formatters, {
 						 "commands": _commandFormatter
 					})
-				}).on("loaded.rs.jquery.bootgrid", function()
-				{
+				})
+				.on("loaded.rs.jquery.bootgrid", function() {
 					/* Executes after data is loaded and rendered */
 					grid.find(".command-edit").on("click", function(e)
 					{
