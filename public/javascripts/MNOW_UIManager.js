@@ -10,7 +10,7 @@ var DBModel = (function() {
 			"project_manager":	{type:'reference', default:null, table:'users', field:'id', formatter:function(col,row) { 
 					// if not null
 					if (row.project_manager) {
-						var usr = Entities.get("users",row.project_manager);
+						var usr = Cache.get("users",row.project_manager);
 						return '{0},{1}'.format(usr.last_name,usr.first_name);
 					}
 					return "";
@@ -25,7 +25,42 @@ var DBModel = (function() {
 			"location":		{type:'text', 	default:''},
 		}
 	};
-
+	
+	var Cache = (function() {	
+		var _cache={};
+		
+		function _load(type,list) {
+			_cache[type]=list;
+		};
+		
+		function _get(type,id) {
+			if ((id>0) && (_cache[type]) ) {
+				for (var i=0; i<_cache[type].length ; i++) {
+					if (_cache[type][i].id == id ) {
+						return _cache[type][i];
+					}
+				}
+			}
+			return null;
+		}
+		return {
+			load : _load,
+			get  : _get
+		};
+	})();
+	
+	function _getAll(objtype,callback) {
+		return $.ajax({
+		  url: '/api/'+objtype,
+		  dataType: "json",
+		  cache:false,
+		  success: function (data) {
+			if ($.isFunction(callback))
+				callback(data);
+		  }
+		});
+	};
+	
 	return {
 		getDictionary:function(type) {
 			return _dictionary[type] || null;
@@ -44,32 +79,45 @@ var DBModel = (function() {
 		},
 		
 		getAll:function(objtype, callback ) {
-			return $.ajax({
-			  url: '/api/'+objtype,
-			  dataType: "json",
-			  cache:false,
-			  success: function (data) {
-				  callback(data);
-			  }
+			var dfd = new jQuery.Deferred();
+			var deferreds = [ _getAll(objtype) ];
+			var dictionary = DBModel.getDictionary(objtype);
+			$.each(dictionary, function (key,field_dict) {
+				if (field_dict.type=="reference") {
+					var remote_type = field_dict.table;
+					var gadfd = _getAll(remote_type,function(list) {
+						Cache.load(remote_type,list);
+					})
+					deferreds.push( gadfd )
+				}
 			});
+
+			$.when.all(deferreds).then(function(results) {
+				if ($.isFunction(callback))
+					(callback)(results[0][0]);		// array of ( Anything data, String textStatus, jqXHR jqXHR )
+				dfd.resolve(results[0][0]);
+			});
+			return dfd.promise();
 		},
 		
 		get:function(objtype, id, callback ) {
 			if (id) {
-				$.ajax({
+				return $.ajax({
 				  url: '/api/'+objtype+'/'+id.toString(),
 				  type: 'GET',
 				  cache:false,
 				  success: function (data) {
-					  callback(data);
+					  if ($.isFunction(callback))
+						callback(data);
 				  }
 				});
 			}
+			return null;
 		},
 
 		update:function(objtype, object, callback ) {
 			if (object.id) {
-				$.ajax({
+				return $.ajax({
 				  url: '/api/'+objtype+'/'+object.id.toString(),
 				  type: 'PUT',
 				  data: {
@@ -77,14 +125,16 @@ var DBModel = (function() {
 				  },
 				  cache:false,
 				  success: function (data) {
-					  callback(data);
+					  if ($.isFunction(callback))
+						callback(data);
 				  }
 				});
 			}
+			return null;
 		},
 		
 		add:function(objtype, object, callback ) {
-			$.ajax({
+			return $.ajax({
 			  url: '/api/'+objtype,
 			  type: 'POST',
 			  data: {
@@ -92,54 +142,27 @@ var DBModel = (function() {
 			  },
 			  cache:false,
 			  success: function (data) {
-				  callback(data);
+				  if ($.isFunction(callback))
+					callback(data);
 			  }
 			});
 		},
 		
 		del:function(objtype, id, callback ) {
-			$.ajax({
+			return $.ajax({
 			  url: '/api/'+objtype+'/'+id.toString(),
 			  type: 'DELETE',
 			  data: null,
 			  cache:false,
 			  success: function (data) {
-				  callback(data);
+				  if ($.isFunction(callback))
+					callback(data);
 			  }
 			});
 		},
 	}
 })();
 
-var Entities = (function() {	
-	var _cache={};
-	
-	function _init(type) {
-		var dfd = new $.Deferred();
-		delete _cache[type];
-		_cache[type]={}
-		DBModel.getAll(type,function(list) {
-			_cache[type]=list;
-			dfd.resolve(list);
-		});
-		return dfd.promise()
-	};
-	
-	function _get(type,id) {
-		if ((id>0) && (_cache[type]) ) {
-			for (var i=0; i<_cache[type].length ; i++) {
-				if (_cache[type][i].id == id ) {
-					return _cache[type][i];
-				}
-			}
-		}
-		return null;
-	}
-	return {
-		init : _init,
-		get  : _get
-	};
-})();
 
 if (typeof String.prototype.format == 'undefined') {
 	String.prototype.format = function()
@@ -159,16 +182,28 @@ if (typeof String.prototype.format == 'undefined') {
 // Put somewhere in your scripting environment
 if (jQuery.when.all===undefined) {
     jQuery.when.all = function(deferreds) {
-        var deferred = new jQuery.Deferred();
-        $.when.apply(jQuery, deferreds).then(
-            function() {
-                deferred.resolve(Array.prototype.slice.call(arguments));
-            },
-            function() {
-                deferred.fail(Array.prototype.slice.call(arguments));
-            });
-
-        return deferred;
+		var deferred = new jQuery.Deferred();
+		var len = deferreds.length;
+		$.when.apply(jQuery, deferreds)
+		.then(
+			function() {
+				var result = [];
+				if (len==1) 
+					result.push(Array.prototype.slice.call(arguments))
+				else
+					result = Array.prototype.slice.call(arguments);
+				deferred.resolve(result);
+			},
+			function() {
+				var result = [];
+				if (len==1) 
+					result.push(Array.prototype.slice.call(arguments))
+				else
+					result = Array.prototype.slice.call(arguments);
+				deferred.fail(result);
+			}
+		);
+		return deferred.promise();
     }
 }
 
@@ -403,16 +438,15 @@ var UIManager = (function(){
 			return ($.map(commandtbl, function(e) { return e.format(row.id); })).join(" ");
 		};
 		function _updateList(type,htmlid,commandtbl) {
-			// prepare referenced data
-			var deferreds = [ Entities.init(type) ];
 			var dictionary = DBModel.getDictionary(type);
-			$.each(dictionary, function (key,field_dict) {
-				if (field_dict.type=="reference")
-					deferreds.push( Entities.init(field_dict.table) )
-			});
-			$.when.all(deferreds).then(function(results) {
+			$.when(DBModel.getAll(type)).then(function(results) {
 				// load the template file, then render it with data
-				var html = new EJS({url: '/views/defaultlist.ejs'}).render({htmlid:htmlid, title:'List: '+type, data: results[0], commandtbl:commandtbl});
+				var html = new EJS({url: '/views/defaultlist.ejs'}).render({
+					htmlid:htmlid, 
+					title:'List: '+type, 
+					data: results, 
+					commandtbl:commandtbl});
+					
 				$('main').html(html);	
 
 				// prepare formatters
@@ -452,7 +486,8 @@ var UIManager = (function(){
 			});
 		};
 
-		_updateList(type,htmlid,commandtbl);					
+		_updateList(type,htmlid,commandtbl);		
+		
 		$('main')
 			.off('click')
 			.on('click','#mnow-create-object',function() {
