@@ -1,3 +1,4 @@
+-- database & account creation
 -- CREATE DATABASE testdb;
 -- CREATE USER 'amg0'@'localhost' IDENTIFIED BY 'Clem0tine';
 -- GRANT ALL PRIVILEGES ON testdb.* TO 'amg0'@'localhost';
