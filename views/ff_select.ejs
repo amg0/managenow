@@ -2,8 +2,11 @@
 <div class="form-group">
 	<label for="<%=key%>"><%=key%>:</label>
 	<select id="<%=key%>" class="form-control" >
+		<% if (required==false) {%>
+			<option value="0"></option>
+		<%}%>
 		<% for (var i=0; i<items.length ; i++) { %>
-				<option value="<%= items[i].id %>"><%= items[i].label %></option>
+				<option value="<%= items[i].id %>" <% if (value==items[i].id) {%> selected <%}%>><%= items[i].label %></option>
 		<% } %>
 	</select>
 </div>

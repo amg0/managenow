@@ -1349,3 +1349,609 @@
 {"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T00:53:38.980Z"}
 {"level":"info","message":"connected as id 63","timestamp":"2016-01-07T00:53:38.994Z"}
 {"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T00:53:38.995Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-07T20:48:19.148Z"}
+{"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-07T20:48:19.154Z"}
+{"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-07T20:48:19.155Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T20:48:41.821Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T20:48:41.823Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T20:48:50.547Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T20:48:50.550Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T20:48:56.458Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='2' LIMIT 1","timestamp":"2016-01-07T20:48:56.462Z"}
+{"id":2,"project_name":"Snow rel4","prod_date":"2016-03-31","project_manager":null,"level":"info","message":"","timestamp":"2016-01-07T20:48:56.465Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T20:48:56.467Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T20:48:56.507Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T20:48:56.508Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T20:49:05.824Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T20:49:05.825Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T20:49:07.400Z"}
+{"level":"info","message":"get SQL:SELECT * FROM users WHERE id='3' LIMIT 1","timestamp":"2016-01-07T20:49:07.402Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T20:49:10.844Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T20:49:10.845Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:30:06.253Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T21:30:06.256Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:30:35.600Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T21:30:35.601Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T21:30:35.606Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T21:30:35.608Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:32:31.118Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T21:32:31.121Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:32:33.073Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T21:32:33.074Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T21:32:33.077Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T21:32:33.080Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:33:40.221Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T21:33:40.223Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:33:41.421Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T21:33:41.423Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T21:33:41.428Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T21:33:41.430Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:33:54.340Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='2' LIMIT 1","timestamp":"2016-01-07T21:33:54.341Z"}
+{"id":2,"project_name":"Snow rel4","prod_date":"2016-03-31","project_manager":null,"level":"info","message":"","timestamp":"2016-01-07T21:33:54.343Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T21:33:54.344Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:55:56.172Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T21:55:56.173Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:55:57.612Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T21:55:57.614Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T21:55:57.617Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T21:55:57.618Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:56:07.892Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T21:56:07.893Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T21:56:07.895Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T21:56:07.896Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:56:36.148Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T21:56:36.149Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:56:38.278Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T21:56:38.279Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T21:56:38.285Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T21:56:38.287Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:57:43.055Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T21:57:43.056Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T21:57:43.057Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T21:57:43.058Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:57:49.641Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='2' LIMIT 1","timestamp":"2016-01-07T21:57:49.642Z"}
+{"id":2,"project_name":"Snow rel4","prod_date":"2016-03-31","project_manager":null,"level":"info","message":"","timestamp":"2016-01-07T21:57:49.644Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T21:57:49.646Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:58:17.346Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T21:58:17.348Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:58:18.968Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T21:58:18.969Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T21:58:18.972Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T21:58:18.973Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:58:53.416Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T21:58:53.419Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T21:58:54.788Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T21:58:54.790Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T21:58:54.792Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T21:58:54.794Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:01:14.630Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T22:01:14.633Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:01:16.143Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T22:01:16.144Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T22:01:16.146Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T22:01:16.148Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:01:49.814Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T22:01:49.814Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:14:08.477Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T22:14:08.478Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:14:10.692Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T22:14:10.693Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T22:14:10.695Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T22:14:10.697Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:14:26.246Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T22:14:26.246Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:24:58.650Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T22:24:58.652Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:25:15.391Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T22:25:15.391Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T22:25:15.393Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T22:25:15.394Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:25:15.478Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T22:25:15.479Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:32:07.701Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T22:32:07.703Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:32:09.183Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T22:32:09.184Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T22:32:09.186Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T22:32:09.188Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:32:09.267Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T22:32:09.268Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:32:17.472Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='2' LIMIT 1","timestamp":"2016-01-07T22:32:17.473Z"}
+{"id":2,"project_name":"Snow rel4","prod_date":"2016-03-31","project_manager":null,"level":"info","message":"","timestamp":"2016-01-07T22:32:17.475Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T22:32:17.476Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:32:17.492Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T22:32:17.493Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:32:23.369Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T22:32:23.370Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T22:32:23.375Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T22:32:23.376Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:32:23.393Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T22:32:23.394Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:33:24.363Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T22:33:24.364Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:33:25.784Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T22:33:25.784Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T22:33:25.786Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T22:33:25.788Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:33:25.871Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T22:33:25.872Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:34:42.004Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T22:34:42.007Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:34:43.932Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T22:34:43.936Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T22:34:43.938Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T22:34:43.939Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:34:44.020Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T22:34:44.022Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:35:16.738Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T22:35:16.738Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T22:35:16.742Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T22:35:16.745Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:35:16.760Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T22:35:16.761Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:36:28.575Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T22:36:28.575Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:36:31.747Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T22:36:31.748Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T22:36:31.750Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T22:36:31.753Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:36:31.832Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T22:36:31.833Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:37:10.145Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T22:37:10.146Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:37:11.281Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T22:37:11.283Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T22:37:11.286Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T22:37:11.290Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:37:11.366Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T22:37:11.367Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:37:52.166Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T22:37:52.167Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:37:53.811Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T22:37:53.814Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T22:37:53.817Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T22:37:53.819Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:37:53.900Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T22:37:53.901Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:38:11.224Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='2' LIMIT 1","timestamp":"2016-01-07T22:38:11.224Z"}
+{"id":2,"project_name":"Snow rel4","prod_date":"2016-03-31","project_manager":null,"level":"info","message":"","timestamp":"2016-01-07T22:38:11.226Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T22:38:11.228Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T22:38:11.310Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T22:38:11.311Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:07:49.440Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:07:49.442Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:07:50.670Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:07:50.671Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T23:07:50.673Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:07:50.676Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:07:50.753Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:07:50.754Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:08:01.287Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:08:01.288Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T23:08:01.289Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:08:01.290Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:08:01.305Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:08:01.306Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:08:05.538Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='2' LIMIT 1","timestamp":"2016-01-07T23:08:05.539Z"}
+{"id":2,"project_name":"Snow rel4","prod_date":"2016-03-31","project_manager":null,"level":"info","message":"","timestamp":"2016-01-07T23:08:05.548Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:08:05.550Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:08:05.564Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:08:05.565Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:08:48.472Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='2' LIMIT 1","timestamp":"2016-01-07T23:08:48.473Z"}
+{"id":2,"project_name":"Snow rel4","prod_date":"2016-03-31","project_manager":null,"level":"info","message":"","timestamp":"2016-01-07T23:08:48.474Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:08:48.483Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:08:48.499Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:08:48.500Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:09:25.568Z"}
+{"project_name":"Snow rel4","prod_date":"2016-03-31","project_manager":null,"level":"info","message":"","timestamp":"2016-01-07T23:09:25.570Z"}
+{"level":"info","message":"update SQL:UPDATE projects SET `project_name` = 'Snow rel4', `prod_date` = '2016-03-31', `project_manager` = NULL Where ID = '2'","timestamp":"2016-01-07T23:09:25.572Z"}
+{"level":"info","message":"Changed 0 rows","timestamp":"2016-01-07T23:09:25.588Z"}
+{"level":"warn","timestamp":"2016-01-07T23:09:25.596Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:09:25.622Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:09:25.623Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:10:03.518Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:10:03.519Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T23:10:03.520Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:10:03.522Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:10:03.536Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:10:03.537Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:13:27.823Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:13:27.825Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T23:13:27.827Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:13:27.831Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:13:27.843Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:13:27.844Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:37.493Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:14:37.495Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:39.127Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:14:39.128Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T23:14:39.130Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:14:39.131Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:39.212Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:14:39.213Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:42.694Z"}
+{"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":"2","level":"info","message":"","timestamp":"2016-01-07T23:14:42.696Z"}
+{"level":"info","message":"update SQL:UPDATE projects SET `project_name` = 'Biztalk Migration', `prod_date` = '2016-01-31', `project_manager` = '2' Where ID = '1'","timestamp":"2016-01-07T23:14:42.697Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2016-01-07T23:14:42.705Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:42.734Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:14:42.735Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:44.121Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:14:44.122Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":2,"level":"info","message":"","timestamp":"2016-01-07T23:14:44.124Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:14:44.126Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:44.141Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:14:44.142Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:46.958Z"}
+{"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":"3","level":"info","message":"","timestamp":"2016-01-07T23:14:46.959Z"}
+{"level":"info","message":"update SQL:UPDATE projects SET `project_name` = 'Biztalk Migration', `prod_date` = '2016-01-31', `project_manager` = '3' Where ID = '1'","timestamp":"2016-01-07T23:14:46.960Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2016-01-07T23:14:46.967Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:46.984Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:14:46.988Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:48.223Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:14:48.224Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":3,"level":"info","message":"","timestamp":"2016-01-07T23:14:48.226Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:14:48.228Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:48.241Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:14:48.243Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:50.777Z"}
+{"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":"0","level":"info","message":"","timestamp":"2016-01-07T23:14:50.778Z"}
+{"level":"info","message":"update SQL:UPDATE projects SET `project_name` = 'Biztalk Migration', `prod_date` = '2016-01-31', `project_manager` = '0' Where ID = '1'","timestamp":"2016-01-07T23:14:50.780Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2016-01-07T23:14:51.071Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:51.085Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:14:51.087Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:54.854Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:14:54.855Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":0,"level":"info","message":"","timestamp":"2016-01-07T23:14:54.858Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:14:54.859Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:54.873Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:14:54.874Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:57.425Z"}
+{"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":"1","level":"info","message":"","timestamp":"2016-01-07T23:14:57.426Z"}
+{"level":"info","message":"update SQL:UPDATE projects SET `project_name` = 'Biztalk Migration', `prod_date` = '2016-01-31', `project_manager` = '1' Where ID = '1'","timestamp":"2016-01-07T23:14:57.426Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2016-01-07T23:14:57.704Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:14:57.716Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:14:57.717Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:15:14.343Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:15:14.344Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:15:15.619Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:15:15.620Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T23:15:15.623Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:15:15.624Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:15:15.701Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:15:15.702Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:15:18.872Z"}
+{"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":"0","level":"info","message":"","timestamp":"2016-01-07T23:15:18.874Z"}
+{"level":"info","message":"update SQL:UPDATE projects SET `project_name` = 'Biztalk Migration', `prod_date` = '2016-01-31', `project_manager` = '0' Where ID = '1'","timestamp":"2016-01-07T23:15:18.875Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2016-01-07T23:15:19.163Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:15:19.182Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:15:19.182Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:15:20.949Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:15:20.951Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":0,"level":"info","message":"","timestamp":"2016-01-07T23:15:20.955Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:15:20.957Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:15:20.971Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:15:20.972Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:15:23.838Z"}
+{"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":"1","level":"info","message":"","timestamp":"2016-01-07T23:15:23.842Z"}
+{"level":"info","message":"update SQL:UPDATE projects SET `project_name` = 'Biztalk Migration', `prod_date` = '2016-01-31', `project_manager` = '1' Where ID = '1'","timestamp":"2016-01-07T23:15:23.844Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2016-01-07T23:15:23.856Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:15:23.869Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:15:23.870Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:15:39.463Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:15:39.464Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T23:15:39.466Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:15:39.468Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:15:39.485Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:15:39.486Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:15:55.325Z"}
+{"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":"0","level":"info","message":"","timestamp":"2016-01-07T23:15:55.325Z"}
+{"level":"info","message":"update SQL:UPDATE projects SET `project_name` = 'Biztalk Migration', `prod_date` = '2016-01-31', `project_manager` = '0' Where ID = '1'","timestamp":"2016-01-07T23:15:55.326Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2016-01-07T23:15:55.851Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:15:55.862Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:15:55.862Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:16:00.235Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:16:00.237Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":0,"level":"info","message":"","timestamp":"2016-01-07T23:16:00.240Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:16:00.242Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:16:00.255Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:16:00.256Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:16:12.492Z"}
+{"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":"1","level":"info","message":"","timestamp":"2016-01-07T23:16:12.493Z"}
+{"level":"info","message":"update SQL:UPDATE projects SET `project_name` = 'Biztalk Migration', `prod_date` = '2016-01-31', `project_manager` = '1' Where ID = '1'","timestamp":"2016-01-07T23:16:12.493Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2016-01-07T23:16:12.501Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:16:12.521Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:16:12.522Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:04.515Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:19:04.515Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:16.951Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:19:16.952Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T23:19:16.954Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:19:16.956Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:17.035Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:19:17.035Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:20.050Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='2' LIMIT 1","timestamp":"2016-01-07T23:19:20.052Z"}
+{"id":2,"project_name":"Snow rel4","prod_date":"2016-03-31","project_manager":null,"level":"info","message":"","timestamp":"2016-01-07T23:19:20.054Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:19:20.055Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:20.069Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:19:20.070Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:24.721Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='2' LIMIT 1","timestamp":"2016-01-07T23:19:24.722Z"}
+{"id":2,"project_name":"Snow rel4","prod_date":"2016-03-31","project_manager":null,"level":"info","message":"","timestamp":"2016-01-07T23:19:24.725Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:19:24.726Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:24.740Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:19:24.741Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:33.004Z"}
+{"project_name":"Snow rel4","prod_date":"2016-03-31","project_manager":null,"level":"info","message":"","timestamp":"2016-01-07T23:19:33.005Z"}
+{"level":"info","message":"update SQL:UPDATE projects SET `project_name` = 'Snow rel4', `prod_date` = '2016-03-31', `project_manager` = NULL Where ID = '2'","timestamp":"2016-01-07T23:19:33.006Z"}
+{"level":"info","message":"Changed 0 rows","timestamp":"2016-01-07T23:19:33.281Z"}
+{"level":"warn","timestamp":"2016-01-07T23:19:33.288Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:33.301Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:19:33.302Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:34.903Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:19:34.905Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T23:19:34.906Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:19:34.908Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:34.922Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:19:34.922Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:39.674Z"}
+{"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":null,"level":"info","message":"","timestamp":"2016-01-07T23:19:39.675Z"}
+{"level":"info","message":"update SQL:UPDATE projects SET `project_name` = 'Biztalk Migration', `prod_date` = '2016-01-31', `project_manager` = NULL Where ID = '1'","timestamp":"2016-01-07T23:19:39.676Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2016-01-07T23:19:39.687Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:39.708Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:19:39.709Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:40.989Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:19:40.990Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":null,"level":"info","message":"","timestamp":"2016-01-07T23:19:40.993Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:19:40.995Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:41.009Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:19:41.010Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:46.207Z"}
+{"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":"1","level":"info","message":"","timestamp":"2016-01-07T23:19:46.209Z"}
+{"level":"info","message":"update SQL:UPDATE projects SET `project_name` = 'Biztalk Migration', `prod_date` = '2016-01-31', `project_manager` = '1' Where ID = '1'","timestamp":"2016-01-07T23:19:46.210Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2016-01-07T23:19:46.216Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:19:46.237Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:19:46.238Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:23:07.783Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:23:07.786Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:23:09.783Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:23:09.784Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T23:23:09.786Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:23:09.788Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:23:09.868Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:23:09.870Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:24:52.148Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:24:52.150Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:24:53.848Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:24:53.849Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T23:24:53.851Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:24:53.852Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:24:53.935Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:24:53.936Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:25:04.177Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:25:04.179Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:25:05.317Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:25:05.318Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T23:25:05.320Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:25:05.322Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:25:05.401Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:25:05.402Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:31:58.854Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:31:58.858Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:32:00.854Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:32:00.855Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T23:32:00.867Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:32:00.868Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:32:00.946Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:32:00.946Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:32:29.973Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:32:29.974Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:32:52.379Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:32:52.380Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:34:44.985Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:34:44.986Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:37:07.330Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:37:07.331Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:37:13.327Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:37:13.328Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:39:12.081Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-07T23:39:12.081Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-07T23:39:12.085Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-07T23:39:12.086Z"}
+{"level":"info","message":"connected as id 37","timestamp":"2016-01-07T23:39:12.187Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-07T23:39:12.188Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-07T23:45:58.955Z"}
+{"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-07T23:45:58.960Z"}
+{"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-07T23:45:58.961Z"}
+{"level":"info","message":"connected as id 38","timestamp":"2016-01-07T23:46:05.476Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:46:05.478Z"}
+{"level":"info","message":"connected as id 38","timestamp":"2016-01-07T23:57:05.123Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:57:05.125Z"}
+{"level":"info","message":"connected as id 38","timestamp":"2016-01-07T23:57:27.982Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-07T23:57:27.983Z"}
+{"level":"info","message":"connected as id 38","timestamp":"2016-01-08T00:40:48.757Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T00:40:48.758Z"}
+{"level":"info","message":"connected as id 38","timestamp":"2016-01-08T00:40:48.774Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T00:40:48.775Z"}
+{"level":"info","message":"connected as id 38","timestamp":"2016-01-08T00:41:29.819Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T00:41:29.821Z"}
+{"level":"info","message":"connected as id 38","timestamp":"2016-01-08T00:41:29.833Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T00:41:29.834Z"}
+{"level":"info","message":"connected as id 38","timestamp":"2016-01-08T00:46:12.607Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T00:46:12.609Z"}
+{"level":"info","message":"connected as id 38","timestamp":"2016-01-08T00:46:12.620Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T00:46:12.621Z"}
+{"level":"info","message":"connected as id 38","timestamp":"2016-01-08T00:47:29.078Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T00:47:29.080Z"}
+{"level":"info","message":"connected as id 38","timestamp":"2016-01-08T00:47:29.089Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T00:47:29.090Z"}
+{"level":"info","message":"connected as id 38","timestamp":"2016-01-08T00:48:29.776Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T00:48:29.777Z"}
+{"level":"info","message":"connected as id 38","timestamp":"2016-01-08T00:48:29.788Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T00:48:29.790Z"}
+{"level":"info","message":"connected as id 38","timestamp":"2016-01-08T00:49:05.276Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T00:49:05.279Z"}
+{"level":"info","message":"connected as id 39","timestamp":"2016-01-08T00:49:05.289Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T00:49:05.291Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-08T00:50:07.252Z"}
+{"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-08T00:50:07.257Z"}
+{"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-08T00:50:07.258Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T00:50:22.933Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T00:50:22.935Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T00:50:22.952Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T00:50:22.953Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T00:51:18.834Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T00:51:18.836Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T00:51:18.847Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T00:51:18.848Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T00:55:24.429Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T00:55:24.430Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T00:55:24.439Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T00:55:24.441Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T00:57:03.216Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T00:57:03.217Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T00:57:03.229Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T00:57:03.230Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T00:57:22.799Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-08T00:57:22.802Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-08T00:57:22.809Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-08T00:57:22.812Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T00:57:22.895Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T00:57:22.896Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T00:57:32.902Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='2' LIMIT 1","timestamp":"2016-01-08T00:57:32.904Z"}
+{"id":2,"project_name":"Snow rel4","prod_date":"2016-03-31","project_manager":null,"level":"info","message":"","timestamp":"2016-01-08T00:57:32.907Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-08T00:57:32.908Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T00:57:32.926Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T00:57:32.927Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T00:59:00.087Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-08T00:59:00.089Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-08T00:59:00.092Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-08T00:59:00.095Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T00:59:00.113Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T00:59:00.116Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T01:00:32.363Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-08T01:00:32.366Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-08T01:00:32.368Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-08T01:00:32.369Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T01:00:32.384Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:00:32.385Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T01:06:14.927Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T01:06:14.929Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T01:06:14.942Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:06:14.943Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T01:06:16.290Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-08T01:06:16.291Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-08T01:06:16.294Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-08T01:06:16.295Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T01:06:16.402Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:06:16.403Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T01:06:48.998Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='2' LIMIT 1","timestamp":"2016-01-08T01:06:49.000Z"}
+{"id":2,"project_name":"Snow rel4","prod_date":"2016-03-31","project_manager":null,"level":"info","message":"","timestamp":"2016-01-08T01:06:49.010Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-08T01:06:49.012Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T01:06:49.045Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:06:49.046Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T01:11:52.605Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T01:11:52.606Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T01:11:52.616Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:11:52.634Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T01:11:54.426Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-08T01:11:54.428Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-08T01:11:54.433Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-08T01:11:54.435Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T01:11:54.461Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:11:54.462Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T01:11:58.088Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='2' LIMIT 1","timestamp":"2016-01-08T01:11:58.089Z"}
+{"id":2,"project_name":"Snow rel4","prod_date":"2016-03-31","project_manager":null,"level":"info","message":"","timestamp":"2016-01-08T01:11:58.092Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-08T01:11:58.093Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T01:11:58.106Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:11:58.107Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T01:12:00.408Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:12:00.410Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T01:12:02.003Z"}
+{"level":"info","message":"get SQL:SELECT * FROM users WHERE id='1' LIMIT 1","timestamp":"2016-01-08T01:12:02.004Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T01:12:04.299Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T01:12:04.300Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T01:12:04.307Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:12:04.308Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T01:12:05.596Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-08T01:12:05.597Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-08T01:12:05.601Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-08T01:12:05.603Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T01:12:05.615Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:12:05.616Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T01:15:04.524Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-08T01:15:04.524Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":1,"level":"info","message":"","timestamp":"2016-01-08T01:15:04.527Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-08T01:15:04.528Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T01:15:04.543Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:15:04.543Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T01:15:08.256Z"}
+{"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":"2","level":"info","message":"","timestamp":"2016-01-08T01:15:08.258Z"}
+{"level":"info","message":"update SQL:UPDATE projects SET `project_name` = 'Biztalk Migration', `prod_date` = '2016-01-31', `project_manager` = '2' Where ID = '1'","timestamp":"2016-01-08T01:15:08.260Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2016-01-08T01:15:08.267Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T01:15:08.290Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T01:15:08.292Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T01:15:08.300Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:15:08.302Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T01:15:09.703Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-08T01:15:09.704Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":2,"level":"info","message":"","timestamp":"2016-01-08T01:15:09.706Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-08T01:15:09.708Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T01:15:09.721Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:15:09.722Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T01:15:12.428Z"}
+{"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":"3","level":"info","message":"","timestamp":"2016-01-08T01:15:12.429Z"}
+{"level":"info","message":"update SQL:UPDATE projects SET `project_name` = 'Biztalk Migration', `prod_date` = '2016-01-31', `project_manager` = '3' Where ID = '1'","timestamp":"2016-01-08T01:15:12.431Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2016-01-08T01:15:12.717Z"}
+{"level":"info","message":"connected as id 41","timestamp":"2016-01-08T01:15:12.733Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T01:15:12.734Z"}
+{"level":"info","message":"connected as id 42","timestamp":"2016-01-08T01:15:12.736Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:15:12.737Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-08T01:15:35.423Z"}
+{"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-08T01:15:35.427Z"}
+{"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-08T01:15:35.428Z"}
+{"level":"info","message":"initialize DAL & pool","timestamp":"2016-01-08T01:15:41.364Z"}
+{"level":"info","message":"init generic DAL for \"users\" ","timestamp":"2016-01-08T01:15:41.371Z"}
+{"level":"info","message":"init generic DAL for \"projects\" ","timestamp":"2016-01-08T01:15:41.372Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-08T01:15:47.440Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T01:15:47.442Z"}
+{"level":"info","message":"connected as id 44","timestamp":"2016-01-08T01:15:47.447Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:15:47.448Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-08T01:15:57.470Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-08T01:15:57.473Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":3,"level":"info","message":"","timestamp":"2016-01-08T01:15:57.478Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-08T01:15:57.480Z"}
+{"level":"info","message":"connected as id 44","timestamp":"2016-01-08T01:15:57.507Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:15:57.508Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-08T01:16:40.685Z"}
+{"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":"3","level":"info","message":"","timestamp":"2016-01-08T01:16:40.688Z"}
+{"level":"info","message":"update SQL:UPDATE projects SET `project_name` = 'Biztalk Migration', `prod_date` = '2016-01-31', `project_manager` = '3' Where ID = '1'","timestamp":"2016-01-08T01:16:40.690Z"}
+{"level":"info","message":"Changed 0 rows","timestamp":"2016-01-08T01:16:40.974Z"}
+{"level":"warn","timestamp":"2016-01-08T01:16:40.987Z"}
+{"level":"info","message":"connected as id 44","timestamp":"2016-01-08T01:16:41.004Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T01:16:41.005Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-08T01:16:41.007Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:16:41.008Z"}
+{"level":"info","message":"connected as id 44","timestamp":"2016-01-08T01:16:44.730Z"}
+{"level":"info","message":"get SQL:SELECT * FROM projects WHERE id='1' LIMIT 1","timestamp":"2016-01-08T01:16:44.732Z"}
+{"id":1,"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":3,"level":"info","message":"","timestamp":"2016-01-08T01:16:44.735Z"}
+{"0":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"id","orgName":"id","charsetNr":63,"length":10,"type":3,"flags":16931,"decimals":0,"zeroFill":false,"protocol41":true},"1":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_name","orgName":"project_name","charsetNr":33,"length":150,"type":253,"flags":4097,"decimals":0,"zeroFill":false,"protocol41":true},"2":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"prod_date","orgName":"prod_date","charsetNr":63,"length":10,"type":10,"flags":4225,"decimals":0,"zeroFill":false,"protocol41":true},"3":{"catalog":"def","db":"testdb","table":"projects","orgTable":"projects","name":"project_manager","orgName":"project_manager","charsetNr":63,"length":10,"type":3,"flags":32,"decimals":0,"zeroFill":false,"protocol41":true},"level":"info","message":"","timestamp":"2016-01-08T01:16:44.736Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-08T01:16:44.749Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:16:44.750Z"}
+{"level":"info","message":"connected as id 44","timestamp":"2016-01-08T01:16:53.274Z"}
+{"project_name":"Biztalk Migration","prod_date":"2016-01-31","project_manager":"2","level":"info","message":"","timestamp":"2016-01-08T01:16:53.274Z"}
+{"level":"info","message":"update SQL:UPDATE projects SET `project_name` = 'Biztalk Migration', `prod_date` = '2016-01-31', `project_manager` = '2' Where ID = '1'","timestamp":"2016-01-08T01:16:53.275Z"}
+{"level":"info","message":"Changed 1 rows","timestamp":"2016-01-08T01:16:53.557Z"}
+{"level":"info","message":"connected as id 43","timestamp":"2016-01-08T01:16:53.575Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM projects","timestamp":"2016-01-08T01:16:53.576Z"}
+{"level":"info","message":"connected as id 44","timestamp":"2016-01-08T01:16:53.586Z"}
+{"level":"info","message":"listAll SQL:SELECT * FROM users","timestamp":"2016-01-08T01:16:53.587Z"}

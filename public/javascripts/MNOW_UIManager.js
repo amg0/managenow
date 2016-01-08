@@ -1,13 +1,21 @@
 //# sourceURL=MNOW_UIManager.js
 // "use strict";
 	
-var Model = (function() {
+var DBModel = (function() {
 	var _dictionary = {
 		"projects":{
 			"id": 				{type:'number', default:''},
 			"project_name":		{type:'text', 	default:'' , required:true },
 			"prod_date":		{type:'date', 	default:new Date().toISOString().substring(0, 10) , required:true },
-			"project_manager":	{type:'reference', default:null, table:'users', field:'id', display:'last_name,first_name' },
+			"project_manager":	{type:'reference', default:null, table:'users', field:'id', formatter:function(col,row) { 
+					// if not null
+					if (row.project_manager) {
+						var usr = Entities.get("users",row.project_manager);
+						return '{0},{1}'.format(usr.last_name,usr.first_name);
+					}
+					return "";
+				}
+			},
 		},
 		"users":{
 			"id": 			{type:'number', default:''},
@@ -17,6 +25,7 @@ var Model = (function() {
 			"location":		{type:'text', 	default:''},
 		}
 	};
+
 	return {
 		getDictionary:function(type) {
 			return _dictionary[type] || null;
@@ -35,7 +44,7 @@ var Model = (function() {
 		},
 		
 		getAll:function(objtype, callback ) {
-			$.ajax({
+			return $.ajax({
 			  url: '/api/'+objtype,
 			  dataType: "json",
 			  cache:false,
@@ -102,6 +111,35 @@ var Model = (function() {
 	}
 })();
 
+var Entities = (function() {	
+	var _cache={};
+	
+	function _init(type) {
+		var dfd = new $.Deferred();
+		delete _cache[type];
+		_cache[type]={}
+		DBModel.getAll(type,function(list) {
+			_cache[type]=list;
+			dfd.resolve(list);
+		});
+		return dfd.promise()
+	};
+	
+	function _get(type,id) {
+		if ((id>0) && (_cache[type]) ) {
+			for (var i=0; i<_cache[type].length ; i++) {
+				if (_cache[type][i].id == id ) {
+					return _cache[type][i];
+				}
+			}
+		}
+		return null;
+	}
+	return {
+		init : _init,
+		get  : _get
+	};
+})();
 
 if (typeof String.prototype.format == 'undefined') {
 	String.prototype.format = function()
@@ -118,85 +156,128 @@ if (typeof String.prototype.format == 'undefined') {
 	};
 };
 
+// Put somewhere in your scripting environment
+if (jQuery.when.all===undefined) {
+    jQuery.when.all = function(deferreds) {
+        var deferred = new jQuery.Deferred();
+        $.when.apply(jQuery, deferreds).then(
+            function() {
+                deferred.resolve(Array.prototype.slice.call(arguments));
+            },
+            function() {
+                deferred.fail(Array.prototype.slice.call(arguments));
+            });
+
+        return deferred;
+    }
+}
+
 var HtmlUtils = (function() {
 	function _buildItems(table,field,display,selectedvalue) {
-		Model.getAll(table,function(list) {
+		DBModel.getAll(table,function(list) {
 			var i=0;
 		});
 		return [];
 	};
+	function _buildField(dictionary,key,value) {
+		var dfd =  $.Deferred();
+		switch (dictionary.type) {
+			case "number":
+				htmltype="number";
+				htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
+						htmltype:"number",
+						key:key,
+						value:value,
+						required:(dictionary.required || false), 
+						placeholder:""
+				});
+				dfd.resolve(htmlField);
+				break;
+			case "date":
+				// for pure date field, we do not want to take into account user locale. date is the date we want
+				value = value.substring(0, 10);
+				// var date = new Date(value);
+				// value = date.toISOString().substring(0, 10);
+				htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
+						htmltype:"date",
+						key:key,
+						value:value,
+						required:(dictionary.required || false), 
+						placeholder:"YYYY-MM-DD"
+				});
+				dfd.resolve(htmlField);
+				break;
+			case "reference":
+				//{type:'reference', default:null, table:'users', field:'id', formatter:function(r) {}}
+				DBModel.getAll( dictionary.table ,function(data) {
+					var dummyrow={}
+					var items = $.map(data, function(elem) { 
+						// table for values we need
+						// properties of <option>
+						dummyrow[key]=elem[ dictionary.field ];
+						return {
+							id:elem[ dictionary.field ], 
+							label:dictionary.formatter(key,dummyrow)
+							} 
+						});
+					htmlField = new EJS({url: '/views/ff_select.ejs'}).render({
+						key:key,
+						value:value,	// this object id is the selected value
+						items:items,	// this is the <options>		
+						required: (dictionary.required==true)
+					});
+					dfd.resolve(htmlField);
+				});
+				break;
+			default:
+				htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
+						htmltype:dictionary.type,
+						key:key,
+						value:value,
+						required:(dictionary.required || false), 
+						placeholder:""
+				});
+				dfd.resolve(htmlField);
+		}
+		return dfd.promise();
+	}
 	return {
 		bodyFromObject : function ( type, template , callback ) {
 			var html="";
-			var dictionary = Model.getDictionary(type);
+			var dictionary = DBModel.getDictionary(type);
+			var deferreds = [];
 			$.each(template, function(key,value) {
-				var placeholder = "";
-				var htmltype="text";
-				var htmlField = "";
-				switch (dictionary[key].type) {
-					case "reference":
-						htmlField = new EJS({url: '/views/ff_select.ejs'}).render({
-							key:key,
-							value:value,
-							items:_buildItems(dictionary[key].table,dictionary[key].field,dictionary[key].display,value)							
-						});
-						break;
-					case "date":
-						// for pure date field, we do not want to take into account user locale. date is the date we want
-						placeholder = "YYYY-MM-DD";
-						htmltype="date";
-						value = value.substring(0, 10);
-						// var date = new Date(value);
-						// value = date.toISOString().substring(0, 10);
-						htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
-								htmltype:htmltype,
-								key:key,
-								value:value,
-								required:(dictionary[key].required || false), 
-								placeholder:placeholder
-						});
-						break;
-					case "number":
-						htmltype="number";
-						htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
-								htmltype:htmltype,
-								key:key,
-								value:value,
-								required:(dictionary[key].required || false), 
-								placeholder:placeholder
-						});
-						break;
-					default:
-						htmltype=dictionary[key].type;
-						htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
-								htmltype:htmltype,
-								key:key,
-								value:value,
-								required:(dictionary[key].required || false), 
-								placeholder:placeholder
-						});
-				}
-
-				html += htmlField;
+				deferreds.push( _buildField(dictionary[key],key,value) );
 			});
-			(callback)(html);
-			return ;
+			$.when.all(deferreds).then(function(results) {
+				(callback)(results.join(""));
+			});
+			return;
 		},
-		objectFromBody : function (type, inputs) {
-			var obj= Model.getTemplate(type);
-			var dictionary = Model.getDictionary(type);
+		objectFromBody : function (type, dialog) {
+			var obj= DBModel.getTemplate(type);
+			var dictionary = DBModel.getDictionary(type);
+			var inputs = $(dialog).find("input");
 			inputs.each(function(idx,elem) {
 				var key = $(elem).prop('id');
 				var value = $(elem).val();
 				if ( (dictionary[key].required == true) || (value!="") ) {
 					switch (dictionary[key].type) {
 						case "date":
-							obj[$(elem).prop('id')]=$(elem).val();
+							obj[key]=value;
 							break;
 						default:
-							obj[$(elem).prop('id')]=$(elem).val();					
+							obj[key]=value;					
 					}
 				}
+			});
+			var selects = $(dialog).find("select");
+			selects.each(function(idx,elem) {
+				var key = $(elem).prop('id');
+				var value = $(elem).val();
+				if (value=="0")
+					value=null;
+				obj[key]=value;
 			});
 			return obj;
 		},
@@ -214,7 +295,7 @@ var HtmlUtils = (function() {
 						html+="<thead>"
 						html+="<tr>"
 						$.each(obj, function(k,v) {
-							html+="<th data-column-id='{0}' {1} {2}>".format(
+							html+="<th data-column-id='{0}' data-formatter='{0}' {1} {2}>".format(
 								k,
 								(k==idcolumn) ? "data-identifier='true'" : "",
 								"data-visible='{0}'".format( true /*$.inArray(k,viscols)!=-1*/ )
@@ -232,7 +313,7 @@ var HtmlUtils = (function() {
 					html+="<tr>"
 					$.each(obj, function(k,v) {
 						html+="<td>"
-						html+=v;
+						html+=( (v==null) ? '' : v)
 						html+="</td>"
 					});
 					if (commands.length>0) {
@@ -288,26 +369,26 @@ var UIManager = (function(){
 		$('main').empty();
 	};
 	function _onEditObject(type,id,callback) {
-		Model.get(type,id,function(object) {
+		DBModel.get(type,id,function(object) {
 			var htmlid = 'createDialog';
 			HtmlUtils.bodyFromObject(type,object,function(htmlbody) {
 				var htmlDialog = new EJS({url: '/views/defaultdialog.ejs'}).render({htmlid:htmlid, title:type, body: htmlbody});
 				var dialog = DialogManager.registerDialog(htmlid,htmlDialog);
 				DialogManager.runDialog(dialog,function(result) {
-					var obj = HtmlUtils.objectFromBody(type,$(dialog).find("input"));
+					var obj = HtmlUtils.objectFromBody(type,$(dialog));
 					(callback)(obj);
 				});
 			});
 		});
 	};
 	function _onCreateObject(type,callback) {
-		var template = Model.getTemplate(type);
+		var template = DBModel.getTemplate(type);
 		var htmlid = 'createDialog';
 		HtmlUtils.bodyFromObject(type,template,function(htmlbody){
 			var htmlDialog = new EJS({url: '/views/defaultdialog.ejs'}).render({htmlid:htmlid, title:type, body: htmlbody});
 			var dialog = DialogManager.registerDialog(htmlid,htmlDialog);
 			DialogManager.runDialog(dialog,function(result) {
-				var obj = HtmlUtils.objectFromBody(type,$(dialog).find("input"));
+				var obj = HtmlUtils.objectFromBody(type,$(dialog));
 				(callback)(obj);
 			});
 		});
@@ -322,15 +403,33 @@ var UIManager = (function(){
 			return ($.map(commandtbl, function(e) { return e.format(row.id); })).join(" ");
 		};
 		function _updateList(type,htmlid,commandtbl) {
-			Model.getAll( type,function(data) {
+			// prepare referenced data
+			var deferreds = [ Entities.init(type) ];
+			var dictionary = DBModel.getDictionary(type);
+			$.each(dictionary, function (key,field_dict) {
+				if (field_dict.type=="reference")
+					deferreds.push( Entities.init(field_dict.table) )
+			});
+			$.when.all(deferreds).then(function(results) {
 				// load the template file, then render it with data
-				var html = new EJS({url: '/views/defaultlist.ejs'}).render({htmlid:htmlid, title:'List: '+type, data: data, commandtbl:commandtbl});
-				$('main').html(html);			
+				var html = new EJS({url: '/views/defaultlist.ejs'}).render({htmlid:htmlid, title:'List: '+type, data: results[0], commandtbl:commandtbl});
+				$('main').html(html);	
+
+				// prepare formatters
+				var formatters = {};
+				$.each(dictionary, function (key,field_dict) {
+					if (field_dict.formatter)
+						formatters[key] = function(col,row) {
+							return field_dict.formatter(col,row);
+						};
+				});
+				
+				// setup grid with commands and formatters
 				var grid = $("#"+htmlid).bootgrid({
 					caseSensitive:false,
-					formatters: {
+					formatters: $.extend( formatters, {
 						 "commands": _commandFormatter
-					}
+					})
 				}).on("loaded.rs.jquery.bootgrid", function()
 				{
 					/* Executes after data is loaded and rendered */
@@ -338,18 +437,18 @@ var UIManager = (function(){
 					{
 						var id = $(this).data('row-id');
 						_onEditObject(type,id,function(object) {
-							Model.update(type,object,function(result) {
+							DBModel.update(type,object,function(result) {
 								_updateList(type,htmlid,commandtbl);
 							});
 						});
 					}).end().find(".command-delete").on("click", function(e)
 					{
 						var id = $(this).data('row-id');
-						Model.del(type,id,function(result){
+						DBModel.del(type,id,function(result){
 							_updateList(type,htmlid,commandtbl);
 						});
 					});
-				});			
+				});		
 			});
 		};
 
@@ -358,7 +457,7 @@ var UIManager = (function(){
 			.off('click')
 			.on('click','#mnow-create-object',function() {
 				_onCreateObject(type,function(object){
-					Model.add(type,object,function(result) {
+					DBModel.add(type,object,function(result) {
 						_updateList(type,htmlid,commandtbl);
 					});
 				})
