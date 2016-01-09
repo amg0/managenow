@@ -29,10 +29,19 @@ var DBModel = (function() {
 	var Cache = (function() {	
 		var _cache={};
 		
+		function _init() { delete _cache; _cache={} };
 		function _load(type,list) {
 			_cache[type]=list;
 		};
 		
+		function _add(type,obj) {
+			if (obj) {
+				if (_cache[type]==null)
+					_cache[type]=[]
+				_cache[type].push(obj);
+			}
+			return obj;
+		}
 		function _get(type,id) {
 			if ((id>0) && (_cache[type]) ) {
 				for (var i=0; i<_cache[type].length ; i++) {
@@ -44,8 +53,10 @@ var DBModel = (function() {
 			return null;
 		}
 		return {
-			load : _load,
-			get  : _get
+			init	: _init,
+			load	: _load,
+			add		: _add,
+			get		: _get
 		};
 	})();
 	
@@ -79,6 +90,38 @@ var DBModel = (function() {
 		},
 		
 		getAll:function(objtype, callback ) {
+			var dfd = new jQuery.Deferred();
+			var dictionary = DBModel.getDictionary(objtype);
+			var keys = Object.keys(dictionary);
+			Cache.init();
+			_getAll(objtype)
+				.done(function(list) {
+					var deferreds = [ ];
+					Cache.load(objtype,list);	// add the result in the cache
+					$.each(list,function(i,row) {
+						var references = keys.filter(function(key) { return dictionary[key].type=="reference"})
+						$.each( references, function (i,key) {
+							//type:'reference', default:null, table:'users', field:'id', formatter:function(col,row)
+							var dictline = dictionary[key];
+							if (row[key]!=null) {
+								deferreds.push( DBModel.get(dictline.table, row[key]) 
+									.done(function(refobj){
+										Cache.add(dictline.table,refobj);
+									})
+								);
+							}
+						});
+					})
+					$.when.all(deferreds).then(function(results) {
+						if ($.isFunction(callback))
+							(callback)(list);
+						dfd.resolve(list)
+					})
+				});
+			return dfd.promise();
+		},
+
+		getAll2:function(objtype, callback ) {
 			var dfd = new jQuery.Deferred();
 			var deferreds = [ _getAll(objtype) ];
 			var dictionary = DBModel.getDictionary(objtype);
@@ -184,27 +227,31 @@ if (jQuery.when.all===undefined) {
     jQuery.when.all = function(deferreds) {
 		var deferred = new jQuery.Deferred();
 		var len = deferreds.length;
-		$.when.apply(jQuery, deferreds)
-		.then(
-			function() {
-				// bug of jquery ? if there is only one defered, the result will not be an array
-				// so we have to mock it up here to inssure the result is allways an array of result
-				var result = [];
-				if (len==1) 
-					result.push(Array.prototype.slice.call(arguments))
-				else
-					result = Array.prototype.slice.call(arguments);
-				deferred.resolve(result);
-			},
-			function() {
-				var result = [];
-				if (len==1) 
-					result.push(Array.prototype.slice.call(arguments))
-				else
-					result = Array.prototype.slice.call(arguments);
-				deferred.fail(result);
-			}
-		);
+		if (len==0)
+			deferred.resolve([]);
+		else {
+			$.when.apply(jQuery, deferreds)
+			.then(
+				function() {
+					// bug of jquery ? if there is only one defered, the result will not be an array
+					// so we have to mock it up here to inssure the result is allways an array of result
+					var result = [];
+					if (len==1) 
+						result.push(Array.prototype.slice.call(arguments))
+					else
+						result = Array.prototype.slice.call(arguments);
+					deferred.resolve(result);
+				},
+				function() {
+					var result = [];
+					if (len==1) 
+						result.push(Array.prototype.slice.call(arguments))
+					else
+						result = Array.prototype.slice.call(arguments);
+					deferred.fail(result);
+				}
+			);
+		}
 		return deferred.promise();
     }
 }
@@ -246,7 +293,8 @@ var HtmlUtils = (function() {
 				break;
 			case "reference":
 				//{type:'reference', default:null, table:'users', field:'id', formatter:function(r) {}}
-				DBModel.getAll( dictionary.table ,function(data) {
+				DBModel.getAll( dictionary.table )
+				.then(function(data) {
 					var dummyrow={}
 					var items = $.map(data, function(elem) { 
 						// table for values we need
