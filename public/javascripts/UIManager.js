@@ -1,5 +1,7 @@
 //# sourceURL=UIManager.js
 // "use strict";
+
+
 var UIManager = (function(){
 	function _preparePage() {
 		$('main').empty();
@@ -7,7 +9,7 @@ var UIManager = (function(){
 	function _onEditObject(type,id,callback) {
 		DBModel.get(type,id,function(object) {
 			var htmlid = 'createDialog';
-			HtmlUtils.bodyFromObject(type,object,function(htmlbody) {
+			HtmlUtils.bodyFromObject(type,object,MODE_EDIT,function(htmlbody) {
 				var htmlDialog = new EJS({url: '/views/defaultdialog.ejs'}).render({htmlid:htmlid, title:type, body: htmlbody});
 				var dialog = DialogManager.registerDialog(htmlid,htmlDialog);
 				DialogManager.runDialog(dialog,function(result) {
@@ -20,7 +22,7 @@ var UIManager = (function(){
 	function _onCreateObject(type,callback) {
 		var template = DBModel.getTemplate(type);
 		var htmlid = 'createDialog';
-		HtmlUtils.bodyFromObject(type,template,function(htmlbody){
+		HtmlUtils.bodyFromObject(type,template,MODE_EDIT,function(htmlbody){
 			var htmlDialog = new EJS({url: '/views/defaultdialog.ejs'}).render({htmlid:htmlid, title:type, body: htmlbody});
 			var dialog = DialogManager.registerDialog(htmlid,htmlDialog);
 			DialogManager.runDialog(dialog,function(result) {
@@ -108,15 +110,47 @@ var UIManager = (function(){
 				return false;	// prevent new handlers
 			})	
 	};
-	function _onePage(type,id) {
+	function _onePage(type,id) {	
+		// var deferred = [];
+		// deferred.push(DBModel.get(type,id).done(obj) { _obj = obj; } );
 		$.when(DBModel.get(type,id))
-		.done( function(obj) {
-			var html = new EJS({url: '/views/view'+type+'.ejs'})
-						.render({
-							obj:obj
-						});
-								
-			$('main').html(html);	
+		.done( function(object) {
+			$.when(HtmlUtils.bodyFromObject(type,object,MODE_VIEW))
+			.done( function(fieldvalues) {
+				var viewmodel = {
+					title:DBModel.name( type,object ) || type,
+					object:object,
+					resolved_object:fieldvalues
+				};
+				// prepare list of all remote references
+				var remote_ref = DBModel.getRemoteReferences(type);
+				var deferreds = [];
+				$.each(remote_ref, function(remotetype,info) {
+					// find all objects which remote ref value is equal to "id"
+					// info = {field:fieldname, fieldkey: fielddescr.field}
+					var filter = ['{0}=\'{1}\''.format(info.remotefield,object[info.localfield])];
+					deferreds.push( 
+						DBModel.getAll(remotetype,filter).then(function(list) {
+							remote_ref[remotetype].result = list;
+						})
+					);
+				});
+				$.when.all(deferreds).then(function(results) {
+					// render view
+					viewmodel.references={};
+					$.each(remote_ref, function(remotetype,info) {
+						viewmodel.references[remotetype]=HtmlUtils.array2Table(
+							'{0}'.format(remotetype),		//htmlid 
+							info.result,
+							'id',
+							null,
+							null)
+					});
+					// viewmodel.references = remote_ref;
+					var html = new EJS({url: '/views/viewobject.ejs'}).render(viewmodel);
+					$('main').html(html);	
+				});
+			});
 		});
 	};
 	return {

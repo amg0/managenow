@@ -40,7 +40,7 @@ exports.exit = function( callback ) {
 	});
 }
 
-exports.listAll = function(type, fields, callback) {
+exports.listAll = function(type, fields, filters, callback) {
 	pool.getConnection(function(err, connection) {
 		// connected! (unless `err` is set)
 		if (err) {
@@ -48,7 +48,7 @@ exports.listAll = function(type, fields, callback) {
 			(callback)(err);
 		} else {
 			winston.info('connected as id ' + connection.threadId);
-			dals[type].listAll(connection, fields, function(error,results, fields) {
+			dals[type].listAll(connection, fields, filters, function(error,results, fields) {
 				connection.release();
 				(callback)(error,results, fields);
 			});

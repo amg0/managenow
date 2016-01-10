@@ -17,8 +17,8 @@ Route	HTTP Verb	Description
 /* GET users listing. */
 router
 	.get('/', function(req, res, next) {
-		var id = req.params.id;
-		dal.listAll( 'projects', null , function (err, results, fields) {
+		var filters = req.query.filters;
+		dal.listAll( 'projects', null , filters, function (err, results, fields) {
 			res.send(results);
 		});
 	})

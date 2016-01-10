@@ -8,10 +8,17 @@ module.exports = function(tablename) {
 	var _tablename = tablename;
 	winston.info('init generic DAL for "%s" ',_tablename);
 	return {
-		listAll : function(con,fields,callback) {
+		listAll : function(con,fields,filters,callback) {
+			var filterstr = "";
 			var sql = 'SELECT * FROM '+_tablename;
 			if (fields && fields.length>0)
 				sql = mysql.format('SELECT ?? FROM '+_tablename, [fields]);
+
+			if (filters && filters.length>0) {
+				filterstr = "(" + filters.join(") AND (") + ")";
+				sql = sql + " WHERE " + filterstr;
+			}
+
 			winston.info('listAll SQL:%s',sql);
 			con.query(sql, function(error, results, fields){
 				if (error) winston.error(error);

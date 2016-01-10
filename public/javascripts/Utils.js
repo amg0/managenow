@@ -1,6 +1,9 @@
 //# sourceURL=Utils.js
 // "use strict";
 
+var MODE_VIEW = 'view';
+var MODE_EDIT = 'edit';
+
 if (typeof String.prototype.format == 'undefined') {
 	String.prototype.format = function()
 	{
@@ -51,24 +54,28 @@ if (jQuery.when.all===undefined) {
 }
 
 var HtmlUtils = (function() {
-	function _buildItems(table,field,display,selectedvalue) {
-		DBModel.getAll(table,function(list) {
-			var i=0;
-		});
-		return [];
-	};
-	function _buildField(dictionary,key,value) {
+	// function _buildItems(table,field,display,selectedvalue) {
+		// DBModel.getAll(table,function(list) {
+			// var i=0;
+		// });
+		// return [];
+	// };
+	function _buildField(mode,dictionary,key,value) {
 		var dfd =  $.Deferred();
+		var htmlField = {};
 		switch (dictionary.type) {
 			case "number":
 				htmltype="number";
-				htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
+				if (mode==MODE_VIEW)
+					htmlField[key]=value;
+				else
+					htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
 						htmltype:"number",
 						key:key,
 						value:value,
 						required:(dictionary.required || false), 
 						placeholder:""
-				});
+					});
 				dfd.resolve(htmlField);
 				break;
 			case "date":
@@ -76,79 +83,107 @@ var HtmlUtils = (function() {
 				value = value.substring(0, 10);
 				// var date = new Date(value);
 				// value = date.toISOString().substring(0, 10);
-				htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
+				if (mode==MODE_VIEW)
+					htmlField[key]=value;
+				else
+					htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
 						htmltype:"date",
 						key:key,
 						value:value,
 						required:(dictionary.required || false), 
 						placeholder:"YYYY-MM-DD"
-				});
+					});
 				dfd.resolve(htmlField);
 				break;
 			case "enum":
-				var items = $.map(dictionary.values, function(value) { 
-					// table for values we need
-					// properties of <option>
-					return {
-						id:value, 
-						label:value
-					} 
-				});
-				htmlField = new EJS({url: '/views/ff_select.ejs'}).render({
-					key:key,
-					value:value,	// this object id is the selected value
-					items:items,	// this is the <options>		
-					required: (dictionary.required==true)
-				});
-				dfd.resolve(htmlField);
-				break;
-			case "reference":
-				//{type:'reference', default:null, table:'users', field:'id', formatter:function(r) {}}
-				DBModel.getAll( dictionary.table )
-				.then(function(data) {
-					var dummyrow={}
-					var items = $.map(data, function(elem) { 
+				if (mode==MODE_VIEW)
+					htmlField[key]=value;
+				else {
+					var items = $.map(dictionary.values, function(value) { 
 						// table for values we need
 						// properties of <option>
-						dummyrow[key]=elem[ dictionary.field ];
 						return {
-							id:elem[ dictionary.field ], 
-							label:dictionary.formatter(key,dummyrow)
-							} 
-						});
+							id:value, 
+							label:value
+						} 
+					});
 					htmlField = new EJS({url: '/views/ff_select.ejs'}).render({
 						key:key,
 						value:value,	// this object id is the selected value
 						items:items,	// this is the <options>		
 						required: (dictionary.required==true)
 					});
-					dfd.resolve(htmlField);
-				});
+				}
+				dfd.resolve(htmlField);
+				break;
+			case "reference":
+				//{type:'reference', default:null, table:'users', field:'id', formatter:function(r) {}}
+				if (mode==MODE_VIEW) {
+					$.when(DBModel.get( dictionary.table , value))
+					.done(function(obj) {
+						htmlField[key]=DBModel.name(dictionary.table,obj);
+						dfd.resolve(htmlField);
+					});
+				}
+				else {
+					DBModel.getAll( dictionary.table )
+					.then(function(data) {
+						var dummyrow={}
+						var items = $.map(data, function(elem) { 
+							// table for values we need
+							// properties of <option>
+							dummyrow[key]=elem[ dictionary.field ];
+							return {
+								id:elem[ dictionary.field ], 
+								label:dictionary.formatter(key,dummyrow)
+								} 
+							});
+						htmlField = new EJS({url: '/views/ff_select.ejs'}).render({
+							key:key,
+							value:value,	// this object id is the selected value
+							items:items,	// this is the <options>		
+							required: (dictionary.required==true)
+						});
+						dfd.resolve(htmlField);
+					});
+				}
 				break;
 			default:
-				htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
+				if (mode==MODE_VIEW)
+					htmlField[key]=value;
+				else
+					htmlField = new EJS({url: '/views/ff_input.ejs'}).render({
 						htmltype:dictionary.type,
 						key:key,
 						value:value,
 						required:(dictionary.required || false), 
 						placeholder:""
-				});
+					});
 				dfd.resolve(htmlField);
 		}
 		return dfd.promise();
 	}
 	return {
-		bodyFromObject : function ( type, template , callback ) {
+		bodyFromObject : function ( type, template, mode, callback ) {
+			var dfd =  $.Deferred();
 			var html="";
 			var dictionary = DBModel.getDictionary(type);
 			var deferreds = [];
 			$.each(template, function(key,value) {
-				deferreds.push( _buildField(dictionary[key],key,value) );
+				deferreds.push( _buildField(mode,dictionary[key],key,value) );
 			});
-			return $.when.all(deferreds).then(function(results) {
+			$.when.all(deferreds).then(function(results) {
+				var ret ={};
+				if (mode==MODE_VIEW) {
+					$.each(results,function(i,r) { ret = $.extend(ret,r) });
+				} else {
+					ret = results.join("")
+				}
 				if ($.isFunction(callback))
-					(callback)(results.join(""));
+					(callback)(ret);	// html mode pure concat of strings
+				dfd.resolve(ret);
 			});
+			return dfd.promise();
 		},
 		objectFromBody : function (type, dialog) {
 			var obj= DBModel.getTemplate(type);

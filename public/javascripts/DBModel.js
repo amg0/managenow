@@ -16,6 +16,7 @@ var DBModel = (function() {
 					return "";
 				}
 			},
+			shortname: function(obj) { return obj.project_name }
 		},
 		"users":{
 			"id": 			{type:'number', default:''},
@@ -23,6 +24,7 @@ var DBModel = (function() {
 			"last_name":	{type:'text', 	default:'' , required:true },
 			"email":		{type:'email', 	default:'' , required:true },
 			"location":		{type:'text', 	default:''},
+			shortname: 		function(obj) { return '{0}, {1}'.format(obj.last_name, obj.first_name) }
 		},
 		"milestones":{
 			"id": 			{type:'number', default:''},
@@ -37,7 +39,8 @@ var DBModel = (function() {
 					}
 					return "";
 				}
-			}
+			},
+			shortname: 		function(obj) { return '{0}-{1}'.format(obj.kind, obj.date) }
 		}
 	};
 	
@@ -75,10 +78,12 @@ var DBModel = (function() {
 		};
 	})();
 	
-	function _getAll(objtype,callback) {
+	function _getAll(objtype,filters,callback) {
+		// filters = ["id=1","project_name='Biztalk Migration'"];	 DEBUG
 		return $.ajax({
 		  url: '/api/'+objtype,
 		  dataType: "json",
+		  data:{ filters: filters },
 		  cache:false,
 		  success: function (data) {
 			if ($.isFunction(callback))
@@ -104,12 +109,13 @@ var DBModel = (function() {
 			return null;
 		},
 		
-		getAll:function(objtype, callback ) {
+		getAll:function(objtype, filters, callback ) {
+			filters = $.extend([],filters);
 			var dfd = new jQuery.Deferred();
 			var dictionary = DBModel.getDictionary(objtype);
 			var keys = Object.keys(dictionary);
 			Cache.init();
-			_getAll(objtype)
+			_getAll(objtype,filters)
 				.done(function(list) {
 					var deferreds = [ ];
 					Cache.load(objtype,list);	// add the result in the cache
@@ -196,5 +202,28 @@ var DBModel = (function() {
 			  }
 			});
 		},
+		
+		name:function(objtype, obj) {
+			if (obj==null)
+				return '';
+			var dictionary = DBModel.getDictionary(objtype);
+			return dictionary.shortname( obj );
+
+		},
+		
+		getRemoteReferences:function(objtype){
+			var results={};
+			// search all objects which point to this one
+			$.each(_dictionary,function(key, dict) {
+				if (key != objtype) {
+					$.each(dict, function(fieldname, fielddescr) {
+						if ((fielddescr.type =="reference") && (fielddescr.table==objtype)){
+							results[key] = {remotefield:fieldname, localfield: fielddescr.field}
+						}
+					})
+				}
+			});
+			return results;
+		}
 	}
 })();
