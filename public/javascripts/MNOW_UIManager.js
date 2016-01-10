@@ -120,28 +120,6 @@ var DBModel = (function() {
 				});
 			return dfd.promise();
 		},
-
-		getAll2:function(objtype, callback ) {
-			var dfd = new jQuery.Deferred();
-			var deferreds = [ _getAll(objtype) ];
-			var dictionary = DBModel.getDictionary(objtype);
-			$.each(dictionary, function (key,field_dict) {
-				if (field_dict.type=="reference") {
-					var remote_type = field_dict.table;
-					var gadfd = _getAll(remote_type,function(list) {
-						Cache.load(remote_type,list);
-					})
-					deferreds.push( gadfd )
-				}
-			});
-
-			$.when.all(deferreds).then(function(results) {
-				if ($.isFunction(callback))
-					(callback)(results[0][0]);		// array of ( Anything data, String textStatus, jqXHR jqXHR )
-				dfd.resolve(results[0][0]);
-			});
-			return dfd.promise();
-		},
 		
 		get:function(objtype, id, callback ) {
 			if (id) {
