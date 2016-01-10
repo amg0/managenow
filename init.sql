@@ -44,12 +44,13 @@ DROP TABLE  IF EXISTS milestones;
 
 CREATE TABLE milestones (
   id int unsigned NOT NULL AUTO_INCREMENT,
-  kind varchar(50) NOT NULL,
+  kind ENUM( 'MTP', 'CAT', 'INT', 'DEV' ) NOT NULL,
+  subkind varchar(80),
   date date NOT NULL,
   project int unsigned NOT NULL,
   PRIMARY KEY (id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
-INSERT INTO milestones (id, kind,date,project ) VALUES
-(1, 'CAT', '2016-1-31', 1),
-(2, 'MTP', '2016-3-31', 1);
+INSERT INTO milestones (id, kind, subkind, date,project ) VALUES
+(1, 'CAT', 'blabla', '2016-1-31', 1),
+(2, 'MTP', NULL, '2016-3-31', 1);

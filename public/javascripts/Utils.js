@@ -85,6 +85,23 @@ var HtmlUtils = (function() {
 				});
 				dfd.resolve(htmlField);
 				break;
+			case "enum":
+				var items = $.map(dictionary.values, function(value) { 
+					// table for values we need
+					// properties of <option>
+					return {
+						id:value, 
+						label:value
+					} 
+				});
+				htmlField = new EJS({url: '/views/ff_select.ejs'}).render({
+					key:key,
+					value:value,	// this object id is the selected value
+					items:items,	// this is the <options>		
+					required: (dictionary.required==true)
+				});
+				dfd.resolve(htmlField);
+				break;
 			case "reference":
 				//{type:'reference', default:null, table:'users', field:'id', formatter:function(r) {}}
 				DBModel.getAll( dictionary.table )

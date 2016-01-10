@@ -26,7 +26,8 @@ var DBModel = (function() {
 		},
 		"milestones":{
 			"id": 			{type:'number', default:''},
-			"kind": 		{type:'text',  default:'MTP' , required:true },
+			"kind": 		{type:'enum',  values:['MTP', 'CAT', 'INT', 'DEV'], default:'MTP' , required:true },
+			"subkind": 		{type:'text',  default:''  },
 			"date": 		{type:'date', default:new Date().toISOString().substring(0, 10) , required:true },
 			"project": 		{type:'reference', default:null, table:'projects', field:'id', required:true, formatter:function(col,row) { 
 								// if not null
