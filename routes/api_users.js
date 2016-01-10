@@ -18,7 +18,7 @@ Route	HTTP Verb	Description
 router
 	.get('/', function(req, res, next) {
 		var id = req.params.id;
-		dal.listAllUsers(id , function (err, results, fields) {
+		dal.listAll('users', null , function (err, results, fields) {
 			res.send(results);
 		});
 	})
@@ -27,24 +27,24 @@ router
 		// res.write('you posted:\n')
 		// res.end(JSON.stringify(req.body, null, 2))
 		var obj = JSON.parse(req.body.json);
-		dal.addUser( obj , function (err,results, fields) {
+		dal.add( 'users', obj , function (err,results, fields) {
 			res.send(results);
 		});
 	})
 	.get('/:id', function(req, res, next) {
 		var id = req.params.id;
-		dal.getUser(id , function (err, results, fields) {
+		dal.get('users',id , function (err, results, fields) {
 			res.send(results);
 		});
 	})
 	.put('/:id', function(req, res, next) {
 		var obj = JSON.parse(req.body.json);
-		dal.updateUser(req.params.id, obj , function (err, results, fields) {
+		dal.update('users',req.params.id, obj , function (err, results, fields) {
 			res.send(results);
 		});
 	})
 	.delete('/:id', function(req, res, next) {
-		dal.deleteUser(req.params.id,function (err, results, fields) {
+		dal.delete('users',req.params.id,function (err, results, fields) {
 			res.send(results);
 		});
 	});

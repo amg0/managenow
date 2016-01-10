@@ -29,7 +29,7 @@ var UIManager = (function(){
 			});
 		});
 	};
-	function _listPage(type) {
+	function _listPage(type,click_callback) {
 		var htmlid = 'idtable';
 		var commandtbl = [
 		"<button type=\"button\" class=\"btn btn-xs btn-default command-edit\" data-row-id=\"{0}\"><span class=\"fa fa-pencil fa-lg\"></span></button> ",
@@ -69,7 +69,8 @@ var UIManager = (function(){
 					})
 				})
 				.on("click.rs.jquery.bootgrid", function(e,cols,row) {
-					var i=0;
+					if ($.isFunction(click_callback))
+						(click_callback)(row.id);
 				})
 				.on("loaded.rs.jquery.bootgrid", function() {
 					/* Executes after data is loaded and rendered */
@@ -81,12 +82,14 @@ var UIManager = (function(){
 								_updateList(type,htmlid,commandtbl);
 							});
 						});
+						return false;	// prevent new handlers
 					}).end().find(".command-delete").on("click", function(e)
 					{
 						var id = $(this).data('row-id');
 						DBModel.del(type,id,function(result){
 							_updateList(type,htmlid,commandtbl);
 						});
+						return false;	// prevent new handlers
 					});
 				});		
 			});
@@ -102,19 +105,44 @@ var UIManager = (function(){
 						_updateList(type,htmlid,commandtbl);
 					});
 				})
-			})
-			// .on('click','.command-delete span',function() {
-
-			// });		
+				return false;	// prevent new handlers
+			})	
+	};
+	function _onePage(type,id) {
+		$.when(DBModel.get(type,id))
+		.done( function(obj) {
+			var html = new EJS({url: '/views/view'+type+'.ejs'})
+						.render({
+							obj:obj
+						});
+								
+			$('main').html(html);	
+		});
 	};
 	return {
 		pageProjects: function() {
 			_preparePage();
-			_listPage('projects');
+			_listPage('projects',UIManager.pageProject);
+		},
+		pageProject: function(id) {
+			_preparePage();
+			_onePage('projects',id);
+		},
+		pageMilestones: function() {
+			_preparePage();
+			_listPage('milestones',UIManager.pageMilestone);
+		},
+		pageMilestone: function(id) {
+			_preparePage();
+			_onePage('milestones',id);
 		},
 		pageUsers: function() {
 			_preparePage();
-			_listPage('users');
+			_listPage('users',UIManager.pageUser);
+		},
+		pageUser: function(id) {
+			_preparePage();
+			_onePage('users',id);			
 		}
 	};
 })();
@@ -123,4 +151,5 @@ $(document).ready(function() {
 	$( document )
 		.on ("click", "#mnow-page-projects", UIManager.pageProjects )
 		.on ("click", "#mnow-page-users", UIManager.pageUsers )
+		.on ("click", "#mnow-page-milestones", UIManager.pageMilestones )		
 });

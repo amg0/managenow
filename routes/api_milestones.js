@@ -18,30 +18,30 @@ Route	HTTP Verb	Description
 router
 	.get('/', function(req, res, next) {
 		var id = req.params.id;
-		dal.listAll( 'projects', null , function (err, results, fields) {
+		dal.listAll( 'milestones', null , function (err, results, fields) {
 			res.send(results);
 		});
 	})
 	.post('/', function(req, res, next) {
 		var obj = JSON.parse(req.body.json);
-		dal.add('projects', obj , function (err,results, fields) {
+		dal.add('milestones', obj , function (err,results, fields) {
 			res.send(results);
 		});
 	})
 	.get('/:id', function(req, res, next) {
 		var id = req.params.id;
-		dal.get('projects',id , function (err, results, fields) {
+		dal.get('milestones',id , function (err, results, fields) {
 			res.send(results);
 		});
 	})
 	.put('/:id', function(req, res, next) {
 		var obj = JSON.parse(req.body.json);
-		dal.update('projects',req.params.id, obj , function (err, results, fields) {
+		dal.update('milestones',req.params.id, obj , function (err, results, fields) {
 			res.send(results);
 		});
 	})
 	.delete('/:id', function(req, res, next) {
-		dal.delete('projects',req.params.id,function (err, results, fields) {
+		dal.delete('milestones',req.params.id,function (err, results, fields) {
 			res.send(results);
 		});
 	})

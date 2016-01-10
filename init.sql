@@ -38,3 +38,18 @@ CREATE TABLE projects (
 INSERT INTO projects (id, project_name, prod_date, project_manager) VALUES
 (1, 'Biztalk Migration', '2016-1-31', 1),
 (2, 'Snow rel4', '2016-3-31', NULL);
+
+
+DROP TABLE  IF EXISTS milestones;
+
+CREATE TABLE milestones (
+  id int unsigned NOT NULL AUTO_INCREMENT,
+  kind varchar(50) NOT NULL,
+  date date NOT NULL,
+  project int unsigned NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+INSERT INTO milestones (id, kind,date,project ) VALUES
+(1, 'CAT', '2016-1-31', 1),
+(2, 'MTP', '2016-3-31', 1);

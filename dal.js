@@ -5,14 +5,17 @@ var winston = require("winston");	// logging functionality
 winston.add(winston.transports.File, { filename: 'output.log' });
 var mysql = require("mysql");		// mysql access
 var genericdal = require("./genericdal");
-var dalUsers = null;
-var dalProjects = null;
 var pool  = null;
+
+var tables = ['projects','users','milestones'];
+var dals = {};
 
 exports.init = function(callback) {
 	winston.info("initialize DAL & pool");
-	dalUsers = genericdal('users');
-	dalProjects = genericdal('projects');
+	for (var i =0 ; i< tables.length ; i++) {
+		var name = tables[i];
+		dals[name] = genericdal(name);
+	}
 	pool = mysql.createPool({
 	  connectionLimit : 10,
 	  host: "localhost",
@@ -37,7 +40,7 @@ exports.exit = function( callback ) {
 	});
 }
 
-exports.listAllUsers = function(fields, callback) {
+exports.listAll = function(type, fields, callback) {
 	pool.getConnection(function(err, connection) {
 		// connected! (unless `err` is set)
 		if (err) {
@@ -45,7 +48,7 @@ exports.listAllUsers = function(fields, callback) {
 			(callback)(err);
 		} else {
 			winston.info('connected as id ' + connection.threadId);
-			dalUsers.listAll(connection, fields, function(error,results, fields) {
+			dals[type].listAll(connection, fields, function(error,results, fields) {
 				connection.release();
 				(callback)(error,results, fields);
 			});
@@ -53,23 +56,7 @@ exports.listAllUsers = function(fields, callback) {
 	});
 }
 
-exports.listAllProjects = function(fields, callback) {
-	pool.getConnection(function(err, connection) {
-		// connected! (unless `err` is set)
-		if (err) {
-			winston.error('Error connecting to Db');
-			(callback)(err);
-		} else {
-			winston.info('connected as id ' + connection.threadId);
-			dalProjects.listAll(connection, fields, function(error,results, fields) {
-				connection.release();
-				(callback)(error,results, fields);
-			});
-		}
-	});
-}
-
-exports.getProject = function( id , callback ) {
+exports.get = function( type, id , callback ) {
 	pool.getConnection(function(err, connection) {
 		// connected! (unless `err` is set)
 		if (err) {
@@ -77,7 +64,7 @@ exports.getProject = function( id , callback ) {
 			(callback)(err,null);
 		} else {
 			winston.info('connected as id ' + connection.threadId);
-			dalProjects.get(connection, {id:id} , function(error,results, fields) {
+			dals[type].get(connection, {id:id} , function(error,results, fields) {
 				connection.release();
 				winston.info(results);
 				winston.info(fields);
@@ -87,7 +74,7 @@ exports.getProject = function( id , callback ) {
 	});
 }
 
-exports.addProject = function( obj , callback ) {
+exports.add = function( type, obj , callback ) {
 	pool.getConnection(function(err, connection) {
 		// connected! (unless `err` is set)
 		if (err) {
@@ -95,14 +82,14 @@ exports.addProject = function( obj , callback ) {
 			(callback)(err,null);
 		} else {
 			winston.info('connected as id ' + connection.threadId);
-			dalProjects.add(connection, obj , function(error,results, fields) {
+			dals[type].add(connection, obj , function(error,results, fields) {
 				connection.release();
 				(callback)(error,results, fields);
 			});
 		}
 	});
 }
-exports.updateProject = function( id, changes, callback  ) {
+exports.update = function( type, id, changes, callback  ) {
 	pool.getConnection(function(err, connection) {
 		// connected! (unless `err` is set)
 		if (err) {
@@ -110,14 +97,14 @@ exports.updateProject = function( id, changes, callback  ) {
 			(callback)(err,null);
 		} else {
 			winston.info('connected as id ' + connection.threadId);
-			dalProjects.update(connection, id, changes, function(error,results, fields) {
+			dals[type].update(connection, id, changes, function(error,results, fields) {
 				connection.release();
 				(callback)(error,results, fields);
 			});
 		}
 	});
 }
-exports.deleteProject = function( id, callback ) {
+exports.delete = function( type,id, callback ) {
 	pool.getConnection(function(err, connection) {
 		// connected! (unless `err` is set)
 		if (err) {
@@ -125,23 +112,7 @@ exports.deleteProject = function( id, callback ) {
 			(callback)(err,null);
 		} else {
 			winston.info('connected as id ' + connection.threadId);
-			dalProjects.remove(connection, id, function(error,results, fields) {
-				connection.release();
-				(callback)(error,results, fields);
-			});
-		}
-	});
-}
-
-exports.getUser = function( id , callback ) {
-	pool.getConnection(function(err, connection) {
-		// connected! (unless `err` is set)
-		if (err) {
-			winston.error('Error connecting to Db');
-			(callback)(err,null);
-		} else {
-			winston.info('connected as id ' + connection.threadId);
-			dalUsers.get(connection, {id:id} , function(error,results, fields) {
+			dals[type].remove(connection, id, function(error,results, fields) {
 				connection.release();
 				(callback)(error,results, fields);
 			});
@@ -149,51 +120,4 @@ exports.getUser = function( id , callback ) {
 	});
 }
 
-exports.addUser = function( user , callback ) {
-	pool.getConnection(function(err, connection) {
-		// connected! (unless `err` is set)
-		if (err) {
-			winston.error('Error connecting to Db');
-			(callback)(err,null);
-		} else {
-			winston.info('connected as id ' + connection.threadId);
-			dalUsers.add(connection, user , function(error,results, fields) {
-				connection.release();
-				(callback)(error,results, fields);
-			});
-		}
-	});
-}
-
-exports.updateUser = function( id, changes, callback  ) {
-	pool.getConnection(function(err, connection) {
-		// connected! (unless `err` is set)
-		if (err) {
-			winston.error('Error connecting to Db');
-			(callback)(err,null);
-		} else {
-			winston.info('connected as id ' + connection.threadId);
-			dalUsers.update(connection, id, changes, function(error,results, fields) {
-				connection.release();
-				(callback)(error,results, fields);
-			});
-		}
-	});
-}
-
-exports.deleteUser = function( id, callback ) {
-	pool.getConnection(function(err, connection) {
-		// connected! (unless `err` is set)
-		if (err) {
-			winston.error('Error connecting to Db');
-			(callback)(err,null);
-		} else {
-			winston.info('connected as id ' + connection.threadId);
-			dalUsers.remove(connection, id, function(error,results, fields) {
-				connection.release();
-				(callback)(error,results, fields);
-			});
-		}
-	});
-}
 

@@ -23,6 +23,20 @@ var DBModel = (function() {
 			"last_name":	{type:'text', 	default:'' , required:true },
 			"email":		{type:'email', 	default:'' , required:true },
 			"location":		{type:'text', 	default:''},
+		},
+		"milestones":{
+			"id": 			{type:'number', default:''},
+			"kind": 		{type:'text',  default:'MTP' , required:true },
+			"date": 		{type:'date', default:new Date().toISOString().substring(0, 10) , required:true },
+			"project": 		{type:'reference', default:null, table:'projects', field:'id', required:true, formatter:function(col,row) { 
+								// if not null
+					if (row.project) {
+						var pro = Cache.get("projects",row.project);
+						return '{0}'.format(pro.project_name);
+					}
+					return "";
+				}
+			}
 		}
 	};
 	
