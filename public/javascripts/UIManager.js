@@ -113,6 +113,7 @@ var UIManager = (function(){
 	function _onePage(type,id) {	
 		// var deferred = [];
 		// deferred.push(DBModel.get(type,id).done(obj) { _obj = obj; } );
+
 		$.when(DBModel.get(type,id))
 		.done( function(object) {
 			$.when(HtmlUtils.bodyFromObject(type,object,MODE_VIEW))
@@ -138,6 +139,11 @@ var UIManager = (function(){
 				});
 				$.when.all(deferreds).then(function(results) {
 					// render view
+					var buttons = [
+						[	// first group
+							{id:'mnow-edit-object', glyph:'glyphicon-plus', label:'Edit', callback:null }
+						]	
+					];
 					viewmodel.references={};
 					$.each(remote_ref, function(remotetype,info) {
 						viewmodel.references[remotetype]=
@@ -147,11 +153,24 @@ var UIManager = (function(){
 								'id',
 								null,
 								null)
+						buttons.push( [
+							{id:'mnow-create-'+remotetype, glyph:'glyphicon-plus', label:'Create', callback:null },
+							{id:'mnow-edit-object', glyph:'glyphicon-pencil', label:'Edit', callback:null }
+							] );
 					});
 					// viewmodel.references = remote_ref;
+					viewmodel.buttons = buttons;
 					var html = new EJS({url: '/views/viewobject.ejs'}).render(viewmodel);
 					$('main').html(html);	
 					
+					// buttons
+					$.each(viewmodel.buttons, function(i,group) {
+						$.each(group,function(j,btn) {
+							$('#'+btn.id).click(function(){
+								alert('0');
+							});
+						});
+					});
 					//bootgridify
 					$.each(remote_ref, function(remotetype,info) {
 						var grid = $("#"+'{0}-{1}'.format(remotetype,info.remotefield)).bootgrid({

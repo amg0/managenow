@@ -22,6 +22,7 @@ exports.init = function(callback) {
 	  user: "amg0",
 	  password: "xxx",
 	  database: "testdb",
+	  charset: 'utf8',
 	  dateStrings: true
 	});
 	(callback)(null);

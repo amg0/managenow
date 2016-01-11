@@ -2,11 +2,13 @@
 <h1><%=title%></h1>
 <div class='mnow-toolbar row'>
 	<div class='col-xs-12'>
+		<% for (var i =0 ; i<buttons.length ; i++ ) { %>
 		<div class="btn-group" role="group" aria-label="...">
-		  <button type="button" class="btn btn-default">Left</button>
-		  <button type="button" class="btn btn-default">Middle</button>
-		  <button type="button" class="btn btn-default">Right</button>
+			<% for (var j =0 ; j<buttons[i].length ; j++ ) { %>
+				<button id="<%=buttons[i][j].id%>" type="button" class="btn btn-default"><span class="glyphicon <%=buttons[i][j].glyph%>" title=""></span><%=buttons[i][j].label%></button>
+			<% } %>
 		</div>
+		<% } %>
 	</div>
 </div>
 <div class='mnow-idcard row'>
