@@ -48,7 +48,7 @@ exports.listAll = function(type, fields, filters, callback) {
 			winston.error('Error connecting to Db');
 			(callback)(err);
 		} else {
-			winston.info('connected as id ' + connection.threadId);
+			// winston.info('connected as id ' + connection.threadId);
 			dals[type].listAll(connection, fields, filters, function(error,results, fields) {
 				connection.release();
 				(callback)(error,results, fields);
@@ -64,11 +64,9 @@ exports.get = function( type, id , callback ) {
 			winston.error('Error connecting to Db');
 			(callback)(err,null);
 		} else {
-			winston.info('connected as id ' + connection.threadId);
+			// winston.info('connected as id ' + connection.threadId);
 			dals[type].get(connection, {id:id} , function(error,results, fields) {
 				connection.release();
-				winston.info(results);
-				winston.info(fields);
 				(callback)(error,results, fields);
 			});
 		}
@@ -82,7 +80,7 @@ exports.add = function( type, obj , callback ) {
 			winston.error('Error connecting to Db');
 			(callback)(err,null);
 		} else {
-			winston.info('connected as id ' + connection.threadId);
+			// winston.info('connected as id ' + connection.threadId);
 			dals[type].add(connection, obj , function(error,results, fields) {
 				connection.release();
 				(callback)(error,results, fields);
@@ -97,7 +95,7 @@ exports.update = function( type, id, changes, callback  ) {
 			winston.error('Error connecting to Db');
 			(callback)(err,null);
 		} else {
-			winston.info('connected as id ' + connection.threadId);
+			// winston.info('connected as id ' + connection.threadId);
 			dals[type].update(connection, id, changes, function(error,results, fields) {
 				connection.release();
 				(callback)(error,results, fields);
@@ -112,7 +110,7 @@ exports.delete = function( type,id, callback ) {
 			winston.error('Error connecting to Db');
 			(callback)(err,null);
 		} else {
-			winston.info('connected as id ' + connection.threadId);
+			// winston.info('connected as id ' + connection.threadId);
 			dals[type].remove(connection, id, function(error,results, fields) {
 				connection.release();
 				(callback)(error,results, fields);

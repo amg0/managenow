@@ -45,20 +45,20 @@ module.exports = function(tablename) {
 			winston.info('add SQL:%s',sql);
 			con.query(sql, function(error, results, fields){
 			  if (error) winston.error(error);
-			  winston.info(results);
+			  // winston.info(results);
 			  (callback)(error, results, fields);
 			});	
 		},
 		update : function( con, id, object, callback  ) {
 			delete object.id;
 			var sql = mysql.format('UPDATE '+_tablename+' SET ? Where ID = ?',[object,id]);
-			winston.info(object);
+			// winston.info(object);
 			winston.info('update SQL:%s',sql);
 			con.query(
 			  sql,
 			  function (error, results, fields) {
 				if (error) winston.error(error);
-				winston.info('Changed ' + results.changedRows + ' rows');
+				// winston.info('Changed ' + results.changedRows + ' rows');
 				if (results.changedRows==0) {
 					var err = new Error("No record found or modified");
 					winston.log('warn',err);
