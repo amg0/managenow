@@ -1,0 +1,48 @@
+<!-- views/pages/defaultlist.ejs -->
+<h1><%=title%></h1>
+<div class='mnow-toolbar row'>
+	<div class='col-xs-12'>
+		<div class="btn-group" role="group" aria-label="...">
+		  <button type="button" class="btn btn-default">Left</button>
+		  <button type="button" class="btn btn-default">Middle</button>
+		  <button type="button" class="btn btn-default">Right</button>
+		</div>
+	</div>
+</div>
+<div class='mnow-idcard row'>
+	<div class='col-xs-12'>
+		<div class="panel panel-default">
+		  <div class="panel-body">
+			<div class='row'>
+			<% for (var property in object) { %>
+				<div class='col-xs-6 col-sm-3 col-lg-2'>
+					<b><%= property %></b>
+				</div>
+				<div class='col-xs-6 col-sm-3 col-lg-2'>
+					<%= resolved_object[property] %>
+				</div>
+			<% } %>
+			</div>
+		  </div>
+		</div>
+	</div>
+
+	<div class='col-xs-12'>
+		<div class="panel panel-default">
+		  <div class="panel-body">
+			<% for (var property in references) { %>
+				<div class='row'>
+					<div class='col-xs-12'>
+					<%= references[property] %>
+					</div>
+				</div>
+			<% } %>
+		  </div>
+		</div>
+	</div>
+	
+</div>
+<div class='mnow-list row'>
+	<div class='col-xs-12'>
+	</div>
+</div>
