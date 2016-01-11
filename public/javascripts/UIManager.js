@@ -125,6 +125,11 @@ var UIManager = (function(){
 				})
 			})
 		};
+		function _onClickDelete(othertype,id) {
+			DBModel.delete(othertype,object,function(result) {
+				_onePage(type,id);
+			})
+		};
 		
 		// var deferred = [];
 		// deferred.push(DBModel.get(type,id).done(obj) { _obj = obj; } );
@@ -161,6 +166,14 @@ var UIManager = (function(){
 							]	
 						}
 					];
+					var commandtbl = [
+					"<button type=\"button\" class=\"btn btn-xs btn-default command-edit\" data-row-id=\"{0}\"><span class=\"fa fa-pencil fa-lg\"></span></button> ",
+					"<button type=\"button\" class=\"btn btn-xs btn-danger command-delete \" data-row-id=\"{0}\"><span class=\"fa fa-trash-o fa-lg\"></span></button>"
+					];
+					function _commandFormatter(col,row) {
+						return ($.map(commandtbl, function(e) { return e.format(row.id); })).join(" ");
+					};
+
 					viewmodel.references={};
 					$.each(remote_ref, function(remotetype,info) {
 						viewmodel.references[remotetype]=
@@ -169,7 +182,7 @@ var UIManager = (function(){
 								info.result,
 								'id',
 								null,
-								null)
+								commandtbl)
 						buttons.push( {
 							group: remotetype,
 							buttons: [
@@ -194,8 +207,24 @@ var UIManager = (function(){
 					//bootgridify
 					$.each(remote_ref, function(remotetype,info) {
 						var grid = $("#"+'{0}-{1}'.format(remotetype,info.remotefield)).bootgrid({
-							caseSensitive:false
-						})
+							caseSensitive:false,
+							formatters: {
+								 "commands": _commandFormatter
+							}
+						}).on("loaded.rs.jquery.bootgrid", function() {
+							/* Executes after data is loaded and rendered */
+							grid.find(".command-edit").on("click", function(e)
+							{
+								var id = $(this).data('row-id');
+								_onClickEdit(remotetype,id);
+								return false;	// prevent new handlers
+							}).find(".command-delete").on("click", function(e)
+							{
+								var id = $(this).data('row-id');
+								_onClickDelete(remotetype,id);
+								return false;	// prevent new handlers
+							});
+						});		
 					});
 				});
 			});
