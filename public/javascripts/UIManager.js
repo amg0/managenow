@@ -111,23 +111,26 @@ var UIManager = (function(){
 			})	
 	};
 	function _onePage(type,id) {	
-		function _onClickCreate(othertype) {
+		function _onClickCreate(othertype,callback) {
 			_onCreateObject(othertype,function(object){
 				DBModel.add(othertype,object,function(result) {
-					_onePage(type,id);
+					if ($.isFunction(callback))
+						(callback)();
 				});
 			});
 		};
-		function _onClickEdit(othertype,id) {
+		function _onClickEdit(othertype,id,callback) {
 			_onEditObject(othertype,id,function(object) {
 				DBModel.update(othertype,object,function(result) {
-					_onePage(type,id);
+					if ($.isFunction(callback))
+						(callback)();
 				})
 			})
 		};
-		function _onClickDelete(othertype,id) {
-			DBModel.delete(othertype,object,function(result) {
-				_onePage(type,id);
+		function _onClickDelete(othertype,id,callback) {
+			DBModel.del(othertype,id,function(result) {
+				if ($.isFunction(callback))
+					(callback)();
 			})
 		};
 		
@@ -186,8 +189,7 @@ var UIManager = (function(){
 						buttons.push( {
 							group: remotetype,
 							buttons: [
-								{class:'mnow-create-btn', id:remotetype, glyph:'glyphicon-plus', label:'Create', callback:_onClickCreate, params:[remotetype] },
-								{class:'mnow-edit-btn', id:remotetype, glyph:'glyphicon-pencil', label:'Edit', callback:_onClickEdit, params:[remotetype,0] }
+								{class:'mnow-create-btn', id:remotetype, glyph:'glyphicon-plus', label:'Create', callback:_onClickCreate, params:[remotetype] }
 							]
 						});
 					});
@@ -200,6 +202,9 @@ var UIManager = (function(){
 					$.each(viewmodel.buttons, function(i,group) {
 						$.each(group.buttons,function(j,btn) {
 							$("."+btn.class+"#"+btn.id).click( function() { 
+								btn.params.push( function() {
+									_onePage(type,id);
+								} );
 								(btn.callback).apply( this, btn.params );
 							} );
 						});
@@ -215,13 +220,17 @@ var UIManager = (function(){
 							/* Executes after data is loaded and rendered */
 							grid.find(".command-edit").on("click", function(e)
 							{
-								var id = $(this).data('row-id');
-								_onClickEdit(remotetype,id);
+								var remoteid = $(this).data('row-id');
+								_onClickEdit(remotetype,remoteid,function() {
+									_onePage(type,id);
+								});
 								return false;	// prevent new handlers
-							}).find(".command-delete").on("click", function(e)
+							}).end().find(".command-delete").on("click", function(e)
 							{
-								var id = $(this).data('row-id');
-								_onClickDelete(remotetype,id);
+								var remoteid = $(this).data('row-id');
+								_onClickDelete(remotetype,remoteid,function() {
+									_onePage(type,id);
+								});
 								return false;	// prevent new handlers
 							});
 						});		
