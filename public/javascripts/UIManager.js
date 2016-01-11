@@ -1,6 +1,17 @@
 //# sourceURL=UIManager.js
 // "use strict";
 
+var Stack = (function(){
+	var _stack=[];
+	return {
+		pop: function(func,args) { 
+			return _stack.pop( {f:func, a:args} );
+		},
+		push: function(func,args) { 
+			return _stack.push( {f:func, a:args} );
+		}
+	};
+})();
 
 var UIManager = (function(){
 	function _preparePage() {
@@ -232,8 +243,10 @@ var UIManager = (function(){
 									_onePage(type,id);
 								});
 								return false;	// prevent new handlers
-							});
-						});		
+							})
+						}).on("click.rs.jquery.bootgrid", function(e,cols,row) {
+							_onePage(remotetype,row.id);
+						})		
 					});
 				});
 			});
@@ -241,26 +254,32 @@ var UIManager = (function(){
 	};
 	return {
 		pageProjects: function() {
+			Stack.push(UIManager.pageProjects,arguments);
 			_preparePage();
 			_listPage('projects',UIManager.pageProject);
 		},
 		pageProject: function(id) {
+			Stack.push(UIManager.pageProject,arguments);
 			_preparePage();
 			_onePage('projects',id);
 		},
 		pageMilestones: function() {
+			Stack.push(UIManager.pageMilestones,arguments);
 			_preparePage();
 			_listPage('milestones',UIManager.pageMilestone);
 		},
 		pageMilestone: function(id) {
+			Stack.push(UIManager.pageMilestone,arguments);
 			_preparePage();
 			_onePage('milestones',id);
 		},
 		pageUsers: function() {
+			Stack.push(UIManager.pageUsers,arguments);
 			_preparePage();
 			_listPage('users',UIManager.pageUser);
 		},
 		pageUser: function(id) {
+			Stack.push(UIManager.pageUser,arguments);
 			_preparePage();
 			_onePage('users',id);			
 		}
