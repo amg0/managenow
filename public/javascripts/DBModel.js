@@ -102,7 +102,8 @@ var DBModel = (function() {
 			if (dict) {
 				var obj = {};
 				$.each(dict,function(k,v) {
-					obj[k]=v.default;
+					if ( (typeof(v)!="function") )
+						obj[k]=v.default;
 				});
 				return obj;
 			}

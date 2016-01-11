@@ -111,6 +111,21 @@ var UIManager = (function(){
 			})	
 	};
 	function _onePage(type,id) {	
+		function _onClickCreate(othertype) {
+			_onCreateObject(othertype,function(object){
+				DBModel.add(othertype,object,function(result) {
+					_onePage(type,id);
+				});
+			});
+		};
+		function _onClickEdit(othertype,id) {
+			_onEditObject(othertype,id,function(object) {
+				DBModel.update(othertype,object,function(result) {
+					_onePage(type,id);
+				})
+			})
+		};
+		
 		// var deferred = [];
 		// deferred.push(DBModel.get(type,id).done(obj) { _obj = obj; } );
 
@@ -140,9 +155,11 @@ var UIManager = (function(){
 				$.when.all(deferreds).then(function(results) {
 					// render view
 					var buttons = [
-						[	// first group
-							{id:'mnow-edit-object', glyph:'glyphicon-plus', label:'Edit', callback:null }
-						]	
+						{ group: "",
+						  buttons:[	// first group
+								{class:'mnow-edit-btn', id:type, glyph:'glyphicon-pencil', label:'Edit', callback:_onClickEdit, params:[type,id] }
+							]	
+						}
 					];
 					viewmodel.references={};
 					$.each(remote_ref, function(remotetype,info) {
@@ -153,10 +170,13 @@ var UIManager = (function(){
 								'id',
 								null,
 								null)
-						buttons.push( [
-							{id:'mnow-create-'+remotetype, glyph:'glyphicon-plus', label:'Create', callback:null },
-							{id:'mnow-edit-object', glyph:'glyphicon-pencil', label:'Edit', callback:null }
-							] );
+						buttons.push( {
+							group: remotetype,
+							buttons: [
+								{class:'mnow-create-btn', id:remotetype, glyph:'glyphicon-plus', label:'Create', callback:_onClickCreate, params:[remotetype] },
+								{class:'mnow-edit-btn', id:remotetype, glyph:'glyphicon-pencil', label:'Edit', callback:_onClickEdit, params:[remotetype,0] }
+							]
+						});
 					});
 					// viewmodel.references = remote_ref;
 					viewmodel.buttons = buttons;
@@ -165,10 +185,10 @@ var UIManager = (function(){
 					
 					// buttons
 					$.each(viewmodel.buttons, function(i,group) {
-						$.each(group,function(j,btn) {
-							$('#'+btn.id).click(function(){
-								alert('0');
-							});
+						$.each(group.buttons,function(j,btn) {
+							$("."+btn.class+"#"+btn.id).click( function() { 
+								(btn.callback).apply( this, btn.params );
+							} );
 						});
 					});
 					//bootgridify

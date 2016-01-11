@@ -17,3 +17,7 @@ a {
 .capitalize {
     text-transform: capitalize;
 }
+
+.inline {
+	display: inline;
+}

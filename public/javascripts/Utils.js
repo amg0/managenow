@@ -169,6 +169,7 @@ var HtmlUtils = (function() {
 			var html="";
 			var dictionary = DBModel.getDictionary(type);
 			var deferreds = [];
+			var that = template;
 			$.each(template, function(key,value) {
 				deferreds.push( _buildField(mode,dictionary[key],key,value) );
 			});
