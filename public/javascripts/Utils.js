@@ -217,7 +217,6 @@ var HtmlUtils = (function() {
 			var html="";
 			var idcolumn = idcolumn || 'id';
 			var viscols = viscols || [idcolumn];
-			html+="<div class='col-xs-12'>";
 			if ( (arr) && ($.isArray(arr) && (arr.length>0)) ) {
 				var bFirst=true;
 				html+="<table id='{0}' class='table table-condensed table-hover table-striped'>".format(htmlid);
@@ -255,7 +254,6 @@ var HtmlUtils = (function() {
 				html+="</tbody>"
 				html+="</table>";		
 			}
-			html+="</div>";
 			return html;
 		}
 	}

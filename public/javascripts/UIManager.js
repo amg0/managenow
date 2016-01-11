@@ -119,6 +119,7 @@ var UIManager = (function(){
 			.done( function(fieldvalues) {
 				var viewmodel = {
 					title:DBModel.name( type,object ) || type,
+					type: type,
 					object:object,
 					resolved_object:fieldvalues
 				};
@@ -139,16 +140,24 @@ var UIManager = (function(){
 					// render view
 					viewmodel.references={};
 					$.each(remote_ref, function(remotetype,info) {
-						viewmodel.references[remotetype]=HtmlUtils.array2Table(
-							'{0}'.format(remotetype),		//htmlid 
-							info.result,
-							'id',
-							null,
-							null)
+						viewmodel.references[remotetype]=
+							HtmlUtils.array2Table(
+								'{0}-{1}'.format(remotetype,info.remotefield),		//htmlid 
+								info.result,
+								'id',
+								null,
+								null)
 					});
 					// viewmodel.references = remote_ref;
 					var html = new EJS({url: '/views/viewobject.ejs'}).render(viewmodel);
 					$('main').html(html);	
+					
+					//bootgridify
+					$.each(remote_ref, function(remotetype,info) {
+						var grid = $("#"+'{0}-{1}'.format(remotetype,info.remotefield)).bootgrid({
+							caseSensitive:false
+						})
+					});
 				});
 			});
 		});
