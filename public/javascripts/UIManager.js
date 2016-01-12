@@ -144,6 +144,9 @@ var UIManager = (function(){
 					(callback)();
 			})
 		};
+		function _onClickGoto(type,id,callback) {
+			_onePage(type,id);
+		};
 		
 		// var deferred = [];
 		// deferred.push(DBModel.get(type,id).done(obj) { _obj = obj; } );
@@ -164,15 +167,23 @@ var UIManager = (function(){
 				$.each(remote_ref, function(remotetype,info) {
 					// find all objects which remote ref value is equal to "id"
 					// info = {field:fieldname, fieldkey: fielddescr.field}
+					
+					// find remote objects corresponding to this one
 					var filter = ['{0}=\'{1}\''.format(info.remotefield,object[info.localfield])];
+					
+					// filter out the columns remotefield
+					var remotedict = DBModel.getDictionary(remotetype);
+					var cols = Object.keys(remotedict).filter( function(key) { return (typeof(remotedict[key])!="function") && (key!=info.remotefield)} );
 					deferreds.push( 
-						DBModel.getAll(remotetype,filter).then(function(list) {
+						DBModel.getAll(remotetype,filter,cols).then(function(list) {
 							remote_ref[remotetype].result = list;
 						})
 					);
 				});
 				$.when.all(deferreds).then(function(results) {
 					// render view
+					// prepare buttons in main object panel
+					//
 					var buttons = [
 						{ group: "",
 						  buttons:[	// first group
@@ -180,7 +191,19 @@ var UIManager = (function(){
 							]	
 						}
 					];
+					//
+					// for each reference object create a button to goto this object
+					//
+					var dictionary = DBModel.getDictionary(type);
+					$.each(dictionary, function (key,field_dict) {
+						if ((field_dict.type == "reference") && (object[key]!=null) ){
+							buttons[0].buttons.push(
+								{class:'mnow-goto-btn', id:field_dict.table.toString()+'_'+buttons[0].buttons.length, glyph:'glyphicon-arrow-right', label:fieldvalues[key], callback:_onClickGoto, params:[field_dict.table,object[key]] }
+							);
+						};
+					});
 					var commandtbl = [
+					"<button type=\"button\" class=\"btn btn-xs btn-default command-goto\" data-row-id=\"{0}\"><span class=\"glyphicon glyphicon-triangle-right\"></span></button> ",
 					"<button type=\"button\" class=\"btn btn-xs btn-default command-edit\" data-row-id=\"{0}\"><span class=\"fa fa-pencil fa-lg\"></span></button> ",
 					"<button type=\"button\" class=\"btn btn-xs btn-danger command-delete \" data-row-id=\"{0}\"><span class=\"fa fa-trash-o fa-lg\"></span></button>"
 					];
@@ -190,13 +213,15 @@ var UIManager = (function(){
 
 					viewmodel.references={};
 					$.each(remote_ref, function(remotetype,info) {
-						viewmodel.references[remotetype]=
-							HtmlUtils.array2Table(
+						viewmodel.references[remotetype]= { 
+							remotefield:info.remotefield,
+							html:HtmlUtils.array2Table(
 								'{0}-{1}'.format(remotetype,info.remotefield),		//htmlid 
 								info.result,
 								'id',
 								null,
 								commandtbl)
+						};
 						buttons.push( {
 							group: remotetype,
 							buttons: [
@@ -243,7 +268,12 @@ var UIManager = (function(){
 									_onePage(type,id);
 								});
 								return false;	// prevent new handlers
-							})
+							}).end().find(".command-goto").on("click", function(e)
+							{
+								var remoteid = $(this).data('row-id');
+								_onePage(remotetype,remoteid );
+								return false;	// prevent new handlers
+							}).end()
 						}).on("click.rs.jquery.bootgrid", function(e,cols,row) {
 							_onePage(remotetype,row.id);
 						})		

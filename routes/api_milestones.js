@@ -18,7 +18,8 @@ Route	HTTP Verb	Description
 router
 	.get('/', function(req, res, next) {
 		var filters = req.query.filters;
-		dal.listAll( 'milestones', null , filters, function (err, results, fields) {
+		var columns = req.query.columns;
+		dal.listAll( 'milestones', columns , filters, function (err, results, fields) {
 			res.send(results);
 		});
 	})

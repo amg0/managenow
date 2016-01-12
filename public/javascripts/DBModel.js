@@ -78,12 +78,15 @@ var DBModel = (function() {
 		};
 	})();
 	
-	function _getAll(objtype,filters,callback) {
+	function _getAll(objtype,filters,columns,callback) {
 		// filters = ["id=1","project_name='Biztalk Migration'"];	 DEBUG
+		var data={filters: filters, columns:columns};
+		// if (columns)
+			// data.columns = columns.join(",");
 		return $.ajax({
 		  url: '/api/'+objtype,
 		  dataType: "json",
-		  data:{ filters: filters },
+		  data:data,
 		  cache:false,
 		  success: function (data) {
 			if ($.isFunction(callback))
@@ -110,13 +113,13 @@ var DBModel = (function() {
 			return null;
 		},
 		
-		getAll:function(objtype, filters, callback ) {
-			filters = $.extend([],filters);
+		getAll:function(objtype, filters, columns, callback ) {
+			// filters = $.extend([],filters);
 			var dfd = new jQuery.Deferred();
 			var dictionary = DBModel.getDictionary(objtype);
 			var keys = Object.keys(dictionary);
 			Cache.init();
-			_getAll(objtype,filters)
+			_getAll(objtype,filters,columns)
 				.done(function(list) {
 					var deferreds = [ ];
 					Cache.load(objtype,list);	// add the result in the cache

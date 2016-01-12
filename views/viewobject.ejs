@@ -38,7 +38,7 @@
 			<% for (var property in references) { %>
 				<div class='row'>
 					<div class='col-xs-12'>
-						<h3 class='capitalize inline'><%= property %></h3>
+						<h4 class='capitalize inline'><%= references[property].remotefield %> of <%= property %></h4>
 						<div class="btn-group" role="group" aria-label="...">
 							<% var btns=  buttons[i].buttons%>
 							<% for (var j =0 ; j<btns.length ; j++ ) { %>
@@ -47,7 +47,7 @@
 						</div>
 					</div>
 					<div class='col-xs-12'>
-					<%= references[property] %>
+					<%= references[property].html %>
 					</div>
 				</div>
 			<% i++;  } %>
