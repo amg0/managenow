@@ -121,6 +121,15 @@ var UIManager = (function(){
 				return false;	// prevent new handlers
 			})	
 	};
+	function _searchPage(txt) {
+		var _searchResults=[];
+		var html = new EJS({url: '/views/search.ejs'}).render({
+			title:"Search Results",
+			results:_searchResults
+		});
+		$('main').html(html);		
+		alert(txt);
+	};
 	function _onePage(type,id) {	
 		function _onClickCreate(othertype,callback) {
 			_onCreateObject(othertype,function(object){
@@ -312,6 +321,12 @@ var UIManager = (function(){
 			Stack.push(UIManager.pageUser,arguments);
 			_preparePage();
 			_onePage('users',id);			
+		},
+		pageSearch: function() {
+			var txt = $("#mnow-search-text").val();
+			_preparePage();
+			_searchPage(txt);
+			return false;
 		}
 	};
 })();
@@ -321,4 +336,5 @@ $(document).ready(function() {
 		.on ("click", "#mnow-page-projects", UIManager.pageProjects )
 		.on ("click", "#mnow-page-users", UIManager.pageUsers )
 		.on ("click", "#mnow-page-milestones", UIManager.pageMilestones )		
+		.on ("click", "#mnow-search-submit", UIManager.pageSearch )
 });
