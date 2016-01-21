@@ -16,7 +16,8 @@ var DBModel = (function() {
 					return "";
 				}
 			},
-			shortname: function(obj) { return obj.project_name }
+			shortname: function(obj) { return obj.project_name },
+			filter: function(txt) 	 { return 'project_name LIKE \'%{0}%\''.format(txt) }
 		},
 		"users":{
 			"id": 			{type:'number', default:''},
@@ -24,7 +25,8 @@ var DBModel = (function() {
 			"last_name":	{type:'text', 	default:'' , required:true },
 			"email":		{type:'email', 	default:'' , required:true },
 			"location":		{type:'text', 	default:''},
-			shortname: 		function(obj) { return '{0}, {1}'.format(obj.last_name, obj.first_name) }
+			shortname: 		function(obj) { return '{0}, {1}'.format(obj.last_name, obj.first_name) },
+			filter: 		function(txt) { return '(last_name LIKE \'%{0}%\') OR (first_name LIKE \'%{0}%\') OR (location LIKE \'%{0}%\')'.format(txt) }
 		},
 		"milestones":{
 			"id": 			{type:'number', default:''},
@@ -40,7 +42,8 @@ var DBModel = (function() {
 					return "";
 				}
 			},
-			shortname: 		function(obj) { return '{0}-{1}'.format(obj.kind, obj.date) }
+			shortname: 		function(obj) { return '{0}-{1}'.format(obj.kind, obj.date) },
+			filter: 		function(txt) { return '(kind LIKE \'%{0}%\') OR (subkind LIKE \'%{0}%\')'.format(txt) }
 		}
 	};
 	
@@ -96,6 +99,10 @@ var DBModel = (function() {
 	};
 	
 	return {
+		getTypes: function() {
+			return Object.keys(_dictionary);
+		},
+		
 		getDictionary:function(type) {
 			return _dictionary[type] || null;
 		},
@@ -113,36 +120,59 @@ var DBModel = (function() {
 			return null;
 		},
 		
+		getRemoteReferences:function(objtype){
+			var results={};
+			// search all objects which point to this one
+			$.each(_dictionary,function(key, dict) {
+				if (key != objtype) {
+					$.each(dict, function(fieldname, fielddescr) {
+						if ((fielddescr.type =="reference") && (fielddescr.table==objtype)){
+							results[key] = {remotefield:fieldname, localfield: fielddescr.field}
+						}
+					})
+				}
+			});
+			return results;
+		},
+		
+		name:function(objtype, obj) {
+			if (obj==null)
+				return '';
+			var dictionary = DBModel.getDictionary(objtype);
+			return dictionary.shortname( obj );
+
+		},
+		
 		getAll:function(objtype, filters, columns, callback ) {
 			// filters = $.extend([],filters);
 			var dfd = new jQuery.Deferred();
 			var dictionary = DBModel.getDictionary(objtype);
 			var keys = Object.keys(dictionary);
 			Cache.init();
-			_getAll(objtype,filters,columns)
-				.done(function(list) {
-					var deferreds = [ ];
-					Cache.load(objtype,list);	// add the result in the cache
-					$.each(list,function(i,row) {
-						var references = keys.filter(function(key) { return dictionary[key].type=="reference"})
-						$.each( references, function (i,key) {
-							//type:'reference', default:null, table:'users', field:'id', formatter:function(col,row)
-							var dictline = dictionary[key];
-							if (row[key]!=null) {
-								deferreds.push( DBModel.get(dictline.table, row[key]) 
-									.done(function(refobj){
-										Cache.add(dictline.table,refobj);
-									})
-								);
-							}
-						});
-					})
-					$.when.all(deferreds).then(function(results) {
-						if ($.isFunction(callback))
-							(callback)(list);
-						dfd.resolve(list)
-					})
-				});
+			$.when(_getAll(objtype,filters,columns))
+			.done(function(list) {
+				var deferreds = [ ];
+				Cache.load(objtype,list);	// add the result in the cache
+				$.each(list,function(i,row) {
+					var references = keys.filter(function(key) { return dictionary[key].type=="reference"})
+					$.each( references, function (i,key) {
+						//type:'reference', default:null, table:'users', field:'id', formatter:function(col,row)
+						var dictline = dictionary[key];
+						if (row[key]!=null) {
+							deferreds.push( DBModel.get(dictline.table, row[key]) 
+								.done(function(refobj){
+									Cache.add(dictline.table,refobj);
+								})
+							);
+						}
+					});
+				})
+				$.when.all(deferreds).then(function(results) {
+					if ($.isFunction(callback))
+						(callback)(list.clone());
+					dfd.resolve(list.clone())
+				})
+			});
 			return dfd.promise();
 		},
 		
@@ -205,29 +235,6 @@ var DBModel = (function() {
 					callback(data);
 			  }
 			});
-		},
-		
-		name:function(objtype, obj) {
-			if (obj==null)
-				return '';
-			var dictionary = DBModel.getDictionary(objtype);
-			return dictionary.shortname( obj );
-
-		},
-		
-		getRemoteReferences:function(objtype){
-			var results={};
-			// search all objects which point to this one
-			$.each(_dictionary,function(key, dict) {
-				if (key != objtype) {
-					$.each(dict, function(fieldname, fielddescr) {
-						if ((fielddescr.type =="reference") && (fielddescr.table==objtype)){
-							results[key] = {remotefield:fieldname, localfield: fielddescr.field}
-						}
-					})
-				}
-			});
-			return results;
 		}
 	}
 })();

@@ -4,6 +4,12 @@
 var MODE_VIEW = 'view';
 var MODE_EDIT = 'edit';
 
+if (typeof Array.prototype.clone == 'undefined') {
+	Array.prototype.clone = function() {
+		return this.slice(0);
+	};
+};
+
 if (typeof String.prototype.format == 'undefined') {
 	String.prototype.format = function()
 	{
@@ -30,21 +36,13 @@ if (jQuery.when.all===undefined) {
 			$.when.apply(jQuery, deferreds)
 			.then(
 				function() {
-					// bug of jquery ? if there is only one defered, the result will not be an array
-					// so we have to mock it up here to inssure the result is allways an array of result
 					var result = [];
-					if (len==1) 
-						result.push(Array.prototype.slice.call(arguments))
-					else
-						result = Array.prototype.slice.call(arguments);
+					result = Array.prototype.slice.call(arguments);
 					deferred.resolve(result);
 				},
 				function() {
 					var result = [];
-					if (len==1) 
-						result.push(Array.prototype.slice.call(arguments))
-					else
-						result = Array.prototype.slice.call(arguments);
+					result = Array.prototype.slice.call(arguments);
 					deferred.fail(result);
 				}
 			);
@@ -54,12 +52,6 @@ if (jQuery.when.all===undefined) {
 }
 
 var HtmlUtils = (function() {
-	// function _buildItems(table,field,display,selectedvalue) {
-		// DBModel.getAll(table,function(list) {
-			// var i=0;
-		// });
-		// return [];
-	// };
 	function _buildField(mode,dictionary,key,value) {
 		var dfd =  $.Deferred();
 		var htmlField = {};

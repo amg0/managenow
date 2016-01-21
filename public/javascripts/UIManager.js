@@ -123,12 +123,28 @@ var UIManager = (function(){
 	};
 	function _searchPage(txt) {
 		var _searchResults=[];
-		var html = new EJS({url: '/views/search.ejs'}).render({
-			title:"Search Results",
-			results:_searchResults
+		var _deferreds =[];
+
+		$.each(DBModel.getTypes() , function(idx,type) {
+			var dictionary = DBModel.getDictionary(type);
+			var filter=$.isFunction(dictionary.filter) ? [dictionary.filter(txt)] : null ;
+			var cols=null;
+			_deferreds.push(DBModel.getAll(type,filter,cols));
 		});
-		$('main').html(html);		
-		alert(txt);
+		$.when.all(_deferreds).then(function(results) {
+			$.each(DBModel.getTypes() , function(idx,type) {
+				_searchResults.push({
+					type: type,
+					list : results[idx]
+				});
+			})
+			var html = new EJS({url: '/views/search.ejs'}).render({
+				title:"Search Results",
+				results:_searchResults,
+				commandtbl: null
+			});
+			$('main').html(html);		
+		});
 	};
 	function _onePage(type,id) {	
 		function _onClickCreate(othertype,callback) {
